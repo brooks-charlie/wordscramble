@@ -40,8 +40,13 @@ public class Wordscramble implements Serializable {
        Score myScore = new Score();
        myScore.displayScore();
        
-       
-       
+       Menu myMenu = new Menu();
+       myMenu.displayHelpMenu();
+       myMenu.displayExit();
+               
+       GameMenu myGameMenu = new GameMenu();
+       myGameMenu.displayLength();
+     
     }
     
     public void getName(){
