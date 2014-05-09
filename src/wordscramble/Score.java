@@ -12,7 +12,7 @@ package wordscramble;
  */
 public class Score {
     String scoreNotification = "Your score is: ";
-    int usersScore; //holds the user's score after calculation
+    int usersScore = 1234; //holds the user's score after calculation
     
     public int calcScore() {
         int workingInt = 0; //holds the values it's working with
