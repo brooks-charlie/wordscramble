@@ -28,6 +28,20 @@ public class Wordscramble implements Serializable {
        Wordscramble myGame= new Wordscramble();
        myGame.getName();
        myGame.displayHelp();
+       
+       ScrambledWord myScramble = new ScrambledWord();
+       myScramble.displayOrig();
+       myScramble.displayScrambledWord();
+       
+       InputBox myInput = new InputBox();
+       myInput.displayCorrect();
+       myInput.displayWrong();
+       
+       Score myScore = new Score();
+       myScore.displayScore();
+       
+       
+       
     }
     
     public void getName(){
