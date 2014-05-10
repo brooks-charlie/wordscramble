@@ -7,6 +7,7 @@
 package wordscramble;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Random;
  */
 public class WordList3 implements Serializable {
     private String wordLength = "3";
-    private String wordToScramble;
+    private String wordToScramble = "cat";
     private String[] wordListArray = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton", 
@@ -48,10 +49,18 @@ public class WordList3 implements Serializable {
     public void setWordListArray(String[] wordListArray) {
         this.wordListArray = wordListArray;
     }
-    
-    // This function will pick a random word from the wordList array
+    /* This function will pick a random word from the wordList array
     public void chooseWord(){
      wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     }
+    */
+    
+    public void displayVariables(){
+         System.out.println("This is the number of letters in the scrambled word: " + this.wordLength + "\n");
+         System.out.println("This is the list of words: \n" + Arrays.toString(this.wordListArray));
+         System.out.println("This is the word that will be scrambled: " + this.wordToScramble);
+     }
+    
+    
 }
 
