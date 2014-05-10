@@ -43,6 +43,19 @@ public class WordScramble implements Serializable {
        Menu myMenu = new Menu();
        myMenu.displayHelpMenu();
        myMenu.displayExit();
+       
+       WordList3 myWordList3 = new WordList3();
+       myWordList3.displayVariables();
+       
+       WordList4 myWordList4 = new WordList4();
+       myWordList4.displayVariables();
+       
+       WordList5 myWordList5 = new WordList5();
+       myWordList5.displayVariables();
+       
+       WordList6 myWordList6 = new WordList6();
+       myWordList6.displayVariables();
+       
                
        GameMenu myGameMenu = new GameMenu();
        myGameMenu.displayLength();
