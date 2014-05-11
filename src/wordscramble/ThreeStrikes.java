@@ -11,9 +11,14 @@ package wordscramble;
  * @author Sara
  */
 public class ThreeStrikes {
+    public void display() {
  //perimeters of the InputBox because the guesses are linked to that class. 
- public String first = "X"; //vision of the first strike. Will try to get it to appear like that
- public String second = "XX"; //vision of the second stroke. Again will try to have it appear when i learn it 
- public String third = "XXX"; //vision of the third strike, i currently have no idea how to show it, just writing the variables to set it up.       
+ String first = "X"; //vision of the first strike. Will try to get it to appear like that
+ String second = "XX"; //vision of the second stroke. Again will try to have it appear when i learn it 
+ String third = "XXX"; //vision of the third strike, i currently have no idea how to show it, just writing the variables to set it up.       
    //will add more as we learn more.
+ System.out.println(first);
+System.out.println(second);
+System.out.println(third);
+}
 }
