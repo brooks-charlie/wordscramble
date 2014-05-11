@@ -12,10 +12,10 @@ package wordscramble;
  */
 public class Timer {
    public void display(){
-      System.out.println("the word took" + Timer + "seconds to solve!");  
    String start= "5";
    String finsih = "8";
    String time = "finish - start";
+    System.out.println("the word took" + time + "seconds to solve!");  
       
 }
 }
