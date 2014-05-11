@@ -56,6 +56,8 @@ public class WordScramble implements Serializable {
        WordList6 myWordList6 = new WordList6();
        myWordList6.displayVariables();
        
+       PlayAgain myPlayAgain= new PlayAgain();
+       myPlayAgain.display();
                
        GameMenu myGameMenu = new GameMenu();
        myGameMenu.displayLength();
