@@ -19,15 +19,11 @@ public class Score {
         //calculates the user's score based on word letters and guesses used     
         return workingInt;
     }
-       
+    byte wordLength=6;
+    byte failedAttempts=2;
     public void displayScore() {
-        System.out.println(scoreNotification + usersScore);     
-        
-    }
-    byte wordLength=3;
-    byte failedAttempts=0;
-    public void getScore(byte wordLength, byte failedAttempts) {
-        System.out.println("You played with" + wordLength + " letters and used " + failedAttempts + " tries.");
+      /*  System.out.println(scoreNotification + usersScore);  */
+        System.out.println("You played with " + wordLength + " letters and used " + failedAttempts + " tries.");
         int numLetters = wordLength;
         int numFailed = failedAttempts;
         if (numFailed > 2) {
@@ -45,9 +41,12 @@ public class Score {
 		System.out.println("You are the ultimate word \"de-scrambler\"");
                 
        } else{
-           System.out.println("Good job!\n Play again!");
+           System.out.println("Good job!\nPlay again!");
        }
        System.out.println("Your score is " + totalScore );
             
     }
-}
+        
+    }
+    
+    

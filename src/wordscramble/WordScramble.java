@@ -40,6 +40,7 @@ public class WordScramble implements Serializable {
        Score myScore = new Score();
        myScore.displayScore();
        
+       
        Menu myMenu = new Menu();
        myMenu.displayHelpMenu();
        myMenu.displayExit();
