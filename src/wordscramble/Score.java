@@ -24,4 +24,30 @@ public class Score {
         System.out.println(scoreNotification + usersScore);     
         
     }
+    byte wordLength=3;
+    byte failedAttempts=0;
+    public void getScore(byte wordLength, byte failedAttempts) {
+        System.out.println("You played with" + wordLength + " letters and used " + failedAttempts + " tries.");
+        int numLetters = wordLength;
+        int numFailed = failedAttempts;
+        if (numFailed > 2) {
+            System.out.println("Invalid number of attempts");
+           
+        }
+        if (numLetters < 3 || numLetters > 6) {
+            System.out.println("Invalid number of letters");
+        }
+        
+       int totalScore = (numLetters - numFailed) * 100;
+       
+       if (numFailed == 0){
+           totalScore += 500;
+		System.out.println("You are the ultimate word \"de-scrambler\"");
+                
+       } else{
+           System.out.println("Good job!\n Play again!");
+       }
+       System.out.println("Your score is " + totalScore );
+            
+    }
 }
