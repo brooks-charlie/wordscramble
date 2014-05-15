@@ -19,9 +19,63 @@ public class Score {
         //calculates the user's score based on word letters and guesses used     
         return workingInt;
     }
-       
+    byte wordLength=4;
+    byte failedAttempts=2;
+    byte wins =3;
     public void displayScore() {
-        System.out.println(scoreNotification + usersScore);     
+      /*  System.out.println(scoreNotification + usersScore);  */
+        System.out.println("You played with " + wordLength + " letters and used " + failedAttempts + " tries.");
+        int numLetters = wordLength;
+        int numFailed = failedAttempts;
+        if (numFailed > 2) {
+            System.out.println("Invalid number of attempts");
+           
+        }
+        if (numLetters < 3 || numLetters > 6) {
+            System.out.println("Invalid number of letters");
+        }
+        
+       int totalScore = (numLetters - numFailed) * 100;
+       
+       if (numFailed == 0){
+           totalScore += 500;
+		System.out.println("You are the ultimate word \"de-scrambler\"");
+                
+       } else{
+           System.out.println("Good job!\nPlay again!");
+       }
+       System.out.println("Your score is " + totalScore );
+            
+    }
+        
+    public void getWinStats(){
+        double difficulty = 1.362;
+        int gameDifficulty;
+        double resultWins;
+                
+        if (wins < 0){
+            System.out.println("Invalid number of wins");
+            return;
+        }
+        if (wins == 0) {
+            System.out.println("You did not win, no stats available.");
+            return;
+        }
+        if (wordLength < 0 || wordLength > 6) {
+            System.out.println("Invalid number of word length");
+            return;
+        }
+        
+        gameDifficulty = (int) (wins + wordLength); 
+        resultWins = (double) gameDifficulty * difficulty;
+            
+        if (resultWins >0){
+            System.out.println("You are the \"bomb\"!\nYour win difficulty was " + resultWins);
+        }
+        
+        
         
     }
-}
+    }
+    
+    

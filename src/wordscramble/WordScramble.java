@@ -39,6 +39,8 @@ public class WordScramble implements Serializable {
        
        Score myScore = new Score();
        myScore.displayScore();
+       myScore.getWinStats();
+       
        
        Menu myMenu = new Menu();
        myMenu.displayHelpMenu();
