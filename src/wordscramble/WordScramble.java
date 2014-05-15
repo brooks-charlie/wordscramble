@@ -41,7 +41,6 @@ public class WordScramble implements Serializable {
        myScore.displayScore();
        myScore.getWinStats();
        
-       
        Menu myMenu = new Menu();
        myMenu.displayHelpMenu();
        myMenu.displayExit();
@@ -61,8 +60,9 @@ public class WordScramble implements Serializable {
        PlayAgain myPlayAgain= new PlayAgain();
        myPlayAgain.display();
                
-       GameMenu myGameMenu = new GameMenu();
-       myGameMenu.displayLength();
+       GameMenu myGameMenu= new GameMenu();
+       myGameMenu.Length();
+       myGameMenu.Mode();
      
     }
     
