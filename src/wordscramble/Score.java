@@ -21,6 +21,7 @@ public class Score {
     }
     byte wordLength=6;
     byte failedAttempts=2;
+    byte wins =3;
     public void displayScore() {
       /*  System.out.println(scoreNotification + usersScore);  */
         System.out.println("You played with " + wordLength + " letters and used " + failedAttempts + " tries.");
@@ -47,6 +48,31 @@ public class Score {
             
     }
         
+    public void getWinStats(){
+        double difficulty = 1.362;
+        int gameDifficulty;
+        double resultWins;
+                
+        if (wins < 0){
+            System.out.println("Invalid number of wins");
+        }
+        if (wins == 0) {
+            System.out.println("You did not win, no stats available.");
+        }
+        if (wordLength < 0 || wordLength > 6) {
+            System.out.println("Invalid number of word length");
+        }
+        
+        gameDifficulty = (int) (wins + wordLength); 
+        resultWins = (double) gameDifficulty * difficulty;
+            
+        if (resultWins >0){
+            System.out.println("You are the \"bomb\"!\nYour win difficulty was " + resultWins);
+        }
+        
+        
+        
+    }
     }
     
     
