@@ -19,7 +19,7 @@ public class Score {
         //calculates the user's score based on word letters and guesses used     
         return workingInt;
     }
-    byte wordLength=6;
+    byte wordLength=4;
     byte failedAttempts=2;
     byte wins =3;
     public void displayScore() {
@@ -55,12 +55,15 @@ public class Score {
                 
         if (wins < 0){
             System.out.println("Invalid number of wins");
+            return;
         }
         if (wins == 0) {
             System.out.println("You did not win, no stats available.");
+            return;
         }
         if (wordLength < 0 || wordLength > 6) {
             System.out.println("Invalid number of word length");
+            return;
         }
         
         gameDifficulty = (int) (wins + wordLength); 
