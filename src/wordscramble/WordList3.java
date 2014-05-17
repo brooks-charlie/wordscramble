@@ -8,6 +8,7 @@ package wordscramble;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  *
@@ -48,11 +49,12 @@ public class WordList3 implements Serializable {
     public void setWordListArray3(String[] wordListArray3) {
         this.wordListArray3 = wordListArray3;
     }
-    /* This function will pick a random word from the wordList array
+    /* This function will pick a random word from the wordList array */
     public void chooseWord(){
-     wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
+     wordToScramble = (wordListArray3[new Random().nextInt(wordListArray3.length)]);
+     // return wordToScramble;
     }
-    */
+    
     
     public void displayVariables(){
          System.out.println("This is the number of letters in the scrambled word: " + this.wordLength + "\n");

@@ -2,7 +2,10 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
-* test change - Charlie
+ * Heather Jensen -  Menu, GameMenu, WordPicker
+ * Sara Bronson -  PlayAgain, ThreeStrikes, Timer
+ * Charlie Brooks -  ThreeWordlist, FourWordlist, FiveWordlist, SixWordlist
+ * Aubrey Raby -  ScrambledWord, InputBox, Score
  */
 
 package wordscramble;
@@ -47,6 +50,7 @@ public class WordScramble implements Serializable {
        
        WordList3 myWordList3 = new WordList3();
        myWordList3.displayVariables();
+       myWordList3.chooseWord();
        
        WordList4 myWordList4 = new WordList4();
        myWordList4.displayVariables();
