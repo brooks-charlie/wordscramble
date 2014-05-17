@@ -38,13 +38,17 @@ public class WordScramble implements Serializable {
        myScramble.displayOrig();
        myScramble.displayScrambledWord();
        
+       GameMenu myGameMenu= new GameMenu();
+       myGameMenu.Length();
+       myGameMenu.Mode();
+       
        InputBox myInput = new InputBox();
        myInput.displayCorrect();
        myInput.displayWrong();
        
        Score myScore = new Score();
        myScore.displayScore();
-       
+       myScore.getWinStats();
        
        Menu myMenu = new Menu();
        myMenu.displayHelpMenu();
@@ -65,10 +69,10 @@ public class WordScramble implements Serializable {
        
        PlayAgain myPlayAgain= new PlayAgain();
        myPlayAgain.display();
-               
-       GameMenu myGameMenu = new GameMenu();
-       myGameMenu.displayLength();
-     
+                      
+       ThreeStrikes myThreeStrikes= new ThreeStrikes();
+       myThreeStrikes.getStrikes();
+        
     }
     
     

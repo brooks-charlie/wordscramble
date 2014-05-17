@@ -26,8 +26,9 @@ public class GameMenu {
      System.out.println("five");
      System.out.println("six");
      this.wordLength= input.next();
+    }
     
-    /*public void Mode() throws IOException{
+  public void Mode(){
       char ch;
       System.out.println("Choose Game Mode ");
       System.out.println("Just for Fun");
@@ -35,18 +36,11 @@ public class GameMenu {
       System.out.println("Scored");
       System.out.println("Timed and Scored");
       
-      ch=(char) System.in.read();
+      /*ch=(char) System.in.read();
       if(ch=='Just for Fun');
       else if (ch=='Timed');
       else if(ch=='Scored');
       else if(ch=='Timed and Scored');
-      else()system.out.println("Invalid entry, try again");
-    }*/
-           
+      else()system.out.println("Invalid entry, try again");*/
     }
-
-    void displayLength() {
-      /*  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-     */
-    }
-}
+  }
