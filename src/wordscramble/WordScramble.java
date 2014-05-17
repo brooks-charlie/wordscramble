@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class WordScramble implements Serializable {
 
     //Instance Variables
+    String wordLength;
     String name;
     String instructions= "Word Scramble\n"
             +"Number of players: one\n" 
@@ -30,6 +31,7 @@ public class WordScramble implements Serializable {
     public static void main(String[] args){
        WordScramble myGame= new WordScramble();
        myGame.getName();
+       myGame.getWordLength();
        myGame.displayHelp();
        
        ScrambledWord myScramble = new ScrambledWord();
@@ -50,7 +52,7 @@ public class WordScramble implements Serializable {
        
        WordList3 myWordList3 = new WordList3();
        myWordList3.displayVariables();
-       myWordList3.chooseWord();
+       myWordList3.chooseWord(3);
        
        WordList4 myWordList4 = new WordList4();
        myWordList4.displayVariables();
@@ -69,10 +71,16 @@ public class WordScramble implements Serializable {
      
     }
     
+    
     public void getName(){
         Scanner input= new Scanner(System.in);
         System.out.println("Enter your name: ");
         this.name= input.next();
+    }
+    public void getWordLength(){
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter the length of the word you would like to unscramble (the only valid length is 3): ");
+        this.wordLength=input.next();
     }
         
     public void displayHelp(){
