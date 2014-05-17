@@ -59,18 +59,19 @@ public class WordList3 implements Serializable {
     }
     /* This function will pick a random word from the wordList array */
     public void chooseWord(int wordLength){
-        
+        /* Get a random number within the wordListArray3.length using the Random 
+        function and the nextInt method.        */
         randomNum = new Random().nextInt(wordListArray3.length);
-        // randomNum=15;
-        // System.out.println(randomNum);
+        /* Multiply that number by 2        */
         randomNum*=2;
-        // System.out.println(randomNum);
+        /* Divide the number by 2        */
         randomNum/=2;
-        // System.out.println(randomNum);
+        /* If the number is greater than or equal to the length of wordListArray3   
+        then decrement it by 1  */
         if(randomNum >= wordListArray3.length){
             randomNum -=1;
         }
-        
+        /* Use the random number to choose the word in the array to use as the wordToScramble         */
         wordToScramble = (wordListArray3[randomNum]);
      
         System.out.println("This is the Word to scramble:\t\"" + wordToScramble +"\"");
