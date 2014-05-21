@@ -20,7 +20,7 @@ public class WordScramble implements Serializable {
     String name;
     String instructions= "Word Scramble\n"
             +"Number of players: one\n" 
-    +"Game: Players pick how many letters they want to have in their game word \n"
+    +"Game: Player picks how many letters they want to have in their game word \n"
 +"and the system picks a word from an internal list and randomizes the letters.\n "
             + " The player has 3 chances to guess the right word.\n" 
 +"The goal of the game: Guess the right word in three chances.\n" 

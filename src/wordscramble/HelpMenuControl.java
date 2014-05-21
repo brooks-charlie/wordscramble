@@ -19,9 +19,9 @@ public class HelpMenuControl {
         System.out.println();
         this.displayHelpBorder();             
         System.out.println( 
-                "\tThe game board for Word Scramble. It consists of a scrambled word, "
-                + "\n\t a place to type in your answer, and three boxes to show you many  "
-                + "\n\t tries you have used.");
+                "\tThe game board for Word Scramble consists of a scrambled word, "
+                + "\n\t a place to type in your answer, and three strike boxes for your   "
+                + "\n\t wrong guesses.");
                
         displayHelpBorder();
     }
@@ -30,11 +30,12 @@ public class HelpMenuControl {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-                 "\tThe objective of the game is to be the first player to mark three "
-                + "\n\tsquares vertically, horizontally or diagonally. Each player takes "
-                + "\n\tturns placing their marker in one of the locations on the "
-                + "\n\tboard. The first player to get \"three-in-a-row\" is the winner."
-                ); 
+                 "\tThe objective of the game is to unscramble the word. The player "
+                + "\n\t is given three chances to guess the right word."
+                +"Game Rules:"
+                +"\n\t1. Can only select from a predetermined number of letter limits (3, 4, 5, 6) "
+                +"\n\t2. Can only enter one guess per try. "
+                 ); 
         displayHelpBorder();
     }
             
@@ -42,9 +43,14 @@ public class HelpMenuControl {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-                "\tA real player manually takes their turn by placing their mark "
-                + "\n\tin an unused location on the board."
-                ); 
+                "\tTheir are four different play modes. The player can play just for "
+                + "\n\tfun, timed, scored, or timed and scored. The just for fun has "
+                + "\n\tno timer or score, but still has three strikes. The timed mode "
+                + "\n\tgives you three minutes to make your three guesses. The scored "
+                + "\n\tmode gives you a scored based on the number of guesses and the  "
+                + "\n\tlength of the word. Lastly, the timed and scored mode gives the  "
+                + "\n\tplayer three minutes to make their three guess and a scored at the end. "
+                    ); 
         displayHelpBorder();
     }
     
@@ -53,8 +59,10 @@ public class HelpMenuControl {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-                "\tA computer based player automatically takes its turn "
-                + "\n\timmediatly after a real player in a single player game."
+                "\tThe score is as follows: "
+                + "\n\t(Word length - incorrect guess)* 100"
+                + "\n\tIf player guess correct on first try then a bonus of 500 "
+                 + "\n\tis awarded."
                 ); 
         displayHelpBorder();
     }
@@ -63,7 +71,7 @@ public class HelpMenuControl {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-               "\tA location on the board where a player can place their marker"
+               "\tThe player picks either a three, four, five, or six letter word."
                 ); 
         displayHelpBorder();
     }
