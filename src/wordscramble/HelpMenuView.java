@@ -22,7 +22,8 @@ public class HelpMenuView {
         {"Q", "Quit Help"},
      
     } ;
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    //private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    HelpMenuControl helpMenuControl = new HelpMenuControl();
     
     public HelpMenuView(){
         

@@ -44,7 +44,7 @@ public class MainMenuView {
                 case "W":
                     this.mainMenuControl.displayWordLengthMenu();
                     break;
-                case "2":
+                case "P":
                     this.mainMenuControl.displayPlayModeMenu();
                     break;
                 case "H":
