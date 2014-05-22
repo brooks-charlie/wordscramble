@@ -50,7 +50,7 @@ public class HelpMenuControl {
                 + "\n\tmode gives you a scored based on the number of guesses and the  "
                 + "\n\tlength of the word. Lastly, the timed and scored mode gives the  "
                 + "\n\tplayer three minutes to make their three guess and a scored at the end. "
-                    ); 
+                ); 
         displayHelpBorder();
     }
     
@@ -62,7 +62,7 @@ public class HelpMenuControl {
                 "\tThe score is as follows: "
                 + "\n\t(Word length - incorrect guess)* 100"
                 + "\n\tIf player guess correct on first try then a bonus of 500 "
-                 + "\n\tis awarded."
+                + "\n\tis awarded."
                 ); 
         displayHelpBorder();
     }

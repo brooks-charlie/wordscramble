@@ -18,64 +18,81 @@ public class WordScramble implements Serializable {
     //Instance Variables
     String wordLength;
     String name;
-    String instructions= "Word Scramble\n"
-            +"Number of players: one\n" 
-    +"Game: Player picks how many letters they want to have in their game word \n"
-+"and the system picks a word from an internal list and randomizes the letters.\n "
-            + " The player has 3 chances to guess the right word.\n" 
-+"The goal of the game: Guess the right word in three chances.\n" 
-+"Game Rules:\n"
-+"1. Can only select from a predetermined number of letter limits (3, 4, 5, 6)\n"
-+"2. Can only enter one guess per try. \n";
+    String instructions= 
+              "\n\t***********************************************************************"
+            + "\n\t* Welcome to the game of WORD SCRAMBLE!                               *"                            
+            + "\n\t*                                                                     *"
+            + "\n\t* Number of players: one                                              *"
+            + "\n\t* Game: Pick how many letters you want to have in your game word      *"
+            + "\n\t*       and the system picks a word and randomizes the letters.       *"
+            + "\n\t*       You has 3 chances to guess the right word.                    *"
+            + "\n\t* Goal of the Game: Guess the right word in three chances.            *"
+            + "\n\t*                                                                     *"
+            + "\n\t* Good luck!                                                          *"
+            + "\n\t***********************************************************************"
+            + "\n";
+
+            
+    
+ 
+
     
     public static void main(String[] args){
        WordScramble myGame= new WordScramble();
-       myGame.getName();
-       myGame.getWordLength();
        myGame.displayHelp();
+       myGame.getName();
+        //myGame.getWordLength();
        
-       ScrambledWord myScramble = new ScrambledWord();
+       
+       MainMenuView myMainMenu = new MainMenuView();
+       myMainMenu.getInput();
+       
+       //Below is commented out pre-week 4 display calls
+       //Place new calls above this line
+       // --------------------------------------------------
+       
+       /*ScrambledWord myScramble = new ScrambledWord();
        myScramble.displayOrig();
-       myScramble.displayScrambledWord();
+       myScramble.displayScrambledWord();*/
        
-       GameMenu myGameMenu= new GameMenu();
+       /*GameMenu myGameMenu= new GameMenu();
        myGameMenu.Length();
-       myGameMenu.Mode();
+       myGameMenu.Mode();*/
        
-       InputBox myInput = new InputBox();
+       /*InputBox myInput = new InputBox();
        myInput.displayCorrect();
-       myInput.displayWrong();
+       myInput.displayWrong();*/
        
-       Score myScore = new Score();
+       /*Score myScore = new Score();
        myScore.displayScore();
-       myScore.getWinStats();
+       myScore.getWinStats();*/
        
-       Menu myMenu = new Menu();
+       /* Menu myMenu = new Menu();
        myMenu.displayHelpMenu();
-       myMenu.displayExit();
+       myMenu.displayExit(); */
        
-       WordList3 myWordList3 = new WordList3();
+       /*WordList3 myWordList3 = new WordList3();
        myWordList3.displayVariables();
-       myWordList3.chooseWord(3);
+       myWordList3.chooseWord(3); */
        
-       WordList4 myWordList4 = new WordList4();
-       myWordList4.displayVariables();
+       /* WordList4 myWordList4 = new WordList4();
+       myWordList4.displayVariables(); */
        
-       WordList5 myWordList5 = new WordList5();
-       myWordList5.displayVariables();
+       /* WordList5 myWordList5 = new WordList5();
+       myWordList5.displayVariables(); */
        
-       WordList6 myWordList6 = new WordList6();
-       myWordList6.displayVariables();
+       /* WordList6 myWordList6 = new WordList6();
+       myWordList6.displayVariables(); */
        
-       PlayAgain myPlayAgain= new PlayAgain();
-       myPlayAgain.display();
+       /* PlayAgain myPlayAgain= new PlayAgain();
+       myPlayAgain.display(); */
                       
-       ThreeStrikes myThreeStrikes= new ThreeStrikes();
-       myThreeStrikes.getStrikes();
+       /* ThreeStrikes myThreeStrikes= new ThreeStrikes();
+       myThreeStrikes.getStrikes(); */
         
     }
     
-    
+
     public void getName(){
         Scanner input= new Scanner(System.in);
         System.out.println("Enter your name: ");

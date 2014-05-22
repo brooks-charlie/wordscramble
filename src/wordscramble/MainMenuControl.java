@@ -13,13 +13,13 @@ package wordscramble;
 public class MainMenuControl {
     
     public void displayWordLengthMenu() {
-        WordLengthMenuView wordLengthMenu = new WordLengthMenuView();
-        wordLengthMenu.getInput();
+        //WordLengthMenuView wordLengthMenu = new WordLengthMenuView();
+        //wordLengthMenu.getInput();
     }
     
     public void displayPlayModeMenu() {
-        PlayModeMenuView playMenu = new PlayModeMenuView();
-        playMenu.getInput();
+        //PlayModeMenuView playMenu = new PlayModeMenuView();
+        //playMenu.getInput();
     }
    
     public void displayHelpMenu() {
