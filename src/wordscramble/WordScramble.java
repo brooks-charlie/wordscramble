@@ -108,4 +108,8 @@ public class WordScramble implements Serializable {
          System.out.println("\n Welcome " + this.name + "\n");
          System.out.println(this.instructions);
      }
+
+    void displayError(String invalid_command_Please_enter_a_valid_comm) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
