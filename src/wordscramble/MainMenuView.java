@@ -15,8 +15,7 @@ import java.util.Scanner;
 public class MainMenuView {
         
     private static final String[][] menuItems = {
-        {"W", "Word Length Menu"},
-        {"P", "Play Mode Menu"},
+        {"G", "Game Menu"},
         {"H", "Help Menu"},
         {"X", "Exit Word Scramble"}
     }; 
@@ -41,11 +40,8 @@ public class MainMenuView {
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "W":
-                    this.mainMenuControl.displayWordLengthMenu();
-                    break;
-                case "P":
-                    this.mainMenuControl.displayPlayModeMenu();
+                case "G":
+                    this.mainMenuControl.displayGameMenu();
                     break;
                 case "H":
                     this.mainMenuControl.displayHelpMenu();            

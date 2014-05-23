@@ -12,16 +12,13 @@ package wordscramble;
  */
 public class MainMenuControl {
     
-    public void displayWordLengthMenu() {
-        //WordLengthMenuView wordLengthMenu = new WordLengthMenuView();
-        //wordLengthMenu.getInput();
+    public void displayGameMenu() {
+        //I commented the below lines out so I could test the flow, since GameMenuView doens't exist yet.  Please uncomment them when GameMenuView and GameMenuControl are built.
+        //GameMenuView gameMenu = new GameMenuView();
+        //gameMenu.getInput();
     }
     
-    public void displayPlayModeMenu() {
-        //PlayModeMenuView playMenu = new PlayModeMenuView();
-        //playMenu.getInput();
-    }
-   
+       
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.getInput();
