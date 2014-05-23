@@ -13,9 +13,8 @@ package wordscramble;
 public class MainMenuControl {
     
     public void displayGameMenu() {
-        //I commented the below lines out so I could test the flow, since GameMenuView doens't exist yet.  Please uncomment them when GameMenuView and GameMenuControl are built.
-        //GameMenuView gameMenu = new GameMenuView();
-        //gameMenu.getInput();
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.getInput();
     }
     
        
@@ -23,4 +22,5 @@ public class MainMenuControl {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.getInput();
     }
+   
 }

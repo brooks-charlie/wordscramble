@@ -11,12 +11,16 @@ package wordscramble;
  *
  * @author heatherjensen
  */
- public class GamePreferencesMenuControl{
+ public class GameMenuControl{
 
      private Game game;
      
-     public GamePreferencesMenuControl(Game game) {
+     public GameMenuControl(Game game) {
         this.game = game;
+    }
+
+    GameMenuControl() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public Game getGame() {
