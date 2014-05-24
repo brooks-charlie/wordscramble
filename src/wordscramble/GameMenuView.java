@@ -18,7 +18,9 @@ public class GameMenuView {
     String play;
    
        Game game;
-    private final GameMenuControl gameControl = new GameMenuControl(game);
+       // Commented by Charlie
+       //private final GameMenuControl gameControl = new GameMenuControl(game);
+    private final GameMenuControl gameControl = new GameMenuControl();
 
     private final static String[][] menuItems = {
         {"1", "Word Length options"},
@@ -45,10 +47,14 @@ public class GameMenuView {
             
             switch (command) {
                 case "1":
-                    this.gameControl.getWordLength(this.game.word);
+                   // this.gameControl.getWordLength(this.game.word); 
+                    // Replaced with this
+                    this.gameControl.getWordLength(this.word);
                     break;
                 case "2":
-                    this.gameControl.getPlayMode(this.game.play);
+                    // this.gameControl.getPlayMode(this.game.play);
+                    // Replaced with this
+                    this.gameControl.getPlayMode(this.play);
                     break;
                 case "Q":
                     break;
@@ -66,9 +72,13 @@ public class GameMenuView {
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < GameMenuView.menuItems.length; i++) {
+                // Commented out by Charlie
+        /* for (int i = 0; i < GameMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+        } */
+        // Replaced with this
+        for (String[] menuItem : GameMenuView.menuItems) {
+            System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
         }
         System.out.println("\t===============================================================\n");
     }

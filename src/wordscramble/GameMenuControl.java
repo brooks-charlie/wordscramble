@@ -14,14 +14,15 @@ package wordscramble;
  public class GameMenuControl{
 
      private Game game;
-     
-     public GameMenuControl(Game game) {
+     public GameMenuControl(){ //Added by Charlie
+     // Commented out by Charlie
+     // public GameMenuControl(Game game) {
         this.game = game;
     }
-
-    GameMenuControl() {
+     //Commented out by Charlie
+     /* GameMenuControl() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    } */
 
     public Game getGame() {
         return game;
@@ -32,11 +33,14 @@ package wordscramble;
     }
 
     void getPlayMode(String play) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       // Commented out by Charlie
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("This is the Play Mode menu");
     }
-
     void getWordLength(String word) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // Commented out by Charlie
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("This is the Word Length menu");
     }
     
     
