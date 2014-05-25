@@ -47,6 +47,7 @@ public class MainMenuView {
                     this.mainMenuControl.displayHelpMenu();            
                     break;
                 case "X":
+                    System.exit(0);
                     break;
                 default: 
                     new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
