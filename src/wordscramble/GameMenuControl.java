@@ -36,11 +36,16 @@ package wordscramble;
        // Commented out by Charlie
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         System.out.println("This is the Play Mode menu");
+       //public void displayGameMenu() {
+        
+  //  }
     }
     void getWordLength(String word) {
         // Commented out by Charlie
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("This is the Word Length menu");
+        // CSystem.out.println("This is the Word Length menu");
+        WordMenuView wordMenu = new WordMenuView();
+        wordMenu.getInput();
     }
     
     

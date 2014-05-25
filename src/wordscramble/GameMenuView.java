@@ -25,7 +25,7 @@ public class GameMenuView {
     private final static String[][] menuItems = {
         {"1", "Word Length options"},
         {"2", "Play mode options"},
-        {"Q", "Return to game menu"}
+        {"Q", "Return to Main menu"}
     };
 
     GameMenuControl GameMenuControl = new GameMenuControl();
@@ -57,6 +57,8 @@ public class GameMenuView {
                     this.gameControl.getPlayMode(this.play);
                     break;
                 case "Q":
+                    MainMenuView myMainMenu = new MainMenuView();
+                    myMainMenu.getInput();
                     break;
                 default: 
                     new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
