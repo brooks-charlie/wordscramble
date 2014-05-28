@@ -41,11 +41,19 @@ public class WordScramble implements Serializable {
        WordScramble myGame= new WordScramble();
        myGame.displayHelp();
        myGame.getName();
-        //myGame.getWordLength();
+       //myGame.getWordLength();
        
        
        MainMenuView myMainMenu = new MainMenuView();
        myMainMenu.getInput();
+       
+       
+       
+       
+       
+       
+       
+       
        
        //Below is commented out pre-week 4 display calls
        //Place new calls above this line

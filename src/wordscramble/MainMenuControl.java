@@ -22,5 +22,10 @@ public class MainMenuControl {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.getInput();
     }
+    
+    public void playGame() {
+        GuessCheck myGuess = new GuessCheck();
+        myGuess.checker();
+    }
    
 }
