@@ -11,7 +11,7 @@ package wordscramble;
  * @author charliebrooks
  */
 class WordMenuControl {
-    private int wordLength;
+    public int wordLength;
         MainMenuControl mainMenuControl = new MainMenuControl();
 
     void wordlength3() {
