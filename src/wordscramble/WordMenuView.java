@@ -16,9 +16,6 @@ public class WordMenuView {
 
         
     private static final String[][] menuItems = {
-    /*    {"G", "Game Menu"},
-        {"H", "Help Menu"},
-        {"X", "Exit Word Scramble"} */
         {"3", "3 letter word"},
         {"4", "4 letter word"},
         {"5", "5 letter word"},
@@ -49,7 +46,6 @@ public class WordMenuView {
             switch (command) {
                 case "3":
                     this.wordMenuControl.wordlength3();
-                    //this.name= input.next();
                     break;
                 case "4":
                     this.wordMenuControl.wordlength4();
@@ -61,7 +57,6 @@ public class WordMenuView {
                     this.wordMenuControl.wordlength6();
                     break;
                 case "Q":
-                   // this.mainMenuControl.displayGameMenu();
                     MainMenuView myMainMenu = new MainMenuView();
                     myMainMenu.getInput();
                     break;

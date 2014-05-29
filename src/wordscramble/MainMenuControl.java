@@ -19,11 +19,9 @@ public class MainMenuControl {
     }*/
     
     public void displayGameMenu() {
-        //placeholder for the play mode menu
-        System.out.println("This is the Play Mode menu place holder");
+        PlayModeMenuView playMenu = new PlayModeMenuView();
+        playMenu.getInput();
         
-        WordMenuView wordMenu = new WordMenuView();
-        wordMenu.getInput();
     }
     
        
