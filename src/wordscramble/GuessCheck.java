@@ -44,9 +44,10 @@ public class GuessCheck {
                     continue;
             }
         }
-            
+        MainMenuView myMainMenu = new MainMenuView();
+        myMainMenu.getInput();    
           
-        }
+    }
         
     }
 }
