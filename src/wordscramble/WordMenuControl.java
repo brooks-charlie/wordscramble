@@ -20,9 +20,7 @@ class WordMenuControl {
       //  System.out.println("This is the Play Mode menu");
         wordLength = 3;
         
-       GuessCheck myGuess = new GuessCheck();
-       myGuess.checker();
-        
+            
         System.out.println("\n You have choosen "+ wordLength + "\n");
         this.mainMenuControl.displayGameMenu();
     }

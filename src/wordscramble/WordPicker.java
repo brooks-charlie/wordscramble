@@ -12,7 +12,12 @@ package wordscramble;
  */
 public class WordPicker {
     
-   String displayLabel;
+   //String displayLabel;
+    public String wordPicker(){
+        String newWord = "rabbit";
+        return newWord;
+    }
+    
    
     
 }

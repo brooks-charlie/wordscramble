@@ -18,13 +18,13 @@ public class GuessCheck {
     
     
     
-    public void checker(){
+    public void checker(String origWord, String scrambledWord){
         boolean correct = false;
         
         
             
     
-        System.out.println("Scrambled Word: tabbir");
+        System.out.println("Scrambled Word: " + scrambledWord);
         
         while(!correct) {
             System.out.println("What is your guess?");

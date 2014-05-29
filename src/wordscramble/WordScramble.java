@@ -39,8 +39,9 @@ public class WordScramble implements Serializable {
     
     public static void main(String[] args){
        WordScramble myGame= new WordScramble();
-       myGame.displayHelp();
        myGame.getName();
+       myGame.displayHelp();
+       
        //myGame.getWordLength();
        
        
@@ -106,12 +107,14 @@ public class WordScramble implements Serializable {
         System.out.println("Enter your name: ");
         this.name= input.next();
     }
+    /*
     public void getWordLength(){
         Scanner input= new Scanner(System.in);
         System.out.println("Enter the length of the word you would like to unscramble (the only valid length is 3): ");
         this.wordLength=input.next();
     }
         
+    */
     public void displayHelp(){
          System.out.println("\n Welcome " + this.name + "\n");
          System.out.println(this.instructions);
