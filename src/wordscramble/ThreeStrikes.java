@@ -11,9 +11,9 @@ package wordscramble;
  * @author Sara
  */
 public class ThreeStrikes {
-    
-    byte playerGuess= 2;
-    byte failedTries=1;
+    String strikes;
+    byte userGuess= 2;
+    byte failedAttempts=1;
     
     public int calcStrike() {
         int workingInt = 0; //holds the values it's working with
@@ -24,9 +24,11 @@ public class ThreeStrikes {
     public void getStrikes() {
         
       System.out.println("Start Game");
-      int userGuess= playerGuess;
-      int failedAttempts= failedTries;
-      
+          String strike[]= {" ", "X", "XX", "XXX"};
+                    
+          for(String s: strike){
+              System.out.print(s + " ");
+               
         if (userGuess == 0){ 
               System.out.println("Unscramble the word");
         }
@@ -35,7 +37,7 @@ public class ThreeStrikes {
               System.out.println ("Invalid number of attempts");
         }
               
-        int totalAttempts = (userGuess - failedAttempts) * 1;
+        int totalAttempts = (userGuess - failedAttempts);
       
         //userGuess is guesses left
         if(totalAttempts >= 3) {
@@ -49,16 +51,10 @@ public class ThreeStrikes {
         }
                       
         System.out.println ("It took you " + totalAttempts + "attempts.");
-        
-                
-      
-    /*perimeters of the InputBox because the guesses are linked to that class. 
-    String first = "X"; //vision of the first strike. Will try to get it to appear like that
-    String second = "XX"; //vision of the second stroke. Again will try to have it appear when i learn it 
-    String third = "XXX"; //vision of the third strike, i currently have no idea how to show it, just writing the variables to set it up.       
-    //will add more as we learn more.
-System.out.println(first);
-System.out.println(second);
-System.out.println(third);*/
+        }
     }
-}
+     
+    
+    }
+       
+   

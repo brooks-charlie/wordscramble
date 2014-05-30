@@ -48,7 +48,10 @@ public class WordScramble implements Serializable {
        MainMenuView myMainMenu = new MainMenuView();
        myMainMenu.getInput();
        
-       
+       ThreeStrikes myThreeStrikes= new ThreeStrikes();
+       myThreeStrikes.getStrikes(); 
+       myThreeStrikes.calcStrike();
+    }
        
        
        
@@ -96,10 +99,7 @@ public class WordScramble implements Serializable {
        /* PlayAgain myPlayAgain= new PlayAgain();
        myPlayAgain.display(); */
                       
-       /* ThreeStrikes myThreeStrikes= new ThreeStrikes();
-       myThreeStrikes.getStrikes(); */
-        
-    }
+      
     
 
     public void getName(){
@@ -107,14 +107,7 @@ public class WordScramble implements Serializable {
         System.out.println("Enter your name: ");
         this.name= input.next();
     }
-    /*
-    public void getWordLength(){
-        Scanner input= new Scanner(System.in);
-        System.out.println("Enter the length of the word you would like to unscramble (the only valid length is 3): ");
-        this.wordLength=input.next();
-    }
-        
-    */
+    
     public void displayHelp(){
          System.out.println("\n Welcome " + this.name + "\n");
          System.out.println(this.instructions);
