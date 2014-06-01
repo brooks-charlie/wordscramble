@@ -15,14 +15,18 @@ import java.util.Scanner;
 public class GuessCheck {
     String origWord = "rabbit";
     String guess;
+    int userGuess=0;
+    int maxAttempts=3;
     
     
     
     public void checker(String origWord, String scrambledWord){
         boolean correct = false;
         
-        
-            
+        Timer myTimer=new Timer();
+          myTimer.start();  
+       
+          
     
         System.out.println("Scrambled Word: " + scrambledWord);
         
@@ -36,10 +40,13 @@ public class GuessCheck {
             else {
                 if (guess.equals(origWord)){
                     correct = true;
+                    myTimer.stop();
                     System.out.println("Good job, you are correct!\nThe answer was " + origWord);
 
                 }
                 else{
+                    userGuess++;
+                    myTimer.loopy(maxAttempts, userGuess);
                     System.out.println("Incorrect, try again!");
                     continue;
             }

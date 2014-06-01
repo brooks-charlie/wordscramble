@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package wordscramble;
 
 /**
@@ -23,7 +22,7 @@ public class ThreeStrikes {
         
     public void getStrikes() {
         
-      System.out.println("Start Game");
+     // System.out.println("Start Game");
           String strike[]= {" ", "X", "XX", "XXX"};
                     
           for(String s: strike){
@@ -56,5 +55,3 @@ public class ThreeStrikes {
      
     
     }
-       
-   
