@@ -19,11 +19,13 @@ public class HelpMenuView {
         {"P", "Play Mode"},
         {"S", "Scoring Rules"},
         {"W", "Word Length"},
+        {"H", "Hints"},
         {"Q", "Quit Help"},
      
     } ;
     //private HelpMenuControl helpMenuControl = new HelpMenuControl();
     HelpMenuControl helpMenuControl = new HelpMenuControl();
+    WordPicker WordPicker = new WordPicker();
     
     public HelpMenuView(){
         
@@ -56,6 +58,9 @@ public class HelpMenuView {
                     break;
                 case "W": 
                     this.helpMenuControl.displayLengthHelp();
+                    break;
+                case "H":    
+                    this.WordPicker.chooseWord();
                     break;
                 case "Q":
                     break;

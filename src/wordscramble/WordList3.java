@@ -16,8 +16,8 @@ import java.util.Scanner;
  */
 public class WordList3 implements Serializable {
 
-    private String wordLength;// = "3";
-    private String[] wordListArray3 = {
+    public String wordLength;// = "3";
+    public String[] wordListArray3 = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton",
         "tar", "man", "ran", "run", "sat"
