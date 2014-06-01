@@ -28,14 +28,16 @@ public class WordPicker {
         
     
         
-    String[] wordListArray3 = {
+    String[] wordListArray = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton",
-        "tar", "man", "ran", "run", "sat"
+        "tar", "man", "ran", "run", "sat","ham","hog","dig"
     };
-    
-    for(int i=0;i<wordListArray3.length;i++){
-        System.out.println(wordListArray3[i]);
+    System.out.println("Your word is one of these:\n");
+    System.out.println(this.wordPicker());
+    for(int i=0;i<wordListArray.length;i++){
+        System.out.println(wordListArray[i]);
+        
     }
     }
 }
