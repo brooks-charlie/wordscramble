@@ -30,7 +30,7 @@ public class MainMenuControl {
         helpMenu.getInput();
     }
     
-    public void playGame() {
+    public void playGame(int wordLength) {
         String origWord, scrambledWord;
         char[] bubbleChar;
         
@@ -42,7 +42,7 @@ public class MainMenuControl {
         scrambledWord = new String(bubbleChar);
         
         GuessCheck myGuess = new GuessCheck();
-        myGuess.checker(origWord, scrambledWord);
+        myGuess.checker(origWord, scrambledWord, wordLength);
     }
    
 }

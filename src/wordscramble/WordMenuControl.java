@@ -18,28 +18,28 @@ class WordMenuControl {
 
         wordLength = 3;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame();
+        this.mainMenuControl.playGame(wordLength);
     }
 
     void wordlength4() {
 
         wordLength = 4;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame();
+        this.mainMenuControl.playGame(wordLength);
     }
 
     void wordlength5() {
 
         wordLength = 5;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame();
+        this.mainMenuControl.playGame(wordLength);
     }
 
     void wordlength6() {
 
         wordLength = 6;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame();
+        this.mainMenuControl.playGame(wordLength);
     }
     
 }

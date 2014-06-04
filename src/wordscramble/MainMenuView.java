@@ -17,7 +17,7 @@ public class MainMenuView {
     private static final String[][] menuItems = {
         {"G", "Game Menu"},
         {"H", "Help Menu"},
-        {"P", "Play Game"},
+        //{"P", "Play Game"},
         {"X", "Exit Word Scramble"}
     }; 
   
@@ -47,9 +47,9 @@ public class MainMenuView {
                 case "H":
                     this.mainMenuControl.displayHelpMenu();            
                     break;
-                case "P":
-                    this.mainMenuControl.playGame();            
-                    break;
+                //case "P":
+                   // this.mainMenuControl.playGame(wordLength);            
+                    //break;
                 case "X":
                     System.exit(0);
                     break;
