@@ -12,19 +12,22 @@ package wordscramble;
  */
 public class Score {
     String scoreNotification = "Your score is: ";
-    int usersScore = 1234; //holds the user's score after calculation
     
-    public int calcScore() {
+    
+//int usersScore = 1234; //holds the user's score after calculation
+    
+    
+    /*public int calcScore() {
         int workingInt = 0; //holds the values it's working with
         //calculates the user's score based on word letters and guesses used 
         //not sure where to find this, or what it does
         return workingInt;
-    }
+    }*/
     // int wordLength=4;
     // int failedAttempts=2;
     // int wins =3;
     public int displayScore(int wordLength, int failedAttempts) {
-      /*  System.out.println(scoreNotification + usersScore);  */
+        //System.out.println(scoreNotification + usersScore);  
         System.out.println("You played with " + wordLength + " letters and used " + failedAttempts + " tries.");
         int numLetters = wordLength;
         int numFailed = failedAttempts;
@@ -46,6 +49,8 @@ public class Score {
            System.out.println("Good job!\nPlay again!");
        }
        System.out.println("Your score is " + totalScore );
+       //WordScramble.scores[WordScramble.arrayBookmark] = totalScore;
+       WordScramble.arrayBookmark++;
      return totalScore;          
     }
         
