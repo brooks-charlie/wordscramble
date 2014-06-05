@@ -6,6 +6,8 @@
 
 package wordscramble;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Aubrey M. Raby
@@ -49,8 +51,9 @@ public class Score {
            System.out.println("Good job!\nPlay again!");
        }
        System.out.println("Your score is " + totalScore );
-       //WordScramble.scores[WordScramble.arrayBookmark] = totalScore;
+       WordScramble.scores[WordScramble.arrayBookmark] = totalScore;
        WordScramble.arrayBookmark++;
+       System.out.println(Arrays.toString(WordScramble.scores) );
      return totalScore;          
     }
         
