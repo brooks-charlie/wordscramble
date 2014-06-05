@@ -14,6 +14,7 @@ import java.util.Arrays;
  */
 public class Score {
     String scoreNotification = "Your score is: ";
+    int temp;
     
     
 //int usersScore = 1234; //holds the user's score after calculation
@@ -51,9 +52,20 @@ public class Score {
            System.out.println("Good job!\nPlay again!");
        }
        System.out.println("Your score is " + totalScore );
-       WordScramble.scores[WordScramble.arrayBookmark] = totalScore;
-       WordScramble.arrayBookmark++;
-       System.out.println(Arrays.toString(WordScramble.scores) );
+       if(WordScramble.numGames==0){
+           KeepScore myKeepScore = new KeepScore();
+           myKeepScore.scoreFirstGame(totalScore);
+                   WordScramble.numGames++;
+
+       }else{
+      KeepScore myKeepScore = new KeepScore();
+      myKeepScore.scoreGames(totalScore);
+              WordScramble.numGames++;
+
+       }
+      System.out.println("numGames played is: "+ WordScramble.numGames);
+       
+       
      return totalScore;          
     }
         

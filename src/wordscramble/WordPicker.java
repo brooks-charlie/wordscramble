@@ -27,7 +27,7 @@ public class WordPicker {
     if(response.equals("y")){
         
     
-        
+            
     String[] wordListArray = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton",
