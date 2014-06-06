@@ -6,6 +6,7 @@
 package wordscramble;
 
 import java.util.Arrays;
+import static wordscramble.WordScramble.scores;
 
 /**
  *
@@ -69,8 +70,8 @@ public class Score {
       //System.out.println("numGames played is: "+ WordScramble.numGames);
        
       this.getAvg();
-       
-     return totalScore;          
+      this.bestScore();
+      return totalScore;          
 //>>>>>>> origin/master
     }
 
@@ -115,7 +116,19 @@ public class Score {
 			System.out.println("The average score so far is: " + avg);
 		}
     
-    }
+    public void bestScore(){ //finds highest score in scores[]
+                        int max=0;
+                        for(int myMax: WordScramble.scores){
+                        max = myMax;
+                        }
+                        for(int i=1; i < max; i++){
+                            if (scores[i] > max) 
+                                max = scores[i];
+                        }
+                        System.out.println("Your best score is: " + max);  
+                }
+
+       }
     
     
 //>>>>>>> origin/master
