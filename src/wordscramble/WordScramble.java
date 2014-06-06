@@ -18,6 +18,7 @@ public class WordScramble implements Serializable {
     //Instance Variables
     static int numGames=0;
     static int scores []= new int [2];
+    static int wins[] = new int[1];
     //static int arrayBookmark= 0;
     
     String wordLength;

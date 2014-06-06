@@ -51,6 +51,8 @@ public class MainMenuView {
                    // this.mainMenuControl.playGame(wordLength);            
                     //break;
                 case "X":
+                    TrackGames myTrackGames = new TrackGames();
+                    System.out.println("\tGames played:\t"+WordScramble.numGames+"\n\tGames won:\t"+myTrackGames.totalWins());
                     System.exit(0);
                     break;
                 default: 
