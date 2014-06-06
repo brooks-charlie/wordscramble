@@ -17,7 +17,7 @@ public class GuessCheck {
     String guess;
     int userGuess = 0;
     int maxAttempts = 3;
-    int wordLength=6; //pass this from the menu. 
+    //int wordLength=6; //pass this from the menu. 
 
     public void checker(String origWord, String scrambledWord, int wordLength) {
         boolean correct = false;

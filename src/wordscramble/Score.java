@@ -65,6 +65,7 @@ public class Score {
        }
       System.out.println("numGames played is: "+ WordScramble.numGames);
        
+      this.getAvg();
        
      return totalScore;          
     }
@@ -98,6 +99,16 @@ public class Score {
         
     }
    
+    public void getAvg() {
+			int avg = 0;
+			for (int myAvg : WordScramble.scores){
+				avg += myAvg;
+				
+			}
+			avg = avg / (WordScramble.scores.length-1);
+			System.out.println("The average score so far is: " + avg);
+		}
+    
     }
     
     
