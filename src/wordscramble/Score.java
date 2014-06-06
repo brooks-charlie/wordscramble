@@ -41,6 +41,7 @@ public class Score {
 
         int totalScore = (numLetters - numFailed) * 100;
 
+//<<<<<<< HEAD
         if (numFailed == 0) {
             totalScore += 500;
             System.out.println("You are the ultimate word \"de-scrambler\"");
@@ -62,7 +63,15 @@ public class Score {
         }
         System.out.println("numGames played is: " + WordScramble.numGames);
 
-        return totalScore;
+        //return totalScore;
+//=======
+       //}
+      //System.out.println("numGames played is: "+ WordScramble.numGames);
+       
+      this.getAvg();
+       
+     return totalScore;          
+//>>>>>>> origin/master
     }
 
     public void getWinStats(int wordLength, int wins) {
@@ -91,5 +100,22 @@ public class Score {
         }
 
     }
+//<<<<<<< HEAD
 
-}
+//}
+//=======
+   
+    public void getAvg() {
+			int avg = 0;
+			for (int myAvg : WordScramble.scores){
+				avg += myAvg;
+				
+			}
+			avg = avg / (WordScramble.scores.length-1);
+			System.out.println("The average score so far is: " + avg);
+		}
+    
+    }
+    
+    
+//>>>>>>> origin/master
