@@ -71,6 +71,7 @@ public class Score {
        
       this.getAvg();
       this.bestScore();
+      this.minScore();
       return totalScore;          
 //>>>>>>> origin/master
     }
