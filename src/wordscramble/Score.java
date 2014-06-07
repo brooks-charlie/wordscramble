@@ -127,8 +127,17 @@ public class Score {
                         }
                         System.out.println("Your best score is: " + max);  
                 }
-
+    public void minScore(){ //will be used to find the lowest score in the []
+        int min=0;
+        for (int myMin: WordScramble.scores) {
+            min=myMin;
+        }
+        for(int i=1; i>min; i--){
+            if(scores[i] < min){
+            min = scores[i];
        }
-    
-    
+}
+        System.out.println("Your lowest score is:" + min);
+}
+}
 //>>>>>>> origin/master
