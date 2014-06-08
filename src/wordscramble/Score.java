@@ -128,8 +128,8 @@ public class Score {
                         }
                         System.out.println("Your best score is: " + max);  
                 }
-    public void min(int scores[],int totalScore){ //will be used to find the lowest score in the []
-        int i,j,temp, first;
+    public int min(int [] scores,int totalScore){ //will be used to find the lowest score in the []
+        int i,j,temp, first = 0;
         int least = 0;
        
        
@@ -144,11 +144,11 @@ public class Score {
         scores[first]=scores[i];
         scores[i]=temp;
             
-        first=least; 
+        
             
 }
- 
-       System.out.println("Your lowest score is:"+least);
+        return first;  
+       // System.out.println("Your lowest score is:"+least);
     }
    }
 
