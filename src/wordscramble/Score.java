@@ -71,7 +71,7 @@ public class Score {
        
       this.getAvg();
       this.bestScore();
-      this.minScore();
+      this.min(WordScramble.scores,totalScore);
       return totalScore;          
 //>>>>>>> origin/master
     }
@@ -128,17 +128,29 @@ public class Score {
                         }
                         System.out.println("Your best score is: " + max);  
                 }
-    public void minScore(){ //will be used to find the lowest score in the []
-        int min=0;
-        for (int myMin: WordScramble.scores) {
-            min=myMin;
+    public void min(int scores[],int totalScore){ //will be used to find the lowest score in the []
+        int i,j,temp, first;
+        int least = 0;
+       
+       
+        for(i=scores.length-1; i<0; i--) { 
+        first=0;
+        for(j=1;j<=i;j++)//finds the smallest point between i and 1
+        {
+            if(scores[j]<scores[first])
+                first=j;
         }
-        for(int i=1; i>min; i--){
-            if(scores[i] < min){
-            min = scores[i];
-       }
+        temp=scores[first]; //swaps small value with the first
+        scores[first]=scores[i];
+        scores[i]=temp;
+            
+        first=least; 
+            
 }
-        System.out.println("Your lowest score is:" + min);
-}
-}
+ 
+       System.out.println("Your lowest score is:"+least);
+    }
+   }
+
+
 //>>>>>>> origin/master
