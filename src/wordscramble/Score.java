@@ -117,17 +117,26 @@ public class Score {
 			System.out.println("The average score so far is: " + avg);
 		}
     
-    public void bestScore(){ //finds highest score in scores[]
+ public void bestScore(){ //finds highest score in scores[]
                         int max=0;
                         for(int myMax: WordScramble.scores){
-                        max = myMax;
-                        }
-                        for(int i=1; i < max; i++){
-                            if (scores[i] > max) 
-                                max = scores[i];
-                        }
-                        System.out.println("Your best score is: " + max);  
-                }
+                                if(max > myMax)
+                                max = myMax;
+                                for(int i=0; i < max; i++){
+                                if (WordScramble.scores[i] > max) 
+                                max = WordScramble.scores[i];}
+                        
+                        /*int nums[]= WordScramble.scores;
+                                //2nd attempt to get my function to work
+                        int max=nums[0];
+                        for (int i=1; i < max; i++){
+                        if (nums[i]>max)
+                            max=nums[i];*/
+                    }
+       
+                        System.out.println("Your best score is: " + max); 
+                    }  
+                
     public int min(int [] scores,int totalScore){ //will be used to find the lowest score in the []
         int i,j,temp, first = 0;
         int least = 0;
