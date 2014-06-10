@@ -35,7 +35,7 @@ public class MainMenuControl {
         char[] bubbleChar;
         
         WordPicker myWord = new WordPicker();
-        origWord = myWord.wordPicker();
+        origWord = myWord.wordPicker(wordLength);
         
         Bubble myBubble = new Bubble();
         bubbleChar = myBubble.bubbleSort(origWord);

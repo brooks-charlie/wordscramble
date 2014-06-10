@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class GuessCheck {
 
-    String origWord = "rabbit";
+    //String origWord = "rabbit";
     String guess;
     int userGuess = 0;
     int maxAttempts = 3;
@@ -31,8 +31,8 @@ public class GuessCheck {
             System.out.println("What is your guess?");
             Scanner input = new Scanner(System.in);
             this.guess = input.next();
-            if (guess.length() != 6) {
-                System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.");
+            if (guess.length() != wordLength) {
+                System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
                 //userGuess++;
                 continue;
             } else {
@@ -54,7 +54,7 @@ public class GuessCheck {
             }
             
             
-            System.out.println("You tried "+ userGuess + " times to get the word right.");
+            System.out.println("You tried "+ userGuess + " times to get the word right.\nThe word was:\t"+origWord);
             Score myScore = new Score();
             
             myScore.displayScore(wordLength, userGuess);

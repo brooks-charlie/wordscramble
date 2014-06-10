@@ -22,6 +22,9 @@ public class WordList5 implements Serializable {
         "cares", "mixer", "hands", "boxes", "tones", 
         "tares", "mines", "rains", "ruins", "saint"
     };
+    private double randomNum;
+    private int playerWordLength;
+    private int useRandomNum;
 
     public WordList5() {
     }
@@ -54,6 +57,22 @@ public class WordList5 implements Serializable {
      wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     }
     */
+    public String chooseWord() {
+
+        playerWordLength = Integer.parseInt(wordLength);
+    
+        randomNum = new Random().nextInt(wordListArray.length);
+
+        if (randomNum >= wordListArray.length) {
+
+            randomNum = wordListArray.length - 1;
+        }
+        useRandomNum = (int) randomNum;
+        wordToScramble = (wordListArray[useRandomNum]);
+
+        System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
+        return wordToScramble;
+    }
     
     public void displayVariables(){
          System.out.println("This is the number of letters in the scrambled word: " + this.wordLength + "\n");

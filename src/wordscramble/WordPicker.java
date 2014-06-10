@@ -17,8 +17,27 @@ public class WordPicker {
 
     //String displayLabel;
 
-    public String wordPicker() {
-        String newWord = "rabbit";
+    public String wordPicker(int wordLength) {
+        String newWord = "new";
+        if(wordLength==3){
+            //String newWord;
+            WordList3 myWordList3 = new WordList3();
+            newWord = myWordList3.chooseWord();
+        }
+        if(wordLength==4){
+            //String newWord;
+            WordList4 myWordList4 = new WordList4();
+            newWord = myWordList4.chooseWord();
+        }
+        if(wordLength==5){
+            WordList5 myWordList5 = new WordList5();
+            newWord = myWordList5.chooseWord();
+        }
+        if(wordLength==6){
+            WordList6 myWordList6 = new WordList6();
+            newWord = myWordList6.chooseWord();
+        } 
+        //String newWord = "rabbit";
         return newWord;
     }
 
