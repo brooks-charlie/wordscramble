@@ -15,13 +15,13 @@ public class KeepScore {
 
     public int scoreFirstGame(int totalScore) { //Use only on first game
         WordScramble.scores[WordScramble.numGames] = totalScore; // Store the score of the first game in the array
-        System.out.println("WordScramble.scores array length is: " + WordScramble.scores.length);
+        System.out.println("WordScramble.scores array length is:\t" + WordScramble.scores.length);
         return WordScramble.scores[WordScramble.numGames];
     }
 
     public int scoreGames(int totalScore) { // Use on all games except the first game
 
-        System.out.println("WordScramble.scores array length is: " + WordScramble.scores.length);
+        System.out.println("WordScramble.scores array length is:\t" + WordScramble.scores.length);
 
         // The array already has the first game's score, 
         // now store the second game in the next index which is incremented by WordScramble.numGames
@@ -46,7 +46,7 @@ public class KeepScore {
             WordScramble.scores[i] = scores[i];
         }
         // temporarily used to show some things
-        System.out.println("WordScramble.scores array length is: " + WordScramble.scores.length);
+        System.out.println("WordScramble.scores array length is:\t" + WordScramble.scores.length);
         System.out.println("the number of games is:\t" + WordScramble.numGames);
         System.out.println(Arrays.toString(scores));
         System.out.println(Arrays.toString(WordScramble.scores));

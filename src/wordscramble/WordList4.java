@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class WordList4 implements Serializable {
     private String wordLength = "4";
-    private String wordToScramble = "cats";
+    private String wordToScramble;// = "cats";
     private String[] wordListArray = {
         "dogs", "cats", "tape", "hats", "robs",
         "cars", "main", "hams", "bone", "tame", 

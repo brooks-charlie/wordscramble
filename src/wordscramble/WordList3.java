@@ -16,13 +16,14 @@ import java.util.Scanner;
  */
 public class WordList3 implements Serializable {
 
-    public String wordLength;// = "3";
+    public String wordLength = "3";
+    private String wordToScramble;
     public String[] wordListArray = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton",
         "tar", "man", "ran", "run", "sat"
     };
-    public String wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
+    //public String wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     private double randomNum;
     private int playerWordLength;
     private int useRandomNum;
@@ -54,51 +55,26 @@ public class WordList3 implements Serializable {
         this.wordToScramble = wordToScramble;
     }
 
-    public String[] getWordListArray3() {
+    public String[] getWordListArray() {
         return wordListArray;
     }
 
-    public void setWordListArray3(String[] wordListArray3) {
-        this.wordListArray = wordListArray3;
+    public void setWordListArray(String[] wordListArray) {
+        this.wordListArray = wordListArray;
     }
     /* This function will pick a random word from the wordList array */
 
-    public String chooseWord() {
-        /* Get a random number within the wordListArray3.length using the Random 
-         function and the nextInt method.        */
-        //Scanner input = new Scanner(System.in);
-        //System.out.println("Enter the length of the word you would like to unscramble (the only valid length is 3):");
-        //this.wordLength = input.next();
-        /* Get the user input for the word length and validate that it's within the range   */
-        /*System.out.println("You typed:\t" + this.wordLength);
-        if (!"3".equals(wordLength)) {
-            /* Right now, if it's not within the range just set it to something correct. 
-            System.out.println("3 is the only valid option at this point!\nSetting the word length to 3.");
-            wordLength = "3";
-            
-        } */
+        public String chooseWord() {
+
         playerWordLength = Integer.parseInt(wordLength);
-        /* put the integer into a double variable  */
+    
         randomNum = new Random().nextInt(wordListArray.length);
-        // randomNum = 15;
-        /* Divide by 2 then multiply by 2        */
-        // System.out.println(randomNum);
-        //randomNum /= 2;
-        // System.out.println(randomNum);
-        //randomNum *= 2;
-        // System.out.println(randomNum);
-        /* Check to see if the randomNum is outside of the array.length
-         if it is, set it to 1 less than the array.length which would be the last
-         array item */
+
         if (randomNum >= wordListArray.length) {
 
             randomNum = wordListArray.length - 1;
         }
-        /* Use the random number to choose the word in the array to use as the 
-         wordToScramble         */
-        /* cast the double type to integer */
         useRandomNum = (int) randomNum;
-        // System.out.println(useRandomNum);
         wordToScramble = (wordListArray[useRandomNum]);
 
         System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");

@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class WordList6 implements Serializable {
     private String wordLength = "6";
-    private String wordToScramble = "canned";
+    private String wordToScramble;// = "canned";
     private String[] wordListArray = {
         "drapes", "canned", "trains", "haters", "rumble",
         "caring", "mixing", "hinder", "boxers", "tanned", 

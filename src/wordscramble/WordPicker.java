@@ -58,7 +58,6 @@ public class WordPicker {
 
             sortStringExchange(wordListArray);
             System.out.println("Your word is one of these:\n");
-            //System.out.println(this.wordPicker());
             for (int i = 0; i < wordListArray.length; i++) {
                 System.out.println(wordListArray[i]);
 

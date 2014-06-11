@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class WordList5 implements Serializable {
     private String wordLength = "5";
-    private String wordToScramble = "canes";
+    private String wordToScramble;// = "canes";
     private String[] wordListArray = {
         "drain", "canes", "traps", "hates", "rumba",
         "cares", "mixer", "hands", "boxes", "tones", 

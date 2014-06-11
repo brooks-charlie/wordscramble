@@ -17,7 +17,6 @@ import static javax.swing.Spring.sum;
 public class TrackGames {
     
     public int winsOrLosses(int winOrLose){
-        //WordScramble.numGames++;
         System.out.println("numGames is: "+WordScramble.numGames);
         WordScramble.wins[WordScramble.numGames-1]=winOrLose;
         
@@ -29,7 +28,7 @@ public class TrackGames {
         for(int j=0;j<winsTemp.length;j++){
             WordScramble.wins[j]=winsTemp[j];
         }
-        //winsTemp[WordScramble.numGames]=WordScramble.wins[0];
+
         System.out.println("Number of Games from TrackGames is: " + WordScramble.numGames);
         System.out.println("The winsOrLosses arrays is: "+ Arrays.toString(WordScramble.wins));
         
@@ -39,8 +38,7 @@ public class TrackGames {
         int sum=0;
         for(int i : WordScramble.wins)
            sum += i;
-        
-        //WordScramble.wins
+
         return sum;
     }
     
