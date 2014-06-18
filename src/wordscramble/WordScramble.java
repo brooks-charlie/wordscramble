@@ -53,9 +53,10 @@ public class WordScramble implements Serializable {
        MainMenuView myMainMenu = new MainMenuView();
        myMainMenu.getInput();
        
-       ThreeStrikes myThreeStrikes= new ThreeStrikes();
+    /*   ThreeStrikes myThreeStrikes= new ThreeStrikes();
        myThreeStrikes.getStrikes(); 
        myThreeStrikes.calcStrike();
+       */
     }
        
        

@@ -10,7 +10,7 @@ package wordscramble;
  * @author Sara
  */
 public class ThreeStrikes {
-    String strikes;
+  /*  String strikes;
     byte userGuess= 2;
     byte failedAttempts=1;
     
@@ -53,5 +53,5 @@ public class ThreeStrikes {
         }
     }
      
-    
+    */
     }
