@@ -12,14 +12,15 @@ package wordscramble;
  */
 public class ScrambledWord {
     //String origWord = "tabbycat"; //holds original word selected from the word lists
-    String scrambledWord = "ctabytab";  //holds the word once it returns from the array
+ /*   String scrambledWord = "ctabytab";  //holds the word once it returns from the array
         
     
     /* public void displayOrig() {
         System.out.println("Original Word: " + origWord);     
-    }*/
+    }
     
     public void displayScrambledWord(){
         System.out.println("Scrambled Word: " + scrambledWord);
     }
+    */
 }
