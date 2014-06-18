@@ -11,7 +11,7 @@ package wordscramble;
  * @author Aubrey M. Raby
  */
 public class InputBox {
-    String usersGuess = "traincats"; //holds the current guess of the user
+/*    String usersGuess = "traincats"; //holds the current guess of the user
     Boolean compareResult; //compares usersGuess to origWord, true or false
     String correctGuess = "Congratulations, you guessed it!";
     String wrongGuess = "Sorry, that is not the correct word.";
@@ -25,5 +25,5 @@ public class InputBox {
         System.out.println("You guessed: " + usersGuess);     
         System.out.println(wrongGuess);     
     }
-    
+    */
 }
