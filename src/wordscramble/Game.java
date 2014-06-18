@@ -12,6 +12,6 @@ package wordscramble;
  */
 class Game {
  
-    String word;
-    String play;
+ //   String word;
+ //   String play;
 }

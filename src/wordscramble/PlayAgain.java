@@ -12,7 +12,7 @@ package wordscramble;
  * @author Sara
  */
 public class PlayAgain{
-       public void display() {
+  /*     public void display() {
         System.out.println("Would you like to play again?");    
             String yes ="true";
             String no ="false";
@@ -21,6 +21,7 @@ public class PlayAgain{
                     // returns the user to the menu to start the game. 
                 if(false) // will be adjusted later 
                     System.out.println("Thank you for playing!");
-                 */   
+                    
     }
+*/
 }

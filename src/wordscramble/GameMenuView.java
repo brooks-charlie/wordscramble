@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author heatherjensen
  */
 public class GameMenuView {
-    
+/*    
     String word;
     String play;
    
@@ -77,11 +77,12 @@ public class GameMenuView {
                 // Commented out by Charlie
         /* for (int i = 0; i < GameMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        } */
+        } 
         // Replaced with this
         for (String[] menuItem : GameMenuView.menuItems) {
             System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
         }
         System.out.println("\t===============================================================\n");
     }
+*/
 }

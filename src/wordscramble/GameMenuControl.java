@@ -13,7 +13,7 @@ package wordscramble;
  */
  public class GameMenuControl{
 
-     private Game game;
+   /*  private Game game;
      public GameMenuControl(){ //Added by Charlie
      // Commented out by Charlie
      // public GameMenuControl(Game game) {
@@ -22,7 +22,7 @@ package wordscramble;
      //Commented out by Charlie
      /* GameMenuControl() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    } */
+    } 
 
     public Game getGame() {
         return game;
@@ -31,8 +31,8 @@ package wordscramble;
     public void setGame(Game game) {
         this.game = game;
     }
-
-    void getPlayMode(String play) {
+*/
+ /*   void getPlayMode(String play) {
        // Commented out by Charlie
         // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         System.out.println("This is the Play Mode menu");
@@ -48,5 +48,5 @@ package wordscramble;
         wordMenu.getInput();
     }
     
-    
+    */
   }
