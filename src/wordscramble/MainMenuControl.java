@@ -9,10 +9,11 @@ package wordscramble;
 /**
  *
  * @author Aubrey
+ * 
+ * tightly cohesive and loosely coupled 6/18/2014
  */
 public class MainMenuControl {
     
-    //seeing if we can streamline the game to more closely match what will happen when we do start playing the game - Aubrey
     /*public void displayGameMenu() {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.getInput();

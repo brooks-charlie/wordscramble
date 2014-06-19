@@ -51,11 +51,12 @@ public class Score {
         }
         System.out.println("numGames played is: " + WordScramble.numGames);
 
-        this.getAvg();
-        this.bestScore();
+        //this.getAvg();
+        //this.bestScore();
         return totalScore;
     }
 
+    /*
     public void getWinStats(int wordLength, int wins) {
         double difficulty = 1.362;
         int gameDifficulty;
@@ -80,7 +81,7 @@ public class Score {
         if (resultWins > 0) {
             System.out.println("You are the \"bomb\"!\nYour win difficulty was " + resultWins);
         }
-    }
+    } 
 
     public void getAvg() {
         int avg = 0;
@@ -117,5 +118,5 @@ public class Score {
         }
         System.out.println("Your lowest score is:\t" + scores[scores.length - 2]);
         return first;
-    }
+    } */
 }

@@ -9,6 +9,9 @@ package wordscramble;
 /**
  *
  * @author Aubrey
+ * bubble sort to 'randomize' the selected word
+ * 
+ * tightly cohesive and loosely coupled 6/18/2014
  */
 public class Bubble {
     public char[] bubbleSort(String origWord) {

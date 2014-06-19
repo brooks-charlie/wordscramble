@@ -9,6 +9,8 @@ package wordscramble;
 /**
  *
  * @author heatherjensen
+ * 
+ * tightly cohesive and loosely coupled 6/18/2014
  */
 public class HelpMenuControl {
     
@@ -76,7 +78,7 @@ public class HelpMenuControl {
         displayHelpBorder();
     }
 
-    public void displayHelpBorder() {       
+    private void displayHelpBorder() {       
         System.out.println(
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }    
