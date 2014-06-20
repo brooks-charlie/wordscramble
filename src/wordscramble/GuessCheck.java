@@ -5,64 +5,92 @@
  */
 package wordscramble;
 
+import java.io.Serializable;
 import java.util.Scanner;
+
 
 /**
  *
  * @author Aubrey
  */
-public class GuessCheck {
+public class GuessCheck implements Serializable{
 
-    String guess;
-    int userGuess = 0;
-    int maxAttempts = 3;
-    int wordLength = 6; //pass this from the menu. 
+    private String guess;
+    private int userGuess = 0;
+    private int maxAttempts = 3;
+    //int wordLength = 6; //pass this from the menu. 
+    private int result = 0;
 
-    public void checker(String origWord, String scrambledWord, int wordLength) {
-        boolean correct = false;
+    public GuessCheck() {
+       //this.guess = guess;
+        
+    }
+    
+   /*ublic GuessCheck(int userGuess) {
+        this.userGuess = userGuess;
+    }*/
 
-        Timer myTimer = new Timer();
-        myTimer.start();
+    public String getGuess() {
+        return guess;
+    }
 
-        System.out.println("Scrambled Word: " + scrambledWord);
+    public void setGuess(String guess) {
+        this.guess = guess;
+    }
+
+    public int getUserGuess() {
+        return userGuess;
+    }
+
+    public void setUserGuess(int userGuess) {
+        this.userGuess = userGuess;
+    }
+
+    public int getMaxAttempts() {
+        return maxAttempts;
+    }
+
+    public void setMaxAttempts(int maxAttempts) {
+        this.maxAttempts = maxAttempts;
+    }
+
+    public int getResult() {
+        return result;
+    }
+
+    public void setResult(int result) {
+        this.result = result;
+    }
+    
+
+    public int checker(String origWord, String scrambledWord, int wordLength) {
+        //boolean correct = false;
+        
         for(;userGuess<maxAttempts;userGuess++){
             System.out.println("What is your guess?");
             Scanner input = new Scanner(System.in);
             this.guess = input.next();
             if (guess.length() != wordLength) {
                 System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
-
                 continue;
-            } else {
+            } 
+            else {
                 if (guess.equals(origWord)) {
-                    correct = true;
-                    myTimer.stop();
-                    myTimer.getElapsedTimeSecs();
-                    System.out.println("Good job, you are correct!\nThe answer was\t" + origWord);
-                    System.out.println("It took you "+ myTimer.getElapsedTimeSecs() + " seconds to guess correctly.");
+                    //correct = true;
+                    result = 1;
+                    
                 } else {
-                    myTimer.loopy(maxAttempts, userGuess);
+                    //myTimer.loopy(maxAttempts, userGuess);
                     System.out.println("Incorrect, try again!");
                     continue;
                 }
             }
-            System.out.println("You tried "+ userGuess + " times to get the word right.\nThe word was:\t"+origWord);
-            Score myScore = new Score();
-            myScore.displayScore(wordLength, userGuess);
             
-            TrackGames myTrackGames = new TrackGames();
-            myTrackGames.winsOrLosses(1);
-            
-            MainMenuView myMainMenu = new MainMenuView();
-            myMainMenu.getInput();
 
         }
-        Score myScore = new Score();
-        myScore.displayScore(wordLength, userGuess);
         
-        TrackGames myTrackGames = new TrackGames();
-        myTrackGames.winsOrLosses(0);
-        System.out.println("You didn't guess the right word. Play again, you'll get it next time!");
+        
+        return result;
     }
 
 }

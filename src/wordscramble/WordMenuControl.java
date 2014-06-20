@@ -12,34 +12,36 @@ package wordscramble;
  */
 class WordMenuControl {
     public int wordLength;
-        MainMenuControl mainMenuControl = new MainMenuControl();
+        //MainMenuControl mainMenuControl = new MainMenuControl();
+        
+        PlayGame myGame = new PlayGame();
 
     void wordlength3() {
 
         wordLength = 3;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame(wordLength);
+        this.myGame.playGame(wordLength);
     }
 
     void wordlength4() {
 
         wordLength = 4;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame(wordLength);
+        this.myGame.playGame(wordLength);
     }
 
     void wordlength5() {
 
         wordLength = 5;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame(wordLength);
+        this.myGame.playGame(wordLength);
     }
 
     void wordlength6() {
 
         wordLength = 6;
         System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.mainMenuControl.playGame(wordLength);
+        this.myGame.playGame(wordLength);
     }
     
 }

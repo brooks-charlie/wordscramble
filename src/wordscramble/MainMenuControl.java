@@ -31,19 +31,6 @@ public class MainMenuControl {
         helpMenu.getInput();
     }
     
-    public void playGame(int wordLength) {
-        String origWord, scrambledWord;
-        char[] bubbleChar;
-        
-        WordPicker myWord = new WordPicker();
-        origWord = myWord.wordPicker(wordLength);
-        
-        Bubble myBubble = new Bubble();
-        bubbleChar = myBubble.bubbleSort(origWord);
-        scrambledWord = new String(bubbleChar);
-        
-        GuessCheck myGuess = new GuessCheck();
-        myGuess.checker(origWord, scrambledWord, wordLength);
-    }
+    
    
 }
