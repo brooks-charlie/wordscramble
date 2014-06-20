@@ -9,25 +9,27 @@ package wordscramble;
 /**
  *
  * @author Aubrey
+ * 
+ * tightly cohesive and loosely coupled- Heather 6/19/14
  */
 public class PlayModeMenuControl {
     
               
     WordMenuView wordMenu = new WordMenuView();
             
-    void justForFun() {
+    public void justForFun() {
        
         System.out.println("\n You have choosen to play just for fun!\n");
         this.wordMenu.getInput();
     }
     
-    void scoredMode() {
+    public void scoredMode() {
        
         System.out.println("\n You have choosen to play in scored mode.\n");
         this.wordMenu.getInput();
     }
     
-    void timedAndScored() {
+    public void timedAndScored() {
        
         System.out.println("\n You have choosen to play in timed and scored mode.\n");
         this.wordMenu.getInput();

@@ -5,18 +5,41 @@
  */
 package wordscramble;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import static wordscramble.WordScramble.scores;
 
 /**
  *
  * @author Aubrey M. Raby
+ * 
+ * tightly cohesive, loosely coupled, serializable- Heather 6/19/14
  */
-public class Score {
+public class Score implements Serializable {
 
-    String scoreNotification = "Your score is: ";
-    int temp;
+    private String scoreNotification = "Your score is: ";
+    private int temp;
 
+    public Score() {
+    }
+
+    public String getScoreNotification() {
+        return scoreNotification;
+    }
+
+    public void setScoreNotification(String scoreNotification) {
+        this.scoreNotification = scoreNotification;
+    }
+
+    public int getTemp() {
+        return temp;
+    }
+
+    public void setTemp(int temp) {
+        this.temp = temp;
+    }
+    
+    
     public int displayScore(int wordLength, int failedAttempts) {
  
         System.out.println("You played with " + wordLength + " letters and used " + failedAttempts + " tries.");

@@ -13,7 +13,7 @@ package wordscramble;
 public class Menu {
   
    //instance variables
-   String settings;
+   /*String settings;
    String helpMenu;
    String instructions= "Word Scramble\n"
     +"Number of players: one\n" 
@@ -33,6 +33,6 @@ public class Menu {
    
    public void displayExit(){
        System.out.println("Exit");
-    }
+    }*/
 }
    

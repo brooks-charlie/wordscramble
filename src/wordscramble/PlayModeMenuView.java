@@ -11,6 +11,8 @@ import java.util.Scanner;
 /**
  *
  * @author Aubrey
+ * 
+ * tightly cohesive and loosely coupled- Heather 6/19/14
  */
 public class PlayModeMenuView {
     
