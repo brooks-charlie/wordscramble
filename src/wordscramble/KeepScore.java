@@ -30,10 +30,10 @@ public class KeepScore {
         WordScramble.scores[WordScramble.numGames] = totalScore;
 
         // create a temporary array that is larger than the original
-        int scores[] = new int[WordScramble.numGames + 2];
+        int[] tempScores = new int[WordScramble.numGames + 2];
         // Copy the contents of the original array to the temporary array
         for (int i = 0; i < WordScramble.scores.length; i++) {
-            scores[i] = WordScramble.scores[i];
+            tempScores[i] = WordScramble.scores[i];
         }
         // temporarily added to show the contents of the arrays.
         //System.out.println(Arrays.toString(scores));
@@ -46,7 +46,7 @@ public class KeepScore {
         // Now that the original array is larger, we can copy the contents of the temp arrray
         // into the original array and also have room for the score of the next game.
         for (int i = 0; i < WordScramble.scores.length; i++) {
-            WordScramble.scores[i] = scores[i];
+            WordScramble.scores[i] = tempScores[i];
         }
         // temporarily used to show some things
         //System.out.println("WordScramble.scores array length is:\t" + WordScramble.scores.length);

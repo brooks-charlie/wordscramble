@@ -61,9 +61,9 @@ public class HelpMenuView {
                 case "W": 
                     this.helpMenuControl.displayLengthHelp();
                     break;
-                case "H":    
-                    this.WordPicker.chooseWord();
-                    break;
+                //case "H":    
+                   // this.WordPicker.wordHint();
+                  //  break;
                 case "Q":
                     break;
                 default:

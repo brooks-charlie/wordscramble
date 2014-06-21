@@ -22,26 +22,30 @@ public class WordPicker {
         if(wordLength==3){
             //String newWord;
             WordList3 myWordList3 = new WordList3();
-            newWord = myWordList3.chooseWord();
+            newWord = myWordList3.chooseWord(wordLength);
         }
         if(wordLength==4){
             //String newWord;
-            WordList4 myWordList4 = new WordList4();
-            newWord = myWordList4.chooseWord();
+            WordList3 myWordList3 = new WordList3();
+            newWord = myWordList3.chooseWord(wordLength);
         }
         if(wordLength==5){
-            WordList5 myWordList5 = new WordList5();
-            newWord = myWordList5.chooseWord();
+            WordList3 myWordList3 = new WordList3();
+            newWord = myWordList3.chooseWord(wordLength);
         }
-        if(wordLength==6){
-            WordList6 myWordList6 = new WordList6();
-            newWord = myWordList6.chooseWord();
+        if(wordLength==3){
+            WordList3 myWordList3 = new WordList3();
+            newWord = myWordList3.chooseWord(wordLength);
         } 
         //String newWord = "rabbit";
         return newWord;
     }
-
-    public void chooseWord() {
+/* Future use: add new hints menu with a WordHints class so
+    the player can type "hints" during the game to have options for
+    the definition, choose from a list of words or to place one letter in the right place.
+    
+    
+    public void wordHint() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("\tDo you want a hint to help you guess the word?\n"
@@ -64,8 +68,9 @@ public class WordPicker {
             }
         }
     }
+    */
 
-    public static void sortStringExchange(String x[]) {
+    private void sortStringExchange(String x[]) {
         int i, j;
         String temp;
 
