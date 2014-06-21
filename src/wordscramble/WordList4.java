@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author charliebrooks
  * 
- */
+ *
 
 public class WordList4 implements Serializable {
     private String wordLength = "4";
@@ -60,7 +60,7 @@ public class WordList4 implements Serializable {
     public void chooseWord(){
      wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     }
-    */
+    *
     public String chooseWord() {
 
         playerWordLength = Integer.parseInt(wordLength);
@@ -86,3 +86,4 @@ public class WordList4 implements Serializable {
     
     
 }
+*/
