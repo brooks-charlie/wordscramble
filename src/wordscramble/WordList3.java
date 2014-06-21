@@ -23,43 +23,74 @@ public class WordList3 implements Serializable {
         "car", "max", "ham", "box", "ton",
         "tar", "man", "ran", "run", "sat"
     };
+
+    String chooseWord() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public class WordList4 implements Serializable {
+    private String wordLength = "4";
+    private String wordToScramble;// = "cats";
+    private String[] wordListArray = {
+        "dogs", "cats", "tape", "hats", "robs",
+        "cars", "main", "hams", "bone", "tame", 
+        "tall", "mane", "rain", "ruin", "seat"
+    };
+    
+    public class WordList5 implements Serializable {
+    private String wordLength = "5";
+    private String wordToScramble;// = "canes";
+    private String[] wordListArray = {
+        "drain", "canes", "traps", "hates", "rumba",
+        "cares", "mixer", "hands", "boxes", "tones", 
+        "tares", "mines", "rains", "ruins", "saint"
+    };
+    
+    public class WordList6 implements Serializable {
+    private String wordLength = "6";
+    private String wordToScramble;// = "canned";
+    private String[] wordListArray = {
+        "drapes", "canned", "trains", "haters", "rumble",
+        "caring", "mixing", "hinder", "boxers", "tanned", 
+        "taring", "miners", "reigns", "ruined", "saints"
+    };
     //public String wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     private double randomNum;
     private int playerWordLength;
     private int useRandomNum;
-
-    public double getRandomNum() {
+/*
+    private double getRandomNum() {
         return randomNum;
     }
 
-    public void setRandomNum(int randomNum) {
+    private void setRandomNum(int randomNum) {
         this.randomNum = randomNum;
     }
 
-    public WordList3() {
+    public WordList6() {
     }
 
-    public String getWordLength() {
+    private String getWordLength() {
         return wordLength;
     }
 
-    public void setWordLength(String wordLength) {
+    private void setWordLength(String wordLength) {
         this.wordLength = wordLength;
     }
 
-    public String getWordToScramble() {
+    private String getWordToScramble() {
         return wordToScramble;
     }
 
-    public void setWordToScramble(String wordToScramble) {
+    private void setWordToScramble(String wordToScramble) {
         this.wordToScramble = wordToScramble;
     }
 
-    public String[] getWordListArray() {
+    private String[] getWordListArray() {
         return wordListArray;
     }
 
-    public void setWordListArray(String[] wordListArray) {
+    private void setWordListArray(String[] wordListArray) {
         this.wordListArray = wordListArray;
     }
     /* This function will pick a random word from the wordList array */
@@ -81,11 +112,14 @@ public class WordList3 implements Serializable {
         return wordToScramble;
     }
 
-    public void displayVariables() {
+    private void displayVariables() {
         System.out.println("This is the number of letters in the scrambled word: " + this.wordLength);
         System.out.println("This is the list of words:" + Arrays.toString(this.wordListArray));
-        // System.out.println("This is the word that will be scrambled: " + this.wordToScramble);
+        // SystSaem.out.println("This is the word that will be scrambled: " + this.wordToScramble);
         // chooseWord();
     }
 
+}
+    }
+}
 }
