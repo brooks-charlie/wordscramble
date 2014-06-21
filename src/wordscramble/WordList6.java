@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  *
  * @author charliebrooks
- */
+ *
 public class WordList6 implements Serializable {
     private String wordLength = "6";
     private String wordToScramble;// = "canned";
@@ -56,7 +56,7 @@ public class WordList6 implements Serializable {
     public void chooseWord(){
      wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     }
-    */
+    *
     public String chooseWord() {
 
         playerWordLength = Integer.parseInt(wordLength);
@@ -82,3 +82,4 @@ public class WordList6 implements Serializable {
     
     
 }
+*/
