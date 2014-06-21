@@ -10,6 +10,7 @@ import java.util.Arrays;
 /**
  *
  * @author charliebrooks
+ * * tightly cohesive and loosely coupled 6/18/2014
  */
 public class KeepScore {
 
