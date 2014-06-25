@@ -10,10 +10,10 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Random;
 
-/**
+/*
  *
  * @author charliebrooks
- */
+ *
 public class WordList5 implements Serializable {
     private String wordLength = "5";
     private String wordToScramble;// = "canes";
@@ -56,7 +56,7 @@ public class WordList5 implements Serializable {
     public void chooseWord(){
      wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     }
-    */
+    *
     public String chooseWord() {
 
         playerWordLength = Integer.parseInt(wordLength);
@@ -82,3 +82,4 @@ public class WordList5 implements Serializable {
     
     
 }
+*/

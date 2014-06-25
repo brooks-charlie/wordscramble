@@ -14,7 +14,9 @@ import java.util.Scanner;
 /**
  *
  * @author charliebrooks
+ * 
  */
+
 public class WordList4 implements Serializable {
     private String wordLength = "4";
     private String wordToScramble;// = "cats";
@@ -23,6 +25,7 @@ public class WordList4 implements Serializable {
         "cars", "main", "hams", "bone", "tame", 
         "tall", "mane", "rain", "ruin", "seat"
     };
+    
     private double randomNum;
     private int playerWordLength;
     private int useRandomNum;

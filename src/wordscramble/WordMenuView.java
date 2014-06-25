@@ -26,11 +26,6 @@ public class WordMenuView {
     WordMenuControl wordMenuControl = new WordMenuControl();
     MainMenuControl mainMenuControl = new MainMenuControl();
     
-    public WordMenuView() {
-
-    }
- 
-    
     public void getInput() {       
 
         String command;
