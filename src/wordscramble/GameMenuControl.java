@@ -6,47 +6,32 @@
 
 package wordscramble;
 
-
 /**
  *
- * @author heatherjensen
+ * @author Aubrey
+ * 
+ * tightly cohesive and loosely coupled- Heather 6/19/14
  */
- public class GameMenuControl{
-
-   /*  private Game game;
-     public GameMenuControl(){ //Added by Charlie
-     // Commented out by Charlie
-     // public GameMenuControl(Game game) {
-        this.game = game;
-    }
-     //Commented out by Charlie
-     /* GameMenuControl() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    } 
-
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-*/
- /*   void getPlayMode(String play) {
-       // Commented out by Charlie
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        System.out.println("This is the Play Mode menu");
-       //public void displayGameMenu() {
-        
-  //  }
-    }
-    void getWordLength(String word) {
-        // Commented out by Charlie
-        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        // CSystem.out.println("This is the Word Length menu");
-        WordMenuView wordMenu = new WordMenuView();
-        wordMenu.getInput();
+public class GameMenuControl {
+    
+              
+    WordMenuView wordMenu = new WordMenuView();
+            
+    public void justForFun() {
+       
+        System.out.println("\n You have choosen to play just for fun!\n");
+        this.wordMenu.getInput();
     }
     
-    */
-  }
+    public void scoredMode() {
+       
+        System.out.println("\n You have choosen to play in scored mode.\n");
+        this.wordMenu.getInput();
+    }
+    
+    public void timedAndScored() {
+       
+        System.out.println("\n You have choosen to play in timed and scored mode.\n");
+        this.wordMenu.getInput();
+    }
+}

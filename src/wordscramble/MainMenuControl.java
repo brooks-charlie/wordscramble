@@ -20,7 +20,7 @@ public class MainMenuControl {
     }*/
     
     public void displayGameMenu() {
-        PlayModeMenuView playMenu = new PlayModeMenuView();
+        GameMenuView playMenu = new GameMenuView();
         playMenu.getInput();
         
     }

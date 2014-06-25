@@ -10,79 +10,78 @@ import java.util.Scanner;
 
 /**
  *
- * @author heatherjensen
+ * @author Aubrey
+ * 
+ * tightly cohesive and loosely coupled- Heather 6/19/14
  */
-public class GameMenuView {
-/*    
-    String word;
-    String play;
-   
-       Game game;
-       // Commented by Charlie
-       //private final GameMenuControl gameControl = new GameMenuControl(game);
-    private final GameMenuControl gameControl = new GameMenuControl();
-
+public class GameMenuView extends Menu{
+    
     private final static String[][] menuItems = {
-        {"1", "Word Length options"},
-        {"2", "Play mode options"},
-        {"Q", "Return to Main menu"}
-    };
-
-    GameMenuControl GameMenuControl = new GameMenuControl();
+    
+        {"F", "Just for fun!"},
+        {"S", "Scored"},
+        {"T", "Timed and Scored"},
+        {"Q", "Back to Main Menu"}
+    }; 
+  
+    GameMenuControl playModeMenuControl = new GameMenuControl();
+    MainMenuControl mainMenuControl = new MainMenuControl();
     
     public GameMenuView() {
-    
+        super(GameMenuView.menuItems);
     }
+ 
+    @Override
+    public void getInput() {       
 
-       public void getInput() {       
-        String command;
-        Scanner inFile = new Scanner(System.in);
+    
+        boolean valid = false;
         
-        do {
-            this.display();
-
+        while(!valid){
+            this.display(); //dispay the menu
+            
             // get commaned entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "1":
-                   // this.gameControl.getWordLength(this.game.word); 
-                    // Replaced with this
-                    this.gameControl.getWordLength(this.word);
+                case "F":
+                    valid = true;
+                    this.playModeMenuControl.justForFun();
                     break;
-                case "2":
-                    // this.gameControl.getPlayMode(this.game.play);
-                    // Replaced with this
-                    this.gameControl.getPlayMode(this.play);
+                case "S":
+                    valid = true;
+                    this.playModeMenuControl.scoredMode();
+                    break;
+                case "T":
+                    valid = true;
+                    this.playModeMenuControl.timedAndScored();
                     break;
                 case "Q":
+                    valid = true;
                     MainMenuView myMainMenu = new MainMenuView();
                     myMainMenu.getInput();
                     break;
                 default: 
                     new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
+                    continue;                    
             }
-        } while (!command.equals("Q"));
+        }
 
-        return;
+
+     return;
     }
     
+
     
-        
-    public final void display() {
+    
+   public final void display() {
         System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-                // Commented out by Charlie
-        /* for (int i = 0; i < GameMenuView.menuItems.length; i++) {
+        System.out.println("\tEnter the number associated with one of the following commands:");
+
+        for (int i = 0; i < GameMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        } 
-        // Replaced with this
-        for (String[] menuItem : GameMenuView.menuItems) {
-            System.out.println("\t   " + menuItem[0] + "\t" + menuItem[1]);
         }
         System.out.println("\t===============================================================\n");
     }
-*/
 }

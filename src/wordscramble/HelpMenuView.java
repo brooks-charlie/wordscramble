@@ -13,7 +13,7 @@ import java.util.Scanner;
  * 
  * tightly cohesive and loosely coupled 6/18/2014
  */
-public class HelpMenuView {
+public class HelpMenuView extends Menu {
 
     private final static String[][] menuItems = {
         {"A", "About Word Scramble"},
@@ -30,12 +30,12 @@ public class HelpMenuView {
     WordPicker WordPicker = new WordPicker();
     
     public HelpMenuView(){
-        
+        super(HelpMenuView.menuItems); 
     }
     
+    @Override
    public void getInput (){
-      String command;
-      Scanner inFile = new Scanner(System.in);
+      
       
        do {           
                      
