@@ -25,7 +25,7 @@ public abstract class Menu {
     
     public Menu(String[][] menuItems){}
     
-    private final void display(){}
+    public abstract void display();
    //instance variables
    /*String settings;
    String helpMenu;

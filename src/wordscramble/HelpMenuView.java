@@ -76,7 +76,8 @@ public class HelpMenuView extends Menu {
    return;
  
    }
-private final void display() {
+   @Override
+public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
