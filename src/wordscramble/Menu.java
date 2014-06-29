@@ -6,12 +6,26 @@
 
 package wordscramble;
 
+import java.util.Scanner;
+
 /**
  *
  * @author heatherjensen
  */
-public class Menu {
-  
+public abstract class Menu {
+    
+     public String[][] menuItems = null;
+     
+     String command;
+     Scanner inFile = new Scanner(System.in);
+     
+    public abstract void getInput();
+
+    public Menu() {}
+    
+    public Menu(String[][] menuItems){}
+    
+    public abstract void display();
    //instance variables
    /*String settings;
    String helpMenu;

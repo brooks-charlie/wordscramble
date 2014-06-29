@@ -14,9 +14,9 @@ import java.util.Scanner;
  * 
  * tightly cohesive and loosely coupled 6/18/2014
  */
-public class MainMenuView {
+public class MainMenuView extends Menu{
         
-    private static final String[][] menuItems = {
+    private final static String[][] menuItems = {
         {"G", "Game Menu"},
         {"H", "Help Menu"},
         //{"P", "Play Game"},
@@ -26,19 +26,19 @@ public class MainMenuView {
     MainMenuControl mainMenuControl = new MainMenuControl();
     
     public MainMenuView() {
-
+        super(MainMenuView.menuItems);
     }
  
-    
+    @Override
     public void getInput() {       
 
-        String command;
-        Scanner inFile = new Scanner(System.in);
+        
+        
         
         do {
             this.display(); // display the menu
 
-            // get commaned entered
+            // get command entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
@@ -68,8 +68,8 @@ public class MainMenuView {
     
 
     
-    
-   private final void display() {
+    @Override
+   public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

@@ -84,7 +84,7 @@ public class PlayGame implements Serializable{
             System.out.println("It took you "+ myTimer.getElapsedTimeSecs() + " seconds to guess correctly.");
             //System.out.println("You tried "+ userGuess + " times to get the word right.\nThe word was:\t"+origWord);
             
-            Score myScore = new Score();
+            ScoreCalc myScore = new ScoreCalc();
             myScore.displayScore(wordLength, myGuess.getUserGuess());
             
             TrackGames myTrackGames = new TrackGames();
@@ -96,7 +96,7 @@ public class PlayGame implements Serializable{
             myTimer.stop();
             myTimer.getElapsedTimeSecs();
             
-            Score myScore = new Score();
+            ScoreCalc myScore = new ScoreCalc();
             myScore.displayScore(wordLength, myGuess.getUserGuess());
 
             TrackGames myTrackGames = new TrackGames();
