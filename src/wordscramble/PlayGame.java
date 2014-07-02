@@ -18,7 +18,7 @@ public class PlayGame implements Serializable{
     private char[] bubbleChar;
     private GuessCheck myGuess = new GuessCheck();
     private long startTime;
-    private long totalTime;
+    private float totalTime;
 
     public PlayGame() {
     }

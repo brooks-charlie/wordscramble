@@ -52,17 +52,19 @@ public class Timer {
 
     
     //converting to seconds
-    public long getElapsedTimeSecs(long startTime) {
-        long elapsed;
+    public float getElapsedTimeSecs(long startTime) {
+        float elapsed;
         System.out.println("is the game running? " + running);
         if (running) {
             elapsed = ((System.currentTimeMillis() - startTime) / 1000);
         }
         else {
-            elapsed = ((stopTime - startTime) / 1000);
+            elapsed = ((stopTime - startTime));// / 1000);
+            elapsed = (elapsed /1000);
         }
         System.out.println("start time is: " + startTime);
         System.out.println("stop time is " + stopTime);
+        
         return elapsed;
     }
    
