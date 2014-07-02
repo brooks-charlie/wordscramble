@@ -15,9 +15,11 @@ public class Timer {
    private long stopTime=0;
    private boolean running=false;
    
-   public void start(){
+   public long start(){
         this.startTime=System.currentTimeMillis();
         this.running=true;
+        System.out.println("Start Time is " + startTime);
+        return startTime;
     
            }
    public void loopy(int maxAttempts, int userGuess){
@@ -50,14 +52,17 @@ public class Timer {
 
     
     //converting to seconds
-    public long getElapsedTimeSecs() {
+    public long getElapsedTimeSecs(long startTime) {
         long elapsed;
+        System.out.println("is the game running? " + running);
         if (running) {
             elapsed = ((System.currentTimeMillis() - startTime) / 1000);
         }
         else {
             elapsed = ((stopTime - startTime) / 1000);
         }
+        System.out.println("start time is: " + startTime);
+        System.out.println("stop time is " + stopTime);
         return elapsed;
     }
    

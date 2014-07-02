@@ -17,6 +17,8 @@ public class PlayGame implements Serializable{
     private String origWord, scrambledWord;
     private char[] bubbleChar;
     private GuessCheck myGuess = new GuessCheck();
+    private long startTime;
+    private long totalTime;
 
     public PlayGame() {
     }
@@ -67,7 +69,7 @@ public class PlayGame implements Serializable{
         System.out.println("Scrambled Word: " + scrambledWord);
         
         Timer myTimer = new Timer();
-        myTimer.start();
+        startTime = myTimer.start();
         
         this.endGame(myGuess.checker(origWord, scrambledWord, wordLength), wordLength);
         
@@ -80,9 +82,9 @@ public class PlayGame implements Serializable{
         if (result == 1){
             
             myTimer.stop();
-            myTimer.getElapsedTimeSecs();
+            totalTime=myTimer.getElapsedTimeSecs(startTime);
             System.out.println("Good job, you are correct!\nThe answer was\t" + origWord);
-            System.out.println("It took you "+ myTimer.getElapsedTimeSecs() + " seconds to guess correctly.");
+            System.out.println("It took you "+ totalTime + " seconds to guess correctly.");
             //System.out.println("You tried "+ userGuess + " times to get the word right.\nThe word was:\t"+origWord);
             
             ScoreCalc myScore = new ScoreCalc();
@@ -95,7 +97,7 @@ public class PlayGame implements Serializable{
             myMainMenu.getInput();}
         else {
             myTimer.stop();
-            myTimer.getElapsedTimeSecs();
+            //myTimer.getElapsedTimeSecs();
             
             ScoreCalc myScore = new ScoreCalc();
             myScore.displayScore(wordLength, myGuess.getUserGuess());
