@@ -78,6 +78,7 @@ public class GuessCheck implements Serializable{
                 if (guess.equals(origWord)) {
                     //correct = true;
                     result = 1;
+                    break;
                     
                 } else {
                   //  myTimer.loopy(maxAttempts, userGuess);
