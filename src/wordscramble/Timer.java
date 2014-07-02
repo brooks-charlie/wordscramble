@@ -20,7 +20,7 @@ public class Timer {
         this.running=true;
     
            }
-   /*public void loopy(int maxAttempts, int userGuess){
+   public void loopy(int maxAttempts, int userGuess){
    for(;userGuess<=maxAttempts; ) {  
         if(userGuess<maxAttempts) {
             this.running=true;
@@ -30,7 +30,7 @@ public class Timer {
         }
         break;
 }
-   }*/
+   }
    
    public void stop(){
    this.stopTime=System.currentTimeMillis();

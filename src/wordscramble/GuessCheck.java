@@ -20,7 +20,7 @@ public class GuessCheck implements Serializable{
     private int maxAttempts = 3;
     //int wordLength = 6; //pass this from the menu. 
     private int result = 0;
-
+    
     public GuessCheck() {
        //this.guess = guess;
         
@@ -80,7 +80,7 @@ public class GuessCheck implements Serializable{
                     result = 1;
                     
                 } else {
-                    //myTimer.loopy(maxAttempts, userGuess);
+                  //  myTimer.loopy(maxAttempts, userGuess);
                     System.out.println("Incorrect, try again!");
                     continue;
                 }
