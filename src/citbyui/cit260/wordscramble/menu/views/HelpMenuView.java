@@ -1,6 +1,9 @@
-package wordscramble;
+package citbyui.cit260.wordscramble.menu.views;
 
 import java.util.Scanner;
+import wordscramble.HelpMenuControl;
+import wordscramble.WordPicker;
+import wordscramble.WordScrambleError;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

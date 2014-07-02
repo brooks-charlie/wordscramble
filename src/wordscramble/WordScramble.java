@@ -10,13 +10,15 @@
 
 package wordscramble;
 
+import citbyui.cit260.wordscramble.enums.Status;
+import citbyui.cit260.wordscramble.menu.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
 
 public class WordScramble implements Serializable {
 
     //Instance Variables
-    static int numGames=0;
+    public static int numGames=0;
     static int scores []= new int [2];
     static int wins[] = new int[1];
     
@@ -69,6 +71,8 @@ public class WordScramble implements Serializable {
 
     public String getInstructions() {
         return instructions;
+        //System.out.println(""); 
+        //Status.INSTRUCTIONS.display();
     }
 
     public void setInstructions(String instructions) {
@@ -97,5 +101,6 @@ public class WordScramble implements Serializable {
     private void displayHelp(){
          System.out.println("\n Welcome " + this.name + "\n");
          System.out.println(this.instructions);
+         //Status.INSTRUCTIONS.display();
      }
 }

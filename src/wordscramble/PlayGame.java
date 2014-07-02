@@ -6,6 +6,7 @@
 
 package wordscramble;
 
+import citbyui.cit260.wordscramble.menu.views.MainMenuView;
 import java.io.Serializable;
 
 /**

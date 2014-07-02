@@ -74,32 +74,33 @@ public class WordList3 implements Serializable {
                     // chooseWord();
               //  }
 
-    String chooseWord(int wordLength) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+  //  String chooseWord(int wordLength) {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  //  }
 
-            }
+      //      }
 
-/*   
+   
 
-   public String chooseWord() {
+   public String chooseWord(int wordLength) {
 
-        playerWordLength = Integer.parseInt(wordLength);
+       // playerWordLength = Integer.parseInt(wordLength);
     
-        randomNum = new Random().nextInt(wordListArray.length);
+        randomNum = new Random().nextInt(wordListArray3.length);
 
-        if (randomNum >= wordListArray.length) {
+        if (randomNum >= wordListArray3.length) {
 
-            randomNum = wordListArray.length - 1;
+            randomNum = wordListArray3.length - 1;
         }
         useRandomNum = (int) randomNum;
-        wordToScramble = (wordListArray[useRandomNum]);
+        wordToScramble = (wordListArray3[useRandomNum]);
 
         System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
         return wordToScramble;
   
 }
+}
 
 
-*/
+
 

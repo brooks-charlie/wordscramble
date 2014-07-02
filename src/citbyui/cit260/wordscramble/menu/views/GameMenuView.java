@@ -4,9 +4,13 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.menu.views;
 
+import citbyui.cit260.wordscramble.enums.Status;
 import java.util.Scanner;
+import wordscramble.GameMenuControl;
+import wordscramble.MainMenuControl;
+import wordscramble.WordScrambleError;
 
 /**
  *

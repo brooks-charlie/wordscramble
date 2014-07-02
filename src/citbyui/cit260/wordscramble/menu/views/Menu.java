@@ -4,28 +4,33 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.menu.views;
 
+import citbyui.cit260.wordscramble.interfaces.DisplayInfo;
+import citbyui.cit260.wordscramble.interfaces.EnterInfo;
 import java.util.Scanner;
 
 /**
  *
  * @author heatherjensen
  */
-public abstract class Menu {
+public class Menu implements DisplayInfo, EnterInfo {
     
      public String[][] menuItems = null;
      
      String command;
      Scanner inFile = new Scanner(System.in);
-     
-    public abstract void getInput();
+    // @Override
+     public void display(){}
+     public void getInput(){}
+    //public abstract void getInput();
 
     public Menu() {}
     
     public Menu(String[][] menuItems){}
     
-    public abstract void display();
+    //public abstract void display();
+    
    //instance variables
    /*String settings;
    String helpMenu;

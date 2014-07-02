@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.menu.views;
 
 import java.util.Scanner;
+import wordscramble.MainMenuControl;
+import wordscramble.WordMenuControl;
+import wordscramble.WordScrambleError;
 
 /**
  *

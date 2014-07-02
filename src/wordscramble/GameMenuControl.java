@@ -6,6 +6,8 @@
 
 package wordscramble;
 
+import citbyui.cit260.wordscramble.menu.views.WordMenuView;
+
 /**
  *
  * @author Aubrey
