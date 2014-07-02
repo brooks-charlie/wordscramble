@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class WordList4 implements Serializable {
     private String wordLength = "4";
     private String wordToScramble;// = "cats";
-    private String[] wordListArray = {
+    private String[] wordListArray4 = {
         "dogs", "cats", "tape", "hats", "robs",
         "cars", "main", "hams", "bone", "tame", 
         "tall", "mane", "rain", "ruin", "seat"
@@ -50,29 +50,29 @@ public class WordList4 implements Serializable {
     }
 
     public String[] getWordListArray() {
-        return wordListArray;
+        return wordListArray4;
     }
 
     public void setWordListArray(String[] wordListArray) {
-        this.wordListArray = wordListArray;
+        this.wordListArray4 = wordListArray;
     }
     /* This function will pick a random word from the wordList array
     public void chooseWord(){
      wordToScramble = (wordListArray[new Random().nextInt(wordListArray.length)]);
     }
     */
-    public String chooseWord() {
+    public String chooseWord(int wordLength) {
 
-        playerWordLength = Integer.parseInt(wordLength);
+       // playerWordLength = Integer.parseInt(wordLength);
     
-        randomNum = new Random().nextInt(wordListArray.length);
+        randomNum = new Random().nextInt(wordListArray4.length);
 
-        if (randomNum >= wordListArray.length) {
+        if (randomNum >= wordListArray4.length) {
 
-            randomNum = wordListArray.length - 1;
+            randomNum = wordListArray4.length - 1;
         }
         useRandomNum = (int) randomNum;
-        wordToScramble = (wordListArray[useRandomNum]);
+        wordToScramble = (wordListArray4[useRandomNum]);
 
         System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
         return wordToScramble;
@@ -80,7 +80,7 @@ public class WordList4 implements Serializable {
     
     public void displayVariables(){
          System.out.println("This is the number of letters in the scrambled word: " + this.wordLength + "\n");
-         System.out.println("This is the list of words: \n" + Arrays.toString(this.wordListArray));
+         System.out.println("This is the list of words: \n" + Arrays.toString(this.wordListArray4));
          System.out.println("This is the word that will be scrambled: " + this.wordToScramble);
      }
     

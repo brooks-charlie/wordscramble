@@ -26,16 +26,16 @@ public class WordPicker {
         }
         if(wordLength==4){
             //String newWord;
-            WordList3 myWordList3 = new WordList3();
-            newWord = myWordList3.chooseWord(wordLength);
+            WordList4 myWordList4 = new WordList4();
+            newWord = myWordList4.chooseWord(wordLength);
         }
         if(wordLength==5){
-            WordList3 myWordList3 = new WordList3();
-            newWord = myWordList3.chooseWord(wordLength);
+            WordList5 myWordList5 = new WordList5();
+            newWord = myWordList5.chooseWord(wordLength);
         }
-        if(wordLength==3){
-            WordList3 myWordList3 = new WordList3();
-            newWord = myWordList3.chooseWord(wordLength);
+        if(wordLength==6){
+            WordList6 myWordList6 = new WordList6();
+            newWord = myWordList6.chooseWord(wordLength);
         } 
         //String newWord = "rabbit";
         return newWord;
