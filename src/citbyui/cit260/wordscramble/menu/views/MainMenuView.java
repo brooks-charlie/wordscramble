@@ -6,10 +6,11 @@
 
 package citbyui.cit260.wordscramble.menu.views;
 
-import wordscramble.MainMenuControl;
+//import wordscramble.MainMenuControl;
 import wordscramble.TrackGames;
 import wordscramble.WordScramble;
 import wordscramble.WordScrambleError;
+import wordscramble.MainMenuControl;
 import java.util.Scanner;
 
 /**
