@@ -10,6 +10,7 @@
 
 package wordscramble;
 
+import citbyui.cit260.wordscramble.enums.AubreyEnum;
 import citbyui.cit260.wordscramble.enums.Status;
 import citbyui.cit260.wordscramble.menu.views.MainMenuView;
 import java.io.Serializable;
@@ -103,4 +104,7 @@ public class WordScramble implements Serializable {
          System.out.println(this.instructions);
          //Status.INSTRUCTIONS.display();
      }
+    
+    //Aubrey - I can't get the enum to work     
+    System.out.println("\n\t" + AubreyEnum.PURPLE.displayColor());
 }
