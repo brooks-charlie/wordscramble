@@ -4,17 +4,19 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.stats;
 
-import java.io.Serializable;
+
+import citbyui.cit260.wordscramble.interfaces.DisplayStats;
+import wordscramble.WordScramble;
 
 /**
  *
  * @author heatherjensen
  */
-public class StatsMin extends Stats implements Serializable{
+public class StatsMin implements DisplayStats{
   
-    @Override
+     public void display(){} 
     public void CalcStats() { //finds lowest score []
        int min = 0;
         for (int myStat : WordScramble.scores) {
@@ -23,6 +25,6 @@ public class StatsMin extends Stats implements Serializable{
             }
         }
         System.out.println("Your lowest score is:\t" + min); 
-           
+       
     } 
 }

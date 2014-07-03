@@ -4,21 +4,22 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.stats;
 
+import citbyui.cit260.wordscramble.interfaces.DisplayStats;
 import java.io.Serializable;
 
 /**
  *
  * @author heatherjensen
- * Super-class for StatsMin, StatsMax, and StatsAvg
+ * 
  */
-public abstract class Stats implements Serializable{
+public class Stats implements DisplayStats{
 
      int myStat;
      
-    public abstract void CalcStats();
+    public void display(){} 
+    public void CalcStats(){}
 
-    public Stats() {
-     }
+    public Stats() {}
 }

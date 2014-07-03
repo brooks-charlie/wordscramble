@@ -4,19 +4,23 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.stats;
 
+
+import citbyui.cit260.wordscramble.interfaces.DisplayStats;
 import java.io.Serializable;
+import wordscramble.WordScramble;
 
 /**
  *
  * @author heatherjensen
  */
-public class StatsAvg extends Stats implements Serializable{
+public class StatsAvg implements DisplayStats{
    
-    @Override
+     public void display(){} 
      public void CalcStats() {
         int avg = 0;
+        
         for (int myStat : WordScramble.scores) {
             avg += myStat;
         }

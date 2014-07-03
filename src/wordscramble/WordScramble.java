@@ -20,8 +20,8 @@ public class WordScramble implements Serializable {
 
     //Instance Variables
     public static int numGames=0;
-    static int scores []= new int [2];
-    static int wins[] = new int[1];
+    public static int scores []= new int [2];
+    public static int wins[] = new int[1];
     
     private String name;
     private static String instructions= 
@@ -105,6 +105,6 @@ public class WordScramble implements Serializable {
          //Status.INSTRUCTIONS.display();
      }
     
-    //Aubrey - I can't get the enum to work     
-    System.out.println("\n\t" + AubreyEnum.PURPLE.displayColor());
+    //Aubrey - I can't get the enum to work. I commented it out just so it wouldn't scream at me- Heather     
+    //System.out.println("\n\t" + AubreyEnum.PURPLE.displayColor()); 
 }

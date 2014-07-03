@@ -4,17 +4,20 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.stats;
 
+
+import citbyui.cit260.wordscramble.interfaces.DisplayStats;
 import java.io.Serializable;
+import wordscramble.WordScramble;
 
 /**
  *
  * @author heatherjensen
  */
-public class StatsMax extends Stats implements Serializable{
+public class StatsMax implements DisplayStats{
    
-    @Override
+     public void display(){} 
     public void CalcStats() { //finds highest score in scores[]
         
         int max=0;
