@@ -24,7 +24,7 @@ public class WordScramble implements Serializable {
     public static int wins[] = new int[1];
     
     private String name;
-    private static String instructions= 
+  /*  private static String instructions= 
               "\n\t***********************************************************************"
             + "\n\t* Welcome to the game of WORD SCRAMBLE!                               *"                            
             + "\n\t*                                                                     *"
@@ -37,7 +37,7 @@ public class WordScramble implements Serializable {
             + "\n\t* Good luck!                                                          *"
             + "\n\t***********************************************************************"
             + "\n";
-
+*/
     public static int getNumGames() {
         return numGames;
     }
@@ -70,14 +70,14 @@ public class WordScramble implements Serializable {
         this.name = name;
     }
 
-    public String getInstructions() {
-        return instructions;
+   // public String getInstructions() {
+       // return instructions;
         //System.out.println(""); 
         //Status.INSTRUCTIONS.display();
-    }
+   // }
 
     public void setInstructions(String instructions) {
-        this.instructions = instructions;
+   //     this.instructions = instructions;
     }
 
     
@@ -100,9 +100,11 @@ public class WordScramble implements Serializable {
     }
     
     private void displayHelp(){
-         System.out.println("\n Welcome " + this.name + "\n");
-         System.out.println(this.instructions);
-         //Status.INSTRUCTIONS.display();
+         System.out.println("\n Welcome to the game, " + this.name + "\n");
+         //System.out.println(this.instructions);
+         Status.INSTRUCTIONS.display();
+         System.out.println(AubreyEnum.BLUE.displayColor());
+         
      }
     
     //Aubrey - I can't get the enum to work. I commented it out just so it wouldn't scream at me- Heather     
