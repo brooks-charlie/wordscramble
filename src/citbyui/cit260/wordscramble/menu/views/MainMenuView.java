@@ -9,7 +9,7 @@ package citbyui.cit260.wordscramble.menu.views;
 //import wordscramble.MainMenuControl;
 import wordscramble.TrackGames;
 import wordscramble.WordScramble;
-import wordscramble.WordScrambleError;
+import citbyui.cit260.wordscramble.errors.WordScrambleError;
 import wordscramble.MainMenuControl;
 import java.util.Scanner;
 

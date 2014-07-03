@@ -10,7 +10,7 @@ import citbyui.cit260.wordscramble.enums.Status;
 import java.util.Scanner;
 import wordscramble.GameMenuControl;
 import wordscramble.MainMenuControl;
-import wordscramble.WordScrambleError;
+import citbyui.cit260.wordscramble.errors.WordScrambleError;
 
 /**
  *
