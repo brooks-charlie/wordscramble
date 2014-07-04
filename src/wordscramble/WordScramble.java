@@ -107,6 +107,5 @@ public class WordScramble implements Serializable {
          
      }
     
-    //Aubrey - I can't get the enum to work. I commented it out just so it wouldn't scream at me- Heather     
-    //System.out.println("\n\t" + AubreyEnum.PURPLE.displayColor()); 
+    
 }
