@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.score;
 
 import java.util.Arrays;
 
