@@ -15,14 +15,18 @@ import citbyui.cit260.wordscramble.interfaces.ScoreFirstGame;
  *
  * @author charliebrooks
  */
-public class Score {
+public class Score implements ScoreGames, DisplayScore, ScoreFirstGame {
     
     public int scoreFirstGame(int totalScore){return 0;
-};
+}
     public int scoreGames(int totalScore){return 0;
-};
+}
     int[] tempScores = null;         
     public int displayScore(int wordLength, int failedAttempts){return 0;
-};
+}
+
+   
+
+   
     
 }

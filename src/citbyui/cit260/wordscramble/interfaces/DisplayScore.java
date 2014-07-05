@@ -11,5 +11,5 @@ package citbyui.cit260.wordscramble.interfaces;
  * @author charliebrooks
  */
 public interface DisplayScore {
-    public Object displayScore(Object object);
+    
 }
