@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package citbyui.cit260.wordscramble.score;
-
+import citbyui.cit260.wordscramble.enums.ScoreRhetoric;
 import wordscramble.WordScramble;
 import java.io.Serializable;
 
@@ -36,10 +36,12 @@ public class ScoreCalc extends Score implements Serializable  {
 
         if (numFailed == 0) {
             totalScore += 500;
-            System.out.println("You are the ultimate word \"de-scrambler\"");
+            ScoreRhetoric.ULTIMATE.display();
+            //System.out.println("You are the ultimate word \"de-scrambler\"");
 
         } else {
-            System.out.println("Good job!\nPlay again!");
+            ScoreRhetoric.WON.display();
+            //System.out.println("Good job!\nPlay again!");
         }
         System.out.println("Your score is " + totalScore);
         if (WordScramble.numGames == 0) {

@@ -7,16 +7,22 @@
 package citbyui.cit260.wordscramble.score;
 
 import java.util.Arrays;
+import citbyui.cit260.wordscramble.interfaces.DisplayScore;
+import citbyui.cit260.wordscramble.interfaces.ScoreGames;
+import citbyui.cit260.wordscramble.interfaces.ScoreFirstGame;
 
 /**
  *
  * @author charliebrooks
  */
-public abstract class Score {
+public class Score {
     
-    public abstract int scoreFirstGame(int totalScore);
-    public abstract int scoreGames(int totalScore);
+    public int scoreFirstGame(int totalScore){return 0;
+};
+    public int scoreGames(int totalScore){return 0;
+};
     int[] tempScores = null;         
-    public abstract int displayScore(int wordLength, int failedAttempts);
+    public int displayScore(int wordLength, int failedAttempts){return 0;
+};
     
 }
