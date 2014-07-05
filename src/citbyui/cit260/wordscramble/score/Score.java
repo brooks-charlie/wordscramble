@@ -15,7 +15,7 @@ import citbyui.cit260.wordscramble.interfaces.ScoreFirstGame;
  *
  * @author charliebrooks
  */
-public class Score implements ScoreGames, DisplayScore, ScoreFirstGame {
+public abstract class Score implements ScoreGames, DisplayScore, ScoreFirstGame {
     
     public int scoreFirstGame(int totalScore){return 0;
 }
