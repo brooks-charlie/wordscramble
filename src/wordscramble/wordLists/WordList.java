@@ -33,7 +33,7 @@ public String [][] WordListArray6;
    }
    public abstract void display();
 
-    private static class string {
+    public static class string {
 
         public string() {
         }
