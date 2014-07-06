@@ -5,6 +5,7 @@
  */
 package wordscramble.wordLists;
 
+import citbyui.cit260.wordscramble.interfaces.ChooseWord;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Random;
@@ -14,11 +15,11 @@ import java.util.Scanner;
  *
  * @author charliebrooks
  */
-public class WordList3 implements Serializable {
+public class WordList3 implements Serializable{
 
     public String wordLength = "3";
     private String wordToScramble;
-    public String[] wordListArray3 = {
+    public static String[] wordListArray3 = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton",
         "tar", "man", "ran", "run", "sat"
@@ -99,6 +100,11 @@ public class WordList3 implements Serializable {
         return wordToScramble;
   
 }
+
+    
+    public void chooseWord() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 
