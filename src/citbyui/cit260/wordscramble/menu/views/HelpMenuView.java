@@ -4,6 +4,7 @@ import java.util.Scanner;
 import wordscramble.HelpMenuControl;
 import wordscramble.WordPicker;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
+import citbyui.cit260.wordscramble.exceptions.MenuException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -46,7 +47,7 @@ public class HelpMenuView extends Menu {
       
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
-      
+      try{
             switch (command) {
           
                 case "A":
@@ -70,9 +71,15 @@ public class HelpMenuView extends Menu {
                 case "Q":
                     break;
                 default:
-                    new WordScrambleError().displayError ("Invalid command. Please enter a valid command.");
-                    continue;
+                    throw new MenuException("This is an exception.");
+                   // new WordScrambleError().displayError ("Invalid command. Please enter a valid command.");
+                    //continue;
               
+            }
+            }
+            catch (MenuException e){
+                System.out.println("\n" + e.getMessage());
+                
             }
         } while (!command.equals("Q"));
    

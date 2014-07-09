@@ -6,10 +6,11 @@
 
 package citbyui.cit260.wordscramble.menu.views;
 
+import citbyui.cit260.wordscramble.errors.WordScrambleError;
+import citbyui.cit260.wordscramble.exceptions.MenuException;
 import java.util.Scanner;
 import wordscramble.MainMenuControl;
 import wordscramble.WordMenuControl;
-import citbyui.cit260.wordscramble.errors.WordScrambleError;
 
 /**
  *
@@ -41,6 +42,8 @@ public class WordMenuView {
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
+            try {
+            
             switch (command) {
                 case "3":
                     this.wordMenuControl.wordlength3();
@@ -57,14 +60,21 @@ public class WordMenuView {
                 case "Q":
                     MainMenuView myMainMenu = new MainMenuView();
                     myMainMenu.getInput();
-                    break;
+                    //break;
                 default: 
-                    new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
-                    continue;                    
+                    throw new MenuException("This is an exception.");
+                 //   new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
+                 //   continue;    
+                  //  return "0";
+            }
+            }
+            catch (MenuException e){
+                System.out.println("\n" + e.getMessage());
+                
             }
         } while (!command.equals("Q"));
 
-     return;
+    // return "0";
     }
     
 

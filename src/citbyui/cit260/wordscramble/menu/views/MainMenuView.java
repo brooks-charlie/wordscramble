@@ -10,6 +10,7 @@ package citbyui.cit260.wordscramble.menu.views;
 import wordscramble.TrackGames;
 import wordscramble.WordScramble;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
+import citbyui.cit260.wordscramble.exceptions.MenuException;
 import wordscramble.MainMenuControl;
 import java.util.Scanner;
 
@@ -46,7 +47,7 @@ public class MainMenuView extends Menu{
             // get command entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
-            
+            try{
             switch (command) {
                 case "G":
                     this.mainMenuControl.displayGameMenu();
@@ -61,10 +62,16 @@ public class MainMenuView extends Menu{
                     TrackGames myTrackGames = new TrackGames();
                     System.out.println("\tGames played:\t"+WordScramble.numGames+"\n\tGames won:\t"+myTrackGames.totalWins());
                     System.exit(0);
-                    break;
+                    //break;
                 default: 
-                    new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
-                    continue;                    
+                    throw new MenuException("This is an exception.");
+                   // new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
+                    //continue;                    
+            }
+            }
+            catch (MenuException e){
+                System.out.println("\n" + e.getMessage());
+                
             }
         } while (!command.equals("X"));
 

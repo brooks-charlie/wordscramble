@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 public class WordScramble implements Serializable {
-
+private static final Scanner inFile = new Scanner(System.in);
     //Instance Variables
     public static int numGames=0;
     public static int scores []= new int [2];
@@ -84,6 +84,7 @@ public class WordScramble implements Serializable {
     
 
     public static void main(String[] args){
+        try{
        WordScramble myGame= new WordScramble();
        myGame.getPlayerName();
        myGame.displayHelp();
@@ -92,12 +93,24 @@ public class WordScramble implements Serializable {
        MainMenuView myMainMenu = new MainMenuView();
        myMainMenu.getInput();
        
+       }
+catch(Throwable ex) {
+    System.out.println("\n" + ex.getMessage());
+    System.out.println("\n" + ex.getStackTrace().toString());
+//Error.displayError("Unexpected error: " + ex.getMessage());
+//Error.displayErrorMsg(ex.getStackTrace().toString());
+
+}
+finally{
+WordScramble.inFile.close();
+}
+       
     }
 
     private void getPlayerName(){
-        Scanner input= new Scanner(System.in);
+       // Scanner input= new Scanner(System.in);
         System.out.println("Enter your name: ");
-        this.name= input.next();
+        this.name= inFile.next();
     }
     
     private void displayHelp(){
@@ -108,5 +121,6 @@ public class WordScramble implements Serializable {
          System.out.println(HeatherEnum.LION.displayAnimal());
          
      }
+
     
    }

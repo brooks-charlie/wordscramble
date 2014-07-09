@@ -11,6 +11,7 @@ import java.util.Scanner;
 import wordscramble.GameMenuControl;
 import wordscramble.MainMenuControl;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
+import citbyui.cit260.wordscramble.exceptions.MenuException;
 
 /**
  *
@@ -47,7 +48,7 @@ public class GameMenuView extends Menu{
             // get commaned entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
-            
+            try{
             switch (command) {
                 case "F":
                     valid = true;
@@ -65,15 +66,21 @@ public class GameMenuView extends Menu{
                     valid = true;
                     MainMenuView myMainMenu = new MainMenuView();
                     myMainMenu.getInput();
-                    break;
+                   // break;
                 default: 
-                    new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
-                    continue;                    
+                    throw new MenuException("This is an exception.");
+                    //new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
+                    //continue;                    
+            }
+        }
+            catch (MenuException e){
+                System.out.println("\n" + e.getMessage());
+                
             }
         }
 
 
-     return;
+   //  return;
     }
     
 

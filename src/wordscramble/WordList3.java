@@ -18,7 +18,7 @@ public class WordList3 implements Serializable {
 
     public String wordLength = "3";
     private String wordToScramble;
-    public String[] wordListArray3 = {
+    public static String[] wordListArray3 = {
         "dog", "cat", "top", "hat", "rob",
         "car", "max", "ham", "box", "ton",
         "tar", "man", "ran", "run", "sat"
