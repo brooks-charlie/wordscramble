@@ -46,23 +46,27 @@ public class WordMenuView {
             
             switch (command) {
                 case "3":
-                    this.wordMenuControl.wordlength3();
+                    this.wordLength(command);
                     break;
                 case "4":
-                    this.wordMenuControl.wordlength4();
+                    this.wordLength(command);
+                    //this.wordMenuControl.wordlength4();
                     break;
                 case "5":
-                    this.wordMenuControl.wordlength5();
+                    this.wordLength(command);
+                    //this.wordMenuControl.wordlength5();
                     break;
                 case "6":
-                    this.wordMenuControl.wordlength6();
+                    this.wordLength(command);
+                    //this.wordMenuControl.wordlength6();
                     break;
                 case "Q":
                     MainMenuView myMainMenu = new MainMenuView();
                     myMainMenu.getInput();
                     //break;
                 default: 
-                    throw new MenuException("This is an exception.");
+                    this.wordLength(command);
+                    //throw new MenuException("This is an exception.");
                  //   new WordScrambleError().displayError("Invalid command. Please enter a valid command.");
                  //   continue;    
                   //  return "0";
@@ -89,4 +93,20 @@ public class WordMenuView {
         }
         System.out.println("\t===============================================================\n");
     }
+   private void wordLength(String noLetters) throws MenuException{
+       //System.out.println("noLetters is: " + noLetters);
+       int numLetters = Integer.parseInt(noLetters);
+      // System.out.println("NumLetters is: " + numLetters);
+       if (numLetters < 3 || numLetters > 6){
+       //if (!"3".equals(noLetters)  &&  !"4".equals(noLetters) && !"5".equals(noLetters) && !"6".equals(noLetters)) {
+           
+           //System.out.println("wordLength - invalid number of letters specified.");
+           throw new MenuException("wordLength - invalid number of letters specified.");
+           
+        }
+       else{
+           System.out.println("This is else");
+           this.wordMenuControl.wordlength(numLetters);
+       }
+   }
 }
