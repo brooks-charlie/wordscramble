@@ -23,7 +23,15 @@ public enum Status {
             + "\n\t*                                                                     *"
             + "\n\t* Good luck!                                                          *"
             + "\n\t***********************************************************************"
-            + "\n");
+            + "\n"),
+    CONTINUE ("CONTINUE"),
+    NEW_GAME ("NEW_GAME"),
+    PLAYING ("PLAYING"), 
+    WINNER ("WINNER"), 
+    TIE ("TIE"), 
+    QUIT ("QUIT"), 
+    ERROR ("ERROR"),
+    EXIT ("EXIT");
     
     String message;
     private Status(String message){
