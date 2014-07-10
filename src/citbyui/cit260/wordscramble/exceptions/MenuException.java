@@ -25,5 +25,10 @@ public class MenuException extends Exception {
     public MenuException(Throwable cause) {
         super(cause);
     }
+    public String WordLengthError(String wordLength){
+        String  errorMessage="This is an invalid number:\t" + wordLength
+                +"\nPlease select 3, 4, 5 or 6";
+        return errorMessage;
+    }
     
 }

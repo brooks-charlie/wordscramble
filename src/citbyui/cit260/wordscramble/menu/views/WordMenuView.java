@@ -73,7 +73,7 @@ public class WordMenuView {
             }
             }
             catch (MenuException e){
-                System.out.println("\n" + e.getMessage());
+                System.out.println("\n" + e.WordLengthError(command));
                 
             }
         } while (!command.equals("Q"));
@@ -101,12 +101,11 @@ public class WordMenuView {
        //if (!"3".equals(noLetters)  &&  !"4".equals(noLetters) && !"5".equals(noLetters) && !"6".equals(noLetters)) {
            
            //System.out.println("wordLength - invalid number of letters specified.");
-           throw new MenuException("wordLength - invalid number of letters specified.");
+           
+           //e.WordLengthError();
+           throw new MenuException();
            
         }
-       else{
-           System.out.println("This is else");
-           this.wordMenuControl.wordlength(numLetters);
-       }
+       
    }
 }
