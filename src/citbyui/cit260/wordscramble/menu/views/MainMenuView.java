@@ -25,7 +25,7 @@ public class MainMenuView extends Menu{
     private final static String[][] menuItems = {
         {"G", "Game Menu"},
         {"H", "Help Menu"},
-        //{"P", "Play Game"},
+        {"A", "Animal Game"},
         {"X", "Exit Word Scramble"}
     }; 
   
@@ -55,9 +55,9 @@ public class MainMenuView extends Menu{
                 case "H":
                     this.mainMenuControl.displayHelpMenu();            
                     break;
-                //case "P":
-                   // this.mainMenuControl.playGame(wordLength);            
-                    //break;
+                case "A":
+                    this.mainMenuControl.displayAnimalMenu();            
+                    break;
                 case "X":
                     TrackGames myTrackGames = new TrackGames();
                     System.out.println("\tGames played:\t"+WordScramble.numGames+"\n\tGames won:\t"+myTrackGames.totalWins());
