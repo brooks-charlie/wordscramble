@@ -107,7 +107,7 @@ public class WordMenuView {
            
         }
        else{
-           this.wordMenuControl.wordlength(numLetters);
+       this.wordMenuControl.wordlength(numLetters);
        }
        
    }

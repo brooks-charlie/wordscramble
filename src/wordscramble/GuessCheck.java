@@ -5,6 +5,7 @@
  */
 package wordscramble;
 
+import citbyui.cit260.wordscramble.exceptions.GuessException;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -70,24 +71,29 @@ public class GuessCheck implements Serializable{
             System.out.println("What is your guess?");
             Scanner input = new Scanner(System.in);
             this.guess = input.next();
-            if (guess.length() != wordLength) {
-                System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
-                continue;
-            } 
-            else {
-                if (guess.equals(origWord)) {
-                    //correct = true;
-                    result = 1;
-                    break;
-                    
-                } else {
-                  //  myTimer.loopy(maxAttempts, userGuess);
-                    System.out.println("Incorrect, try again!");
-                    continue;
+            try{
+                if (guess.length() != wordLength) {
+                    throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
+                    //System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
+                    //continue;
+                } 
+                else {
+                    if (guess.equals(origWord)) {
+                        //correct = true;
+                        result = 1;
+                        break;
+
+                    } else {
+                      //  myTimer.loopy(maxAttempts, userGuess);
+                        throw new GuessException("Incorrect, try again!");
+                        //System.out.println("Incorrect, try again!");
+                        //continue;
+                    }
                 }
             }
-            
-
+            catch(GuessException e){
+                System.out.println("\n" + e.getMessage());
+            }
         }
         
         
