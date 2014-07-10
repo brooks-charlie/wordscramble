@@ -94,8 +94,13 @@ public class PlayGame implements Serializable{
             TrackGames myTrackGames = new TrackGames();
             myTrackGames.winsOrLosses(1);
             
+            PlayAgain playAgain = new PlayAgain();
+            playAgain.replayGame(wordLength);
+            
             MainMenuView myMainMenu = new MainMenuView();
-            myMainMenu.getInput();}
+            myMainMenu.getInput();
+            
+        }
         else {
             myTimer.stop();
             //myTimer.getElapsedTimeSecs();
