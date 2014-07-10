@@ -106,6 +106,9 @@ public class WordMenuView {
            throw new MenuException();
            
         }
+       else{
+       this.wordMenuControl.wordlength(numLetters);
+       }
        
    }
 }
