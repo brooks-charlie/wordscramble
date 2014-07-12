@@ -11,8 +11,9 @@ package citbyui.cit260.wordscramble.enums;
  * @author charliebrooks
  */
 public enum ScoreRhetoric {
-    WON ("You WON! Would you like to play again?"),
-    ULTIMATE ("You are the Ultimate De-Scrambler!");
+    WON ("You WON! Congratulation!\n"),
+    ULTIMATE ("You are the Ultimate De-Scrambler!\n"),
+    SORRY ("Sorry, you didn't guess the right word. Play again, you'll get it next time!\n");
     
     String scoreRhetoric;
     ScoreRhetoric(String scoreRhetoric){

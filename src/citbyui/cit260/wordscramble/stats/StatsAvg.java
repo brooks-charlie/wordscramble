@@ -25,6 +25,6 @@ public class StatsAvg implements DisplayStats{
             avg += myStat;
         }
         avg = avg / (WordScramble.scores.length - 1);
-        System.out.println("The average score so far is:\t" + avg);
+        System.out.println("\tAverage score:\t" + avg);
     }
 }

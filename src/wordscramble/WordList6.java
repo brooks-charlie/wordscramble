@@ -70,7 +70,7 @@ public class WordList6 implements Serializable {
         useRandomNum = (int) randomNum;
         wordToScramble = (wordListArray6[useRandomNum]);
 
-        System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
+     //   System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
         return wordToScramble;
     }
     

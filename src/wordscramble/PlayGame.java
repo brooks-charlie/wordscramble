@@ -68,6 +68,7 @@ public class PlayGame implements Serializable{
         scrambledWord = new String(bubbleChar);
         
         System.out.println("Scrambled Word: " + scrambledWord);
+        System.out.println("You have up to 3 tries to guess the correct word.");
         
         Timer myTimer = new Timer();
         startTime = myTimer.start();
@@ -84,8 +85,8 @@ public class PlayGame implements Serializable{
             
             myTimer.stop();
             totalTime=myTimer.getElapsedTimeSecs(startTime);
-            System.out.println("Good job, you are correct!\nThe answer was\t" + origWord);
-            System.out.println("It took you "+ totalTime + " seconds to guess correctly.");
+            System.out.println("Good job, you are correct!\nThe answer was:\t" + origWord+"\n");
+            System.out.println("It took you "+ totalTime + " seconds to guess correctly.\n");
             //System.out.println("You tried "+ userGuess + " times to get the word right.\nThe word was:\t"+origWord);
             
             ScoreCalc myScore = new ScoreCalc();
@@ -106,10 +107,14 @@ public class PlayGame implements Serializable{
             //myTimer.getElapsedTimeSecs();
             
             ScoreCalc myScore = new ScoreCalc();
-            myScore.displayScore(wordLength, myGuess.getUserGuess());
+            myScore.displayScore(wordLength, 3);
 
             TrackGames myTrackGames = new TrackGames();
             myTrackGames.winsOrLosses(0);
-            System.out.println("You didn't guess the right word. Play again, you'll get it next time!");    }
+            
+            PlayAgain playAgain = new PlayAgain();
+            playAgain.replayGame(wordLength);
+           // System.out.println("You didn't guess the right word. Play again, you'll get it next time!");    
+        }
     }
 }

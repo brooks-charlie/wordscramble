@@ -26,6 +26,6 @@ public class StatsMax implements DisplayStats{
                 max = myStat;
             }
         }
-        System.out.println("Your best score is:\t" + max);
+        System.out.println("\tBest score:\t" + max);
     }
 }

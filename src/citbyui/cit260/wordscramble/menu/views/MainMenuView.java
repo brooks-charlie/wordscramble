@@ -7,12 +7,16 @@
 package citbyui.cit260.wordscramble.menu.views;
 
 //import wordscramble.MainMenuControl;
-import wordscramble.TrackGames;
-import wordscramble.WordScramble;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
 import citbyui.cit260.wordscramble.exceptions.MenuException;
-import wordscramble.MainMenuControl;
+import citbyui.cit260.wordscramble.stats.Stats;
+import citbyui.cit260.wordscramble.stats.StatsAvg;
+import citbyui.cit260.wordscramble.stats.StatsMax;
 import java.util.Scanner;
+import wordscramble.ExitGame;
+import wordscramble.MainMenuControl;
+import wordscramble.TrackGames;
+import wordscramble.WordScramble;
 
 /**
  *
@@ -59,9 +63,10 @@ public class MainMenuView extends Menu{
                     this.mainMenuControl.displayAnimalMenu();            
                     break;
                 case "X":
-                    TrackGames myTrackGames = new TrackGames();
-                    System.out.println("\tGames played:\t"+WordScramble.numGames+"\n\tGames won:\t"+myTrackGames.totalWins());
-                    System.exit(0);
+                    ExitGame myExitGame = new ExitGame();
+                    myExitGame.exitGame();
+                    
+             
                     //break;
                 default: 
                     throw new MenuException("This is an exception.");

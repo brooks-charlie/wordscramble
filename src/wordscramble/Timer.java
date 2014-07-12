@@ -18,7 +18,7 @@ public class Timer {
    public long start(){
         this.startTime=System.currentTimeMillis();
         this.running=true;
-        System.out.println("Start Time is " + startTime);
+     //   System.out.println("Start Time is " + startTime);
         return startTime;
     
            }
@@ -54,7 +54,7 @@ public class Timer {
     //converting to seconds
     public float getElapsedTimeSecs(long startTime) {
         float elapsed;
-        System.out.println("is the game running? " + running);
+      //  System.out.println("is the game running? " + running);
         if (running) {
             elapsed = ((System.currentTimeMillis() - startTime) / 1000);
         }
@@ -62,8 +62,8 @@ public class Timer {
             elapsed = ((stopTime - startTime));// / 1000);
             elapsed = (elapsed /1000);
         }
-        System.out.println("start time is: " + startTime);
-        System.out.println("stop time is " + stopTime);
+      //  System.out.println("start time is: " + startTime);
+       // System.out.println("stop time is " + stopTime);
         
         return elapsed;
     }

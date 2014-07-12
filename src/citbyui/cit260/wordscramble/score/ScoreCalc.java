@@ -25,7 +25,7 @@ public class ScoreCalc extends Score implements Serializable  {
         System.out.println("You played with " + wordLength + " letters and used " + failedAttempts + " tries.");
         int numLetters = wordLength;
         int numFailed = failedAttempts;
-        if (numFailed > 2) {
+        if (numFailed > 3) {
             System.out.println("Invalid number of attempts");
         }
         if (numLetters < 3 || numLetters > 6) {
@@ -39,11 +39,14 @@ public class ScoreCalc extends Score implements Serializable  {
             ScoreRhetoric.ULTIMATE.display();
             //System.out.println("You are the ultimate word \"de-scrambler\"");
 
-        } else {
+        } else if (numFailed <3){
             ScoreRhetoric.WON.display();
             //System.out.println("Good job!\nPlay again!");
+        }else {
+            ScoreRhetoric.SORRY.display();
         }
-        System.out.println("Your score is " + totalScore);
+            
+        System.out.println("Your score is " + totalScore+"\n");
         if (WordScramble.numGames == 0) {
             ScoreKeeper myKeepScore = new ScoreKeeper();
             myKeepScore.scoreFirstGame(totalScore);
@@ -54,7 +57,7 @@ public class ScoreCalc extends Score implements Serializable  {
             myKeepScore.scoreGames(totalScore);
             WordScramble.numGames++;
         }
-        System.out.println("numGames played is: " + WordScramble.numGames);
+       // System.out.println("numGames played is: " + WordScramble.numGames);
 
         return totalScore;
     }

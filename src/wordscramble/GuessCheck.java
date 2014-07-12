@@ -72,24 +72,25 @@ public class GuessCheck implements Serializable{
             Scanner input = new Scanner(System.in);
             this.guess = input.next();
             try{
-                if (guess.length() != wordLength) {
-                    throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
+                if (guess.length() != wordLength && userGuess!=maxAttempts-1) {
+                    throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\n");
                     //System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
                     //continue;
                 } 
-                else {
-                    if (guess.equals(origWord)) {
+                else if (guess.equals(origWord)) {
                         //correct = true;
                         result = 1;
                         break;
 
-                    } else {
+                    } else if(userGuess<maxAttempts-1) {
                       //  myTimer.loopy(maxAttempts, userGuess);
                         throw new GuessException("Incorrect, try again!");
                         //System.out.println("Incorrect, try again!");
                         //continue;
+                    }else{
+                        break;
                     }
-                }
+                
             }
             catch(GuessException e){
                 System.out.println("\n" + e.getMessage());

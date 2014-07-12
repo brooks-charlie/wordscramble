@@ -95,7 +95,7 @@ public class WordList3 implements Serializable {
         useRandomNum = (int) randomNum;
         wordToScramble = (wordListArray3[useRandomNum]);
 
-        System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
+       // System.out.println("This is the Word to scramble:\t\"" + wordToScramble + "\"");
         return wordToScramble;
   
 }

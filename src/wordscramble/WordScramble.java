@@ -116,7 +116,7 @@ WordScramble.inFile.close();
          System.out.println("\n Welcome to the game, " + this.name + "\n");
          //System.out.println(this.instructions);
          Status.INSTRUCTIONS.display();
-         System.out.println(AubreyEnum.BLUE.displayColor());
+         //System.out.println(AubreyEnum.BLUE.displayColor());
          
          
      }

@@ -21,7 +21,7 @@ public class PlayAgain {
 
     public void replayGame(int wordLength) {
          try{
-        System.out.println("Would you like to play again using all the same settings? y/n");
+        System.out.println("\nWould you like to play again using all the same settings? y/n");
         response = inFile.next();
         response = response.trim().toUpperCase();
 
