@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.controls;
+
+import wordscramble.PlayGame;
 
 /**
  *

@@ -9,8 +9,8 @@ package citbyui.cit260.wordscramble.menu.views;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
 import citbyui.cit260.wordscramble.exceptions.MenuException;
 import java.util.Scanner;
-import wordscramble.MainMenuControl;
-import wordscramble.WordMenuControl;
+import citbyui.cit260.wordscramble.controls.MainMenuControl;
+import citbyui.cit260.wordscramble.controls.WordMenuControl;
 
 /**
  *

@@ -14,7 +14,7 @@ import citbyui.cit260.wordscramble.stats.StatsAvg;
 import citbyui.cit260.wordscramble.stats.StatsMax;
 import java.util.Scanner;
 import wordscramble.ExitGame;
-import wordscramble.MainMenuControl;
+import citbyui.cit260.wordscramble.controls.MainMenuControl;
 import wordscramble.TrackGames;
 import wordscramble.WordScramble;
 

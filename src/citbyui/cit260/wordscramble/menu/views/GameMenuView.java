@@ -8,8 +8,8 @@ package citbyui.cit260.wordscramble.menu.views;
 
 import citbyui.cit260.wordscramble.enums.Status;
 import java.util.Scanner;
-import wordscramble.GameMenuControl;
-import wordscramble.MainMenuControl;
+import citbyui.cit260.wordscramble.controls.GameMenuControl;
+import citbyui.cit260.wordscramble.controls.MainMenuControl;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
 import citbyui.cit260.wordscramble.exceptions.MenuException;
 

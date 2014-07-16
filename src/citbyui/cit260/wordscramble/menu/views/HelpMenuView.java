@@ -1,7 +1,7 @@
 package citbyui.cit260.wordscramble.menu.views;
 
 import java.util.Scanner;
-import wordscramble.HelpMenuControl;
+import citbyui.cit260.wordscramble.controls.HelpMenuControl;
 import wordscramble.WordPicker;
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
 import citbyui.cit260.wordscramble.exceptions.MenuException;

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package wordscramble;
+package citbyui.cit260.wordscramble.controls;
 
 
 import citbyui.cit260.wordscramble.menu.views.AnimalGame;
