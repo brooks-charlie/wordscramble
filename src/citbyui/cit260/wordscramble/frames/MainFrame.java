@@ -6,6 +6,8 @@
 
 package citbyui.cit260.wordscramble.frames;
 
+import citbyui.cit260.wordscramble.enums.Status;
+
 /**
  *
  * @author heatherjensen
@@ -120,6 +122,7 @@ public class MainFrame extends javax.swing.JFrame {
         jtWelcome.setLineWrap(true);
         jtWelcome.setRows(5);
         jtWelcome.setText("Welcome to the game of WORD SCRAMBLE! \nNumber of players: one\nGame: Pick how many letters you want to have in your \ngame wordand the system picks a word and randomizes \nthe letters. You has 3 chances to guess the right word.\nGoal of the Game: Guess the right word in three chances.\nHappy unscrambling!");
+        jtWelcome.setToolTipText(Status.INSTRUCTIONS.getMessage());
         jtWelcome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 2));
         jtWelcome.setMargin(new java.awt.Insets(5, 5, 5, 5));
         jScrollPane1.setViewportView(jtWelcome);

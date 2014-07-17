@@ -6,6 +6,7 @@
 
 package citbyui.cit260.wordscramble.frames;
 
+import wordscramble.ExitGame;
 import wordscramble.WordScramble;
 
 /**
@@ -13,6 +14,7 @@ import wordscramble.WordScramble;
  * @author charliebrooks
  */
 public class ExitFrame extends javax.swing.JFrame {
+    ExitGame myExitGame = new ExitGame();
 //public static MainFrame exitFrame = null;
     /**
      * Creates new form ExitFrame
@@ -37,7 +39,7 @@ public class ExitFrame extends javax.swing.JFrame {
         noButton = new javax.swing.JButton();
         yesButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtWelcome = new javax.swing.JTextArea();
+        jtExitWindow = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,7 +49,8 @@ public class ExitFrame extends javax.swing.JFrame {
         jpTitle.setBackground(new java.awt.Color(255, 255, 204));
 
         jlTitle.setFont(new java.awt.Font("Minion Pro", 0, 24)); // NOI18N
-        jlTitle.setText("Word Scramble");
+        jlTitle.setText("Are you sure you want to exit Word Scramble?");
+        jlTitle.setToolTipText("");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
@@ -91,27 +94,26 @@ public class ExitFrame extends javax.swing.JFrame {
                 .addComponent(yesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
                 .addComponent(noButton)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
         jpMenuItemsLayout.setVerticalGroup(
             jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(yesButton)
-                    .addComponent(noButton))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(noButton)))
         );
 
-        jtWelcome.setEditable(false);
-        jtWelcome.setColumns(20);
-        jtWelcome.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jtWelcome.setLineWrap(true);
-        jtWelcome.setRows(5);
-        jtWelcome.setText("Are you sure you want to exit Word Scramble?");
-        jtWelcome.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 2));
-        jtWelcome.setMargin(new java.awt.Insets(5, 5, 5, 5));
-        jScrollPane1.setViewportView(jtWelcome);
+        jtExitWindow.setEditable(false);
+        jtExitWindow.setColumns(20);
+        jtExitWindow.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jtExitWindow.setLineWrap(true);
+        jtExitWindow.setRows(5);
+        jtExitWindow.setText(myExitGame.exitGame());
+        jtExitWindow.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 2));
+        jtExitWindow.setMargin(new java.awt.Insets(5, 5, 5, 5));
+        jScrollPane1.setViewportView(jtExitWindow);
 
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
@@ -120,10 +122,10 @@ public class ExitFrame extends javax.swing.JFrame {
             .addComponent(jpMenuItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
+                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -131,10 +133,10 @@ public class ExitFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1, 1, 1)
                 .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -145,7 +147,9 @@ public class ExitFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpBody, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jpBody, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -173,7 +177,7 @@ public class ExitFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
-    private javax.swing.JTextArea jtWelcome;
+    private javax.swing.JTextArea jtExitWindow;
     private javax.swing.JButton noButton;
     private javax.swing.JButton yesButton;
     // End of variables declaration//GEN-END:variables

@@ -18,29 +18,33 @@ public class ExitGame {
 
     private static final Scanner inFile = new Scanner(System.in);
     private String response;
+    private String finalStats;
 
-    public void exitGame() {
+    public String exitGame() {
 
-        System.out.println("Here are your stats so far:\n");
+        finalStats="Here are your stats so far:\n";
+        //System.out.println("Here are your stats so far:\n");
         TrackGames myTrackGames = new TrackGames();
         StatsMax myStatsMax = new StatsMax();
-        myStatsMax.CalcStats();
+        finalStats=finalStats +"Best Score\t"+ myStatsMax.CalcStats()+"\n";
         StatsAvg myStatsAvg = new StatsAvg();
-        myStatsAvg.CalcStats();
+        finalStats=finalStats +"Average Score\t"+ myStatsAvg.CalcStats()+"\n";
 
-        System.out.println("\tGames played:\t" + WordScramble.numGames + "\n\tGames won:\t" + myTrackGames.totalWins());
-        System.out.println("\nAre you sure you want to exit?");
+       // System.out.println("\tGames played:\t" + WordScramble.numGames + "\n\tGames won:\t" + myTrackGames.totalWins());
+       // System.out.println("\nAre you sure you want to exit?");
+        finalStats=finalStats +"Games played:\t" + WordScramble.numGames + "\nGames won:\t" + myTrackGames.totalWins();
+        
 
-        System.out.println("Please answer Y or N.");
-        response = inFile.next();
+      //  System.out.println("Please answer Y or N.");
+    /*    response = inFile.next();
         response = response.trim().toUpperCase();
         if ("Y".equals(response)) {
             System.exit(0);
         } else {
             MainMenuView myMainMenu = new MainMenuView();
             myMainMenu.getInput();
-        }
-
+        } */
+return finalStats;
     }
 
 }

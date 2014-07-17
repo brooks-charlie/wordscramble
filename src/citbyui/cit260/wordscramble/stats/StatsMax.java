@@ -18,7 +18,7 @@ import wordscramble.WordScramble;
 public class StatsMax implements DisplayStats{
    
      public void display(){} 
-    public void CalcStats() { //finds highest score in scores[]
+    public int CalcStats() { //finds highest score in scores[]
         
         int max=0;
         for  (int myStat : WordScramble.scores) {
@@ -26,6 +26,7 @@ public class StatsMax implements DisplayStats{
                 max = myStat;
             }
         }
-        System.out.println("\tBest score:\t" + max);
+        //System.out.println("\tBest score:\t" + max);
+        return max;
     }
 }

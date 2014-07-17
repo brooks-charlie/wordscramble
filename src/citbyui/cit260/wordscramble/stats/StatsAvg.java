@@ -18,13 +18,14 @@ import wordscramble.WordScramble;
 public class StatsAvg implements DisplayStats{
    
      public void display(){} 
-     public void CalcStats() {
+     public int CalcStats() {
         int avg = 0;
         
         for (int myStat : WordScramble.scores) {
             avg += myStat;
         }
         avg = avg / (WordScramble.scores.length - 1);
-        System.out.println("\tAverage score:\t" + avg);
+       // System.out.println("\tAverage score:\t" + avg);
+        return avg;
     }
 }
