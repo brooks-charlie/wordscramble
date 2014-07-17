@@ -9,8 +9,8 @@
  */
 package wordscramble;
 
-import citbyui.cit260.wordscramble.enums.AubreyEnum;
 import citbyui.cit260.wordscramble.enums.Status;
+import citbyui.cit260.wordscramble.frames.GameMenuFrame;
 import citbyui.cit260.wordscramble.frames.MainFrame;
 import citbyui.cit260.wordscramble.frames.PlayerName;
 import citbyui.cit260.wordscramble.menu.views.MainMenuView;
@@ -19,6 +19,7 @@ import java.util.Scanner;
 
 public class WordScramble implements Serializable {
 public static MainFrame mainFrame = null;
+public static GameMenuFrame gameMenuFrame= null;
     private static final Scanner inFile = new Scanner(System.in);
     //Instance Variables
     public static int numGames = 0;
@@ -117,21 +118,26 @@ public static MainFrame mainFrame = null;
             }
             
         }
+        
+        try {
+             wordScramble = new WordScramble();
+             java.awt.EventQueue.invokeLater(new Runnable() {
+             public void run() {
+               WordScramble.gameMenuFrame = new GameMenuFrame();
+               WordScramble.gameMenuFrame.setVisible(true);
+            }
+        });
+       
+        } catch (Throwable ex) {
+            System.out.println("\n" + ex.getMessage());
+            System.out.println("\n" + ex.getStackTrace().toString());
 
-    }
-
-   // private void getPlayerName() {
-        // Scanner input= new Scanner(System.in);
-        //System.out.println("Enter your name: ");
-   //     this.name = inFile.next();
-   // }
-/*
-    private void displayHelp() {
-        System.out.println("\n Welcome to the game, " + this.name + "\n");
-        //System.out.println(this.instructions);
-        Status.INSTRUCTIONS.display();
-         //System.out.println(AubreyEnum.BLUE.displayColor());
-
-    }
-*/
+        } finally {
+            WordScramble.inFile.close();
+            if(WordScramble.gameMenuFrame != null){
+               WordScramble.gameMenuFrame.dispose();
+            }
+            
+        }
+   }
 }

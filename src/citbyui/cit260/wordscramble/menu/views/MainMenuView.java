@@ -6,7 +6,7 @@
 
 package citbyui.cit260.wordscramble.menu.views;
 
-//import wordscramble.MainMenuControl;
+
 import citbyui.cit260.wordscramble.errors.WordScrambleError;
 import citbyui.cit260.wordscramble.exceptions.MenuException;
 import citbyui.cit260.wordscramble.stats.Stats;
@@ -29,7 +29,6 @@ public class MainMenuView extends Menu{
     private final static String[][] menuItems = {
         {"G", "Game Menu"},
         {"H", "Help Menu"},
-        {"A", "Animal Game"},
         {"X", "Exit Word Scramble"}
     }; 
   
@@ -59,10 +58,7 @@ public class MainMenuView extends Menu{
                 case "H":
                     this.mainMenuControl.displayHelpMenu();            
                     break;
-                case "A":
-                    this.mainMenuControl.displayAnimalMenu();            
-                    break;
-                case "X":
+               case "X":
                     ExitGame myExitGame = new ExitGame();
                     myExitGame.exitGame();
                     

@@ -7,7 +7,7 @@
 package citbyui.cit260.wordscramble.controls;
 
 
-import citbyui.cit260.wordscramble.menu.views.AnimalGame;
+
 import citbyui.cit260.wordscramble.menu.views.HelpMenuView;
 import citbyui.cit260.wordscramble.menu.views.GameMenuView;
 import citbyui.cit260.wordscramble.menu.views.MainMenuView;
@@ -37,9 +37,7 @@ public class MainMenuControl {
         helpMenu.getInput();
     }
     
-   public void displayAnimalMenu(){
-       AnimalGame animalGame = new AnimalGame();
-       animalGame.getInput();
+   
    } 
    
-}
+
