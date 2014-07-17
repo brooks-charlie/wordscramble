@@ -12,6 +12,7 @@ package wordscramble;
 import citbyui.cit260.wordscramble.enums.AubreyEnum;
 import citbyui.cit260.wordscramble.enums.Status;
 import citbyui.cit260.wordscramble.frames.MainFrame;
+import citbyui.cit260.wordscramble.frames.PlayerName;
 import citbyui.cit260.wordscramble.menu.views.MainMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -85,6 +86,9 @@ public static MainFrame mainFrame = null;
         WordScramble wordScramble = null;
         
         try {
+            if (PlayerName.playerName == null){
+                PlayerName.playerName="EVERYONE";
+            }
             wordScramble = new WordScramble();
             java.awt.EventQueue.invokeLater(new Runnable(){
                 public void run() {
@@ -116,12 +120,12 @@ public static MainFrame mainFrame = null;
 
     }
 
-  /*  private void getPlayerName() {
+   // private void getPlayerName() {
         // Scanner input= new Scanner(System.in);
-        System.out.println("Enter your name: ");
-        this.name = inFile.next();
-    }
-
+        //System.out.println("Enter your name: ");
+   //     this.name = inFile.next();
+   // }
+/*
     private void displayHelp() {
         System.out.println("\n Welcome to the game, " + this.name + "\n");
         //System.out.println(this.instructions);

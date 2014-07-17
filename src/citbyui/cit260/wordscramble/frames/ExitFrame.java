@@ -162,8 +162,10 @@ public class ExitFrame extends javax.swing.JFrame {
 
     private void yesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesButtonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
         WordScramble.mainFrame.dispose();
+        this.dispose();
+        System.exit(0);
+        
     }//GEN-LAST:event_yesButtonActionPerformed
 
     /**
