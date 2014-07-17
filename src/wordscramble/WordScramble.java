@@ -77,9 +77,9 @@ public static MainFrame mainFrame = null;
     //System.out.println(""); 
     //Status.INSTRUCTIONS.display();
     // }
-    public void setInstructions(String instructions) {
+   // public void setInstructions(String instructions) {
         //     this.instructions = instructions;
-    }
+   // }
 
     public static void main(String[] args) {
         WordScramble wordScramble = null;
@@ -93,7 +93,7 @@ public static MainFrame mainFrame = null;
                 }
             });
             //MainFrame frame = new 
-            WordScramble myGame = new WordScramble();
+          //  WordScramble myGame = new WordScramble();
           //  myGame.getPlayerName();
          //   myGame.displayHelp();
 
