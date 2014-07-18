@@ -7,6 +7,8 @@
 package citbyui.cit260.wordscramble.controls;
 
 import citbyui.cit260.wordscramble.menu.views.WordMenuView;
+import wordscramble.PlayGame;
+
 
 /**
  *
@@ -15,25 +17,26 @@ import citbyui.cit260.wordscramble.menu.views.WordMenuView;
  * tightly cohesive and loosely coupled- Heather 6/19/14
  */
 public class GameMenuControl {
-    
+    private int modeOfPlay;
               
     WordMenuView wordMenu = new WordMenuView();
+    PlayGame myGame = new PlayGame();
             
     public void justForFun() {
        
-        System.out.println("\n You have choosen to play just for fun!\n");
-        this.wordMenu.getInput();
+        //System.out.println("\n You have choosen to play just for fun!\n");
+        //this.wordMenu.getInput();
     }
     
     public void scoredMode() {
        
-        System.out.println("\n You have choosen to play in scored mode.\n");
-        this.wordMenu.getInput();
+        //System.out.println("\n You have choosen to play in scored mode.\n");
+        //this.wordMenu.getInput();
     }
     
     public void timedAndScored() {
        
-        System.out.println("\n You have choosen to play in timed and scored mode.\n");
-        this.wordMenu.getInput();
+       // System.out.println("\n You have choosen to play in timed and scored mode.\n");
+       // this.wordMenu.getInput();
     }
 }

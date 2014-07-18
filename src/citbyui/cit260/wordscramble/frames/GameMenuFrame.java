@@ -10,11 +10,14 @@ package citbyui.cit260.wordscramble.frames;
  *
  * @author heatherjensen
  */
-import citbyui.cit260.wordscramble.menu.views.MainMenuView;
 
+import citbyui.cit260.wordscramble.menu.views.WordMenuView;
+import citbyui.cit260.wordscramble.controls.GameMenuControl;
 
 public class GameMenuFrame extends javax.swing.JFrame {
- 
+    
+     WordMenuView wordMenu = new WordMenuView();
+     GameMenuControl playModeMenuControl = new GameMenuControl();
     /**
      * Creates new form GameMenuFrame
      */
@@ -192,28 +195,37 @@ public class GameMenuFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFunActionPerformed
-      if(evt.getActionCommand().equals ("Just for Fun")){
-          
-      }
+      this.playModeMenuControl.justForFun();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new WordMenuView().setVisible(true);
     }//GEN-LAST:event_jFunActionPerformed
-
+      });
+    }
     private void jScoredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jScoredActionPerformed
-        if(evt.getActionCommand().equals ("Scored")){
-            
-        }
+        this.playModeMenuControl.scoredMode();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new WordMenuView().setVisible(true);
+    }                                    
+      });
     }//GEN-LAST:event_jScoredActionPerformed
 
     private void jTimedScoredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTimedScoredActionPerformed
-      if(evt.getActionCommand().equals ("Timed and Scored")){
-          
-      }
+       this.playModeMenuControl.timedAndScored();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new WordMenuView().setVisible(true);
+    }                                    
+      });
     }//GEN-LAST:event_jTimedScoredActionPerformed
 
     private void jMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuActionPerformed
-       if(evt.getActionCommand().equals ("Back to Main Menu")){
-           MainMenuView myMainMenu = new MainMenuView();
-           myMainMenu.getInput();
-       }
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new MainFrame().setVisible(true);
+    }                                    
+      });
     }//GEN-LAST:event_jMainMenuActionPerformed
 
     /**

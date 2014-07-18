@@ -14,6 +14,7 @@ import citbyui.cit260.wordscramble.enums.Status;
  */
 public class MainFrame extends javax.swing.JFrame {
   PlayerName myPlayerName = new PlayerName();
+  GameMenuFrame myGameMenuFrame = new GameMenuFrame();
     /**
      * Creates new form MainFrame
      */
@@ -200,9 +201,13 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_exitButtonActionPerformed
 
     private void gameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButtonActionPerformed
-        // TODO add your handling code here:
+       java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GameMenuFrame().setVisible(true);
     }//GEN-LAST:event_gameButtonActionPerformed
-
+   });
+        }                                    
+     
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_helpButtonActionPerformed
