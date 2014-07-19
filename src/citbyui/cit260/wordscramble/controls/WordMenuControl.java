@@ -21,7 +21,7 @@ public class WordMenuControl {
     public void wordlength(int wordLength) {
 
         //wordLength = 3;
-        System.out.println("\n You have choosen "+ wordLength + "\n");
+        //System.out.println("\n You have choosen "+ wordLength + "\n");
         this.myGame.playGame(wordLength);
     }
 

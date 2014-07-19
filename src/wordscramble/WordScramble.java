@@ -19,7 +19,7 @@ import java.util.Scanner;
 
 public class WordScramble implements Serializable {
 public static MainFrame mainFrame = null;
-public static GameMenuFrame gameMenuFrame= null;
+//public static GameMenuFrame gameMenuFrame= null;
     private static final Scanner inFile = new Scanner(System.in);
     //Instance Variables
     public static int numGames = 0;
