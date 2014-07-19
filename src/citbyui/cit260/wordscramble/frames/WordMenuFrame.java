@@ -6,6 +6,7 @@
 
 package citbyui.cit260.wordscramble.frames;
 
+import citbyui.cit260.wordscramble.controls.WordMenuControl;
 import wordscramble.PlayGame;
 
 /**
@@ -14,8 +15,8 @@ import wordscramble.PlayGame;
  */
 public class WordMenuFrame extends javax.swing.JFrame {
 
-    PlayGame myGame = new PlayGame();
-    
+    private WordMenuControl wordMenuControl = new WordMenuControl();
+    PlayGameFrame playGameFrame = new PlayGameFrame();
     
     /**
      * Creates new form WordMenuFrame
@@ -194,10 +195,14 @@ public class WordMenuFrame extends javax.swing.JFrame {
 
     private void jbThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbThreeActionPerformed
         
-        //Call PlayGame panel and pass 3 as the parameter
+        this.wordMenuControl.wordlength(3);
+        //citbyui.cit260.wordscramble.frames.GameMenuFrame.wordMenu.dispose();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PlayGameFrame().setVisible(true);
+    }                                    
+      });
         
-        this.myGame.playGame(3);
-        this.dispose();
     }//GEN-LAST:event_jbThreeActionPerformed
 
     private void jbMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMainMenuActionPerformed
@@ -212,20 +217,39 @@ public class WordMenuFrame extends javax.swing.JFrame {
 
     private void jbFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFourActionPerformed
         //Call PlayGame panel and pass 4 as the parameter
-        this.myGame.playGame(4);
+        this.wordMenuControl.wordlength(4);
         this.dispose();
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PlayGameFrame().setVisible(true);
+    }                                    
+      });
     }//GEN-LAST:event_jbFourActionPerformed
 
     private void jbFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFiveActionPerformed
         //Call PlayGame panel and pass 5 as the parameter
-        this.myGame.playGame(5);
+        
+        this.wordMenuControl.wordlength(5);
         this.dispose();
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PlayGameFrame().setVisible(true);
+    }                                    
+      });
     }//GEN-LAST:event_jbFiveActionPerformed
 
     private void jbSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSixActionPerformed
         //Call PlayGame panel and pass 5 as the parameter
-        this.myGame.playGame(6);
+        this.wordMenuControl.wordlength(6);
         this.dispose();
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PlayGameFrame().setVisible(true);
+    }                                    
+      });
     }//GEN-LAST:event_jbSixActionPerformed
 
     /**
