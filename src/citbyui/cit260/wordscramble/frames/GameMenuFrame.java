@@ -16,7 +16,7 @@ import citbyui.cit260.wordscramble.controls.GameMenuControl;
 
 public class GameMenuFrame extends javax.swing.JFrame {
     
-     WordMenuView wordMenu = new WordMenuView();
+     WordMenuFrame wordMenu = new WordMenuFrame();
      GameMenuControl playModeMenuControl = new GameMenuControl();
     /**
      * Creates new form GameMenuFrame
@@ -114,8 +114,9 @@ public class GameMenuFrame extends javax.swing.JFrame {
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jMainMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFun, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScored, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTimedScored))
+                    .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTimedScored, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScored, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)))
                 .addGap(54, 54, 54))
         );
         jpMenuItemsLayout.setVerticalGroup(
@@ -196,9 +197,10 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
     private void jFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFunActionPerformed
       this.playModeMenuControl.justForFun();
+      this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WordMenuView().setVisible(true);
+                new WordMenuFrame().setVisible(true);
     }//GEN-LAST:event_jFunActionPerformed
       });
     }
@@ -206,7 +208,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
         this.playModeMenuControl.scoredMode();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WordMenuView().setVisible(true);
+                new WordMenuFrame().setVisible(true);
     }                                    
       });
     }//GEN-LAST:event_jScoredActionPerformed
@@ -215,7 +217,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
        this.playModeMenuControl.timedAndScored();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new WordMenuView().setVisible(true);
+                new WordMenuFrame().setVisible(true);
     }                                    
       });
     }//GEN-LAST:event_jTimedScoredActionPerformed

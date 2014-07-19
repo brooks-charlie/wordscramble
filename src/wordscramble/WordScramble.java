@@ -119,12 +119,12 @@ public static GameMenuFrame gameMenuFrame= null;
             
         }
         
-        try {
+        /* try {
              wordScramble = new WordScramble();
              java.awt.EventQueue.invokeLater(new Runnable() {
              public void run() {
                WordScramble.gameMenuFrame = new GameMenuFrame();
-               WordScramble.gameMenuFrame.setVisible(true);
+               WordScramble.gameMenuFrame.setVisible(true); 
             }
         });
        
@@ -138,6 +138,6 @@ public static GameMenuFrame gameMenuFrame= null;
                WordScramble.gameMenuFrame.dispose();
             }
             
-        }
+        }*/
    }
 }
