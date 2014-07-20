@@ -48,7 +48,7 @@ public class ExitFrame extends javax.swing.JFrame {
 
         jpTitle.setBackground(new java.awt.Color(255, 255, 204));
 
-        jlTitle.setFont(new java.awt.Font("Minion Pro", 0, 24)); // NOI18N
+        jlTitle.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         jlTitle.setText("Are you sure you want to exit Word Scramble?");
         jlTitle.setToolTipText("");
 
@@ -111,7 +111,7 @@ public class ExitFrame extends javax.swing.JFrame {
             .addGroup(jpMenuItemsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(yesButton, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(yesButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(noButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -123,7 +123,7 @@ public class ExitFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
-                    .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 568, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addGap(52, 52, 52)

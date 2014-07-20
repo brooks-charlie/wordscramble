@@ -51,7 +51,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jpTitle.setBackground(new java.awt.Color(255, 255, 204));
 
-        jlTitle.setFont(new java.awt.Font("Minion Pro", 0, 24)); // NOI18N
+        jlTitle.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jlTitle.setText("Word Scramble");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);

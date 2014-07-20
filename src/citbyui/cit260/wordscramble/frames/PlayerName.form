@@ -116,7 +116,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="jokButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Ok"/>
+                <Property name="text" type="java.lang.String" value="OK"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jokButtonActionPerformed"/>
@@ -135,7 +135,7 @@
         <Component class="javax.swing.JLabel" name="jlTitle">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Minion Pro" size="24" style="0"/>
+              <Font name="Lucida Grande" size="20" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Please enter your name?"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>

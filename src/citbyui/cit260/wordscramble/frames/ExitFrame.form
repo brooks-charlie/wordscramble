@@ -60,7 +60,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      <Component id="jpTitle" pref="0" max="32767" attributes="0"/>
+                      <Component id="jpTitle" pref="568" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -116,7 +116,7 @@
             <Component class="javax.swing.JLabel" name="jlTitle">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Minion Pro" size="24" style="0"/>
+                  <Font name="Lucida Grande" size="20" style="0"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Are you sure you want to exit Word Scramble?"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
@@ -188,7 +188,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="2" attributes="0">
-                          <Component id="yesButton" alignment="2" pref="25" max="32767" attributes="0"/>
+                          <Component id="yesButton" alignment="2" max="32767" attributes="0"/>
                           <Component id="noButton" alignment="2" max="32767" attributes="0"/>
                       </Group>
                   </Group>

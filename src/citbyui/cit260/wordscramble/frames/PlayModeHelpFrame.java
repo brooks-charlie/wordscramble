@@ -41,7 +41,7 @@ public class PlayModeHelpFrame extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153)));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 163));
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setText("Play Mode Help");
 
         jTextArea1.setColumns(20);

@@ -53,7 +53,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
         jpTitle.setBackground(new java.awt.Color(255, 255, 208));
 
-        jLabel1.setFont(new java.awt.Font("Minion Pro", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         jLabel1.setText("Game Menu");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
@@ -116,7 +116,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
                     .addComponent(jFun, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jpMenuItemsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jTimedScored, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jScored, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)))
+                        .addComponent(jScored, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(54, 54, 54))
         );
         jpMenuItemsLayout.setVerticalGroup(

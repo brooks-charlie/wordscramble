@@ -52,7 +52,7 @@ public class WordMenuFrame extends javax.swing.JFrame {
 
         jpTitle.setBackground(new java.awt.Color(255, 255, 208));
 
-        jlTitle.setFont(new java.awt.Font("Microsoft YaHei", 0, 24)); // NOI18N
+        jlTitle.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jlTitle.setText("Word Length Menu");
 
         jlLengthInstructions.setFont(new java.awt.Font("Lucida Sans", 0, 18)); // NOI18N

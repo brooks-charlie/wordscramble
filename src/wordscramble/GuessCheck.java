@@ -19,18 +19,14 @@ public class GuessCheck implements Serializable{
     private String guess;
     private int userGuess = 0;
     private int maxAttempts = 3;
-    //int wordLength = 6; //pass this from the menu. 
     private int result = 0;
+  
     
     public GuessCheck() {
        //this.guess = guess;
         
     }
     
-   /*ublic GuessCheck(int userGuess) {
-        this.userGuess = userGuess;
-    }*/
-
     public String getGuess() {
         return guess;
     }
@@ -65,24 +61,29 @@ public class GuessCheck implements Serializable{
     
 
     public int checker(String origWord, String scrambledWord, int wordLength) {
+        //if (guess.length() != wordLength && userGuess!=maxAttempts-1){
+         
+        
         //boolean correct = false;
         
         for(;userGuess<maxAttempts;userGuess++){
            // System.out.println("What is your guess?");
             Scanner input = new Scanner(System.in);
             //this.guess = input.next();
-            try{
+            //try{
                 if (guess.length() != wordLength && userGuess!=maxAttempts-1) {
-                    throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\n");
+                    result=0;
+                    //throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\n");
                     //System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
                     //continue;
                 } 
-                else if (guess.equals(origWord)) {
+                //else if (guess.equals(origWord)) {
+                else {
                         //correct = true;
                         result = 1;
                         break;
 
-                    } else if(userGuess<maxAttempts-1) {
+                    }/* else if(userGuess<maxAttempts-1) {
                       //  myTimer.loopy(maxAttempts, userGuess);
                         throw new GuessException("Incorrect, try again!");
                         //System.out.println("Incorrect, try again!");
@@ -94,7 +95,7 @@ public class GuessCheck implements Serializable{
             }
             catch(GuessException e){
                 System.out.println("\n" + e.getMessage());
-            }
+            }*/
         }
         
         

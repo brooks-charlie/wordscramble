@@ -5,19 +5,24 @@
  */
 
 package citbyui.cit260.wordscramble.frames;
-import javax.swing.JTextField;
+import citbyui.cit260.wordscramble.controls.WordMenuControl;
+import wordscramble.GuessCheck;
 import wordscramble.PlayGame;
 import wordscramble.WordScramble;
-import wordscramble.GuessCheck;
 
 /**
  *
  * @author Aubrey
  */
 public class PlayGameFrame extends javax.swing.JFrame {
-    public static String myGuess; 
+    public static String myGuess;
+    public static String checkGuess;
     GuessCheck myGuessCheck = new GuessCheck();
     PlayGame myPlayGame = new PlayGame();
+    WordMenuControl wordLength= new WordMenuControl();
+    WordMenuControl userGuess= new WordMenuControl();
+    WordMenuControl maxAttempts= new WordMenuControl();
+    
     
     /**
      * Creates new form PlayGameFrame
@@ -42,7 +47,8 @@ public class PlayGameFrame extends javax.swing.JFrame {
         jmyGuess = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLab = new javax.swing.JLabel();
+        jCheckGuess = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,7 +61,7 @@ public class PlayGameFrame extends javax.swing.JFrame {
         jpTitle.setBackground(new java.awt.Color(255, 255, 208));
         jpTitle.setToolTipText("");
 
-        jLabel2.setFont(new java.awt.Font("Microsoft YaHei", 0, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 36)); // NOI18N
         jLabel2.setText("WordScramble");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
@@ -81,15 +87,22 @@ public class PlayGameFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel3.setText("This is your scrambled word: " +myPlayGame.getScrambledWord());
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel4.setText("Enter your Guess here:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 102, 0));
-        jLabel5.setText("Message of Error");
+        jLab.setFont(new java.awt.Font("Lucida Grande", 3, 11)); // NOI18N
+        jLab.setForeground(new java.awt.Color(204, 102, 0));
+        jLab.setText("Message of Error");
+
+        jCheckGuess.setText("Guess");
+        jCheckGuess.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckGuessActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
@@ -109,8 +122,10 @@ public class PlayGameFrame extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
-                            .addComponent(jmyGuess))))
+                            .addComponent(jLab, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                            .addComponent(jmyGuess))
+                        .addGap(63, 63, 63)
+                        .addComponent(jCheckGuess)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpBodyLayout.setVerticalGroup(
@@ -124,10 +139,12 @@ public class PlayGameFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLab, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jmyGuess, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jmyGuess, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                        .addComponent(jCheckGuess))
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(68, 68, 68))
         );
@@ -158,17 +175,30 @@ public class PlayGameFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jmyGuessActionPerformed
 
+    private void jCheckGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckGuessActionPerformed
+       /* Object CheckGuess = evt.getSource();
+        //I think I am getting close just need to decide what to make CheckGuess equal Ideas?
+       if (CheckGuess == ){
+           jLab.setText("Good job!");
+       }
+      
+       else{ 
+        jLab.setText("Incorrect, try again!");
+        }*/
+    }//GEN-LAST:event_jCheckGuessActionPerformed
+    
     /**
      * @param args the command line arguments
      */
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jCheckGuess;
+    private javax.swing.JLabel jLab;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField jmyGuess;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;

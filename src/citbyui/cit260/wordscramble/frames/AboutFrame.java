@@ -42,7 +42,7 @@ public class AboutFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 208));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 208));
-        jLabel1.setFont(new java.awt.Font("Microsoft YaHei", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setText("    About");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

@@ -46,7 +46,7 @@ public class PlayerName extends javax.swing.JFrame {
         jpMenuItems.setBackground(new java.awt.Color(255, 255, 204));
         jpMenuItems.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 2));
 
-        jokButton.setText("Ok");
+        jokButton.setText("OK");
         jokButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jokButtonActionPerformed(evt);
@@ -76,7 +76,7 @@ public class PlayerName extends javax.swing.JFrame {
             }
         });
 
-        jlTitle.setFont(new java.awt.Font("Minion Pro", 0, 24)); // NOI18N
+        jlTitle.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
         jlTitle.setText("Please enter your name?");
         jlTitle.setToolTipText("");
 
@@ -154,21 +154,9 @@ public class PlayerName extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jlTitle;
-    private javax.swing.JLabel jlTitle1;
-    private javax.swing.JLabel jlTitle2;
-    private javax.swing.JLabel jlTitle3;
-    private javax.swing.JLabel jlTitle4;
     private javax.swing.JButton jokButton;
     private javax.swing.JPanel jpBody;
-    private javax.swing.JPanel jpBody1;
-    private javax.swing.JPanel jpBody2;
-    private javax.swing.JPanel jpBody3;
-    private javax.swing.JPanel jpBody4;
     private javax.swing.JPanel jpMenuItems;
-    private javax.swing.JPanel jpTitle1;
-    private javax.swing.JPanel jpTitle2;
-    private javax.swing.JPanel jpTitle3;
-    private javax.swing.JPanel jpTitle4;
     private javax.swing.JTextField jplayerName;
     // End of variables declaration//GEN-END:variables
 }
