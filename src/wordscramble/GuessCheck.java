@@ -68,7 +68,7 @@ public class GuessCheck implements Serializable{
         //boolean correct = false;
         
         for(;userGuess<maxAttempts;userGuess++){
-            System.out.println("What is your guess?");
+           // System.out.println("What is your guess?");
             Scanner input = new Scanner(System.in);
             //this.guess = input.next();
             try{
