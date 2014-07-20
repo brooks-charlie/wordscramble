@@ -193,6 +193,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
 //System.exit(0);        // TODO add your handling code here:
                 java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new ExitFrame().setVisible(true);
             }
@@ -202,6 +203,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void gameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButtonActionPerformed
        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new GameMenuFrame().setVisible(true);
     }//GEN-LAST:event_gameButtonActionPerformed
@@ -211,6 +213,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
         // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new HelpFrame().setVisible(true);
     }   

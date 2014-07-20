@@ -15,9 +15,9 @@ import java.io.Serializable;
  * @author Aubrey
  */
 public class PlayGame implements Serializable{
-    private String origWord, scrambledWord;
+    public static String origWord, scrambledWord;
     private char[] bubbleChar;
-    private GuessCheck myGuess = new GuessCheck();
+    public static GuessCheck myGuess = new GuessCheck();
     private long startTime;
     private float totalTime;
 
@@ -67,13 +67,13 @@ public class PlayGame implements Serializable{
         bubbleChar = myBubble.bubbleSort(origWord);
         scrambledWord = new String(bubbleChar);
         
-        System.out.println("Scrambled Word: " + scrambledWord);
-        System.out.println("You have up to 3 tries to guess the correct word.");
+       // System.out.println("Scrambled Word: " + scrambledWord);
+       // System.out.println("You have up to 3 tries to guess the correct word.");
         
         Timer myTimer = new Timer();
         startTime = myTimer.start();
         
-        this.endGame(myGuess.checker(origWord, scrambledWord, wordLength), wordLength);
+     //   this.endGame(myGuess.checker(origWord, scrambledWord, wordLength), wordLength);
         
         
         

@@ -17,33 +17,34 @@ public class WordMenuControl {
         //MainMenuControl mainMenuControl = new MainMenuControl();
         
         PlayGame myGame = new PlayGame();
-
+        
     public void wordlength(int wordLength) {
 
         //wordLength = 3;
         //System.out.println("\n You have choosen "+ wordLength + "\n");
         this.myGame.playGame(wordLength);
     }
-
-    public void wordlength4() {
-
+/*
+    public void wordlength4(String scrambledWord) {
+    
         wordLength = 4;
-        System.out.println("\n You have choosen "+ wordLength + "\n");
-        this.myGame.playGame(wordLength);
+       // System.out.println("\n You have choosen "+ wordLength + "\n");
+      this.myGame.playGame(wordLength);
     }
+    
 
     public void wordlength5() {
 
         wordLength = 5;
-        System.out.println("\n You have choosen "+ wordLength + "\n");
+        //System.out.println("\n You have choosen "+ wordLength + "\n");
         this.myGame.playGame(wordLength);
     }
 
     public void wordlength6() {
 
         wordLength = 6;
-        System.out.println("\n You have choosen "+ wordLength + "\n");
+        //System.out.println("\n You have choosen "+ wordLength + "\n");
         this.myGame.playGame(wordLength);
     }
-    
+*/    
 }

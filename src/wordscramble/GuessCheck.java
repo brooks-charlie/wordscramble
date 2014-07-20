@@ -70,7 +70,7 @@ public class GuessCheck implements Serializable{
         for(;userGuess<maxAttempts;userGuess++){
             System.out.println("What is your guess?");
             Scanner input = new Scanner(System.in);
-            this.guess = input.next();
+            //this.guess = input.next();
             try{
                 if (guess.length() != wordLength && userGuess!=maxAttempts-1) {
                     throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\n");

@@ -25,6 +25,7 @@ public static MainFrame mainFrame = null;
     public static int numGames = 0;
     public static int scores[] = new int[2];
     public static int wins[] = new int[1];
+    public static PlayGame PlayGame;
 
     private String name;
     /*  private static String instructions= 
