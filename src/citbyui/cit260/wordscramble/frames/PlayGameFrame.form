@@ -69,7 +69,7 @@
                           <Component id="jLabel4" min="-2" pref="188" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLab" pref="298" max="32767" attributes="0"/>
+                              <Component id="jResultMessage" pref="298" max="32767" attributes="0"/>
                               <Component id="jmyGuess" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
@@ -92,7 +92,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" pref="138" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLab" min="-2" pref="51" max="-2" attributes="0"/>
+                  <Component id="jResultMessage" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace pref="27" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -174,15 +174,14 @@
             <Property name="text" type="java.lang.String" value="Enter your Guess here:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLab">
+        <Component class="javax.swing.JLabel" name="jResultMessage">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Lucida Grande" size="11" style="3"/>
+              <Font name="Lucida Grande" size="14" style="3"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="66" red="cc" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Message of Error"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jCheckGuess">

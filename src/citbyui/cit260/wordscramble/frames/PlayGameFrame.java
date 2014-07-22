@@ -6,6 +6,7 @@
 
 package citbyui.cit260.wordscramble.frames;
 import citbyui.cit260.wordscramble.controls.WordMenuControl;
+import javax.swing.JLabel;
 import wordscramble.GuessCheck;
 import wordscramble.PlayGame;
 import wordscramble.WordScramble;
@@ -17,11 +18,17 @@ import wordscramble.WordScramble;
 public class PlayGameFrame extends javax.swing.JFrame {
     public static String guess;
     public static String checkGuess;
+    public static String gameOverMessage;
     GuessCheck myGuessCheck = new GuessCheck();
     PlayGame myPlayGame = new PlayGame();
     WordMenuControl wordLength= new WordMenuControl();
     WordMenuControl userGuess= new WordMenuControl();
     WordMenuControl maxAttempts= new WordMenuControl();
+
+    public JLabel getjResultMessage() {
+        return jResultMessage;
+    }
+    
     
     
     /**
@@ -47,7 +54,7 @@ public class PlayGameFrame extends javax.swing.JFrame {
         jmyGuess = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLab = new javax.swing.JLabel();
+        jResultMessage = new javax.swing.JLabel();
         jCheckGuess = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -93,9 +100,8 @@ public class PlayGameFrame extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel4.setText("Enter your Guess here:");
 
-        jLab.setFont(new java.awt.Font("Lucida Grande", 3, 11)); // NOI18N
-        jLab.setForeground(new java.awt.Color(204, 102, 0));
-        jLab.setText("Message of Error");
+        jResultMessage.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N
+        jResultMessage.setForeground(new java.awt.Color(204, 102, 0));
 
         jCheckGuess.setText("Guess");
         jCheckGuess.addActionListener(new java.awt.event.ActionListener() {
@@ -122,7 +128,7 @@ public class PlayGameFrame extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLab, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                            .addComponent(jResultMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                             .addComponent(jmyGuess))
                         .addGap(63, 63, 63)
                         .addComponent(jCheckGuess)))
@@ -139,7 +145,7 @@ public class PlayGameFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLab, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jResultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -174,23 +180,18 @@ public class PlayGameFrame extends javax.swing.JFrame {
                     
                 }
             });
-        this.dispose();
+       // this.dispose();
     }//GEN-LAST:event_jmyGuessActionPerformed
 
     private void jCheckGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckGuessActionPerformed
         Object CheckGuess = evt.getSource();
-        //I think I am getting close just need to decide what to make CheckGuess equal Ideas?
-        
+
        guess=this.jmyGuess.getText();
-        if (guess.equals(myPlayGame.getOrigWord())){
-           jLab.setText("Good job!");
-         
-       }
-      
-       else{ 
-        jLab.setText("Incorrect, try again!");
-        //jLab.setText((String) CheckGuess);
-        }
+       
+       jResultMessage.setText(myGuessCheck.checker(myPlayGame.getOrigWord(), myPlayGame.getScrambledWord(), 3, guess));
+       gameOverMessage = jResultMessage.getText();
+       this.dispose();
+       
     }//GEN-LAST:event_jCheckGuessActionPerformed
     
     /**
@@ -200,11 +201,11 @@ public class PlayGameFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jCheckGuess;
-    private javax.swing.JLabel jLab;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jResultMessage;
     private javax.swing.JTextField jmyGuess;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpTitle;

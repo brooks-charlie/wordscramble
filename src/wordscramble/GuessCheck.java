@@ -6,27 +6,27 @@
 package wordscramble;
 
 import citbyui.cit260.wordscramble.exceptions.GuessException;
+import citbyui.cit260.wordscramble.frames.ExitFrame;
+import citbyui.cit260.wordscramble.frames.PlayAgainFrame;
 import java.io.Serializable;
 import java.util.Scanner;
-
 
 /**
  *
  * @author Aubrey
  */
-public class GuessCheck implements Serializable{
+public class GuessCheck implements Serializable {
 
     private String guess;
-    private int userGuess = 0;
+    private int userGuess=1;
     private int maxAttempts = 3;
-    private int result = 0;
-  
-    
+    private String result = "0";
+
     public GuessCheck() {
-       //this.guess = guess;
-        
+        //this.guess = guess;
+
     }
-    
+
     public String getGuess() {
         return guess;
     }
@@ -51,55 +51,36 @@ public class GuessCheck implements Serializable{
         this.maxAttempts = maxAttempts;
     }
 
-    public int getResult() {
+    public String getResult() {
         return result;
     }
 
-    public void setResult(int result) {
+    public void setResult(String result) {
         this.result = result;
     }
-    
 
-    public int checker(String origWord, String scrambledWord, int wordLength) {
-        //if (guess.length() != wordLength && userGuess!=maxAttempts-1){
-         
-        
-        //boolean correct = false;
-        
-        for(;userGuess<maxAttempts;userGuess++){
-           // System.out.println("What is your guess?");
-            Scanner input = new Scanner(System.in);
-            //this.guess = input.next();
-            //try{
-                if (guess.length() != wordLength && userGuess!=maxAttempts-1) {
-                    result=0;
-                    //throw new GuessException("Incorrect, please enter a " + wordLength + " letter word.\n");
-                    //System.out.println("Incorrect, try again!, please enter a " + wordLength + " letter word.\nThe word was:\t"+origWord);
-                    //continue;
-                } 
-                //else if (guess.equals(origWord)) {
-                else {
-                        //correct = true;
-                        result = 1;
-                        break;
+    public String checker(String origWord, String scrambledWord, int wordLength, String guess) {
 
-                    }/* else if(userGuess<maxAttempts-1) {
-                      //  myTimer.loopy(maxAttempts, userGuess);
-                        throw new GuessException("Incorrect, try again!");
-                        //System.out.println("Incorrect, try again!");
-                        //continue;
-                    }else{
-                        break;
-                    }
+        //for (userGuess = 0; userGuess < maxAttempts; userGuess++) {
+            if (userGuess == maxAttempts) {
+                result = "Game Over.";
+               // new ExitFrame().setVisible(true);
+                new PlayAgainFrame().setVisible(true);
+               // break;
+            } else if (guess.equals(origWord)) {
+                result = "Good Job!";
+                //new ExitFrame().setVisible(true);
+                new PlayAgainFrame().setVisible(true);
+               // break;
+            } else {
+                userGuess++;
+                result = "Incorrect try again. " + userGuess;
                 
             }
-            catch(GuessException e){
-                System.out.println("\n" + e.getMessage());
-            }*/
-        }
-        
-        
-        return result;
+            return result;
+        //}
+       // return null;
+
     }
 
 }
