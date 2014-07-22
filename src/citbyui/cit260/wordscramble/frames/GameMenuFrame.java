@@ -197,6 +197,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
     private void jFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFunActionPerformed
       this.playModeMenuControl.justForFun();
+      //this.setVisible(false);
       this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -206,6 +207,8 @@ public class GameMenuFrame extends javax.swing.JFrame {
     }
     private void jScoredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jScoredActionPerformed
         this.playModeMenuControl.scoredMode();
+        //this.setVisible(false);
+        this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new WordMenuFrame().setVisible(true);
@@ -215,6 +218,8 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
     private void jTimedScoredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTimedScoredActionPerformed
        this.playModeMenuControl.timedAndScored();
+       //this.setVisible(false);
+       this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new WordMenuFrame().setVisible(true);
@@ -223,6 +228,8 @@ public class GameMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTimedScoredActionPerformed
 
     private void jMainMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMainMenuActionPerformed
+        //this.setVisible(false);
+        this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainFrame().setVisible(true);

@@ -196,6 +196,7 @@ public class WordMenuFrame extends javax.swing.JFrame {
     private void jbThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbThreeActionPerformed
         
         this.wordMenuControl.wordlength(3);
+        this.setVisible(false);
        // citbyui.cit260.wordscramble.frames.GameMenuFrame.wordMenu.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
           public void run() {
@@ -220,6 +221,7 @@ public class WordMenuFrame extends javax.swing.JFrame {
     private void jbFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFourActionPerformed
         //Call PlayGame panel and pass 4 as the parameter
         this.wordMenuControl.wordlength(4);
+        this.setVisible(false);
         //this.dispose();
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -233,6 +235,7 @@ public class WordMenuFrame extends javax.swing.JFrame {
         //Call PlayGame panel and pass 5 as the parameter
         
         this.wordMenuControl.wordlength(5);
+        this.setVisible(false);
        // this.dispose();
         
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -245,6 +248,7 @@ public class WordMenuFrame extends javax.swing.JFrame {
     private void jbSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSixActionPerformed
         //Call PlayGame panel and pass 5 as the parameter
         this.wordMenuControl.wordlength(6);
+        this.setVisible(false);
         //this.dispose();
         
         java.awt.EventQueue.invokeLater(new Runnable() {

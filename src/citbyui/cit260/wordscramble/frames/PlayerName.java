@@ -14,7 +14,25 @@ import wordscramble.WordScramble;
  * @author charliebrooks
  */
 public class PlayerName extends javax.swing.JFrame {
+   // MainFrame myMainFrame = new MainFrame();
     public static String playerName;
+
+    public static void setPlayerName(String playerName) {
+        PlayerName.playerName = playerName;
+    }
+
+    public void setJplayerName(JTextField jplayerName) {
+        this.jplayerName = jplayerName;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public JTextField getJplayerName() {
+        return jplayerName;
+    }
+    
 
     /**
      * Creates new form PlayerName
@@ -128,8 +146,6 @@ public class PlayerName extends javax.swing.JFrame {
          playerName=this.jplayerName.getText();
          java.awt.EventQueue.invokeLater(new Runnable(){
                 public void run() {
-                   WordScramble.mainFrame = new MainFrame();
-                   WordScramble.mainFrame.setVisible(true);
                 }
             });
         this.dispose();
@@ -140,8 +156,6 @@ public class PlayerName extends javax.swing.JFrame {
         playerName=this.jplayerName.getText();
          java.awt.EventQueue.invokeLater(new Runnable(){
                 public void run() {
-                   WordScramble.mainFrame = new MainFrame();
-                   WordScramble.mainFrame.setVisible(true);
                 }
             });
         this.dispose();

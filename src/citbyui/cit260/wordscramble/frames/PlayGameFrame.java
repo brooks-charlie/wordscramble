@@ -15,7 +15,7 @@ import wordscramble.WordScramble;
  * @author Aubrey
  */
 public class PlayGameFrame extends javax.swing.JFrame {
-    public static String myGuess;
+    public static String guess;
     public static String checkGuess;
     GuessCheck myGuessCheck = new GuessCheck();
     PlayGame myPlayGame = new PlayGame();
@@ -165,26 +165,32 @@ public class PlayGameFrame extends javax.swing.JFrame {
 
     private void jmyGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmyGuessActionPerformed
         // TODO add your handling code here:
-        myGuess=this.jmyGuess.getText();
+        guess=this.jmyGuess.getText();
          java.awt.EventQueue.invokeLater(new Runnable(){
                 public void run() {
                    WordScramble.PlayGame = new PlayGame();
+                   
                    //WordScramble.mainFrame.setVisible(true);
+                    
                 }
             });
         this.dispose();
     }//GEN-LAST:event_jmyGuessActionPerformed
 
     private void jCheckGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckGuessActionPerformed
-       /* Object CheckGuess = evt.getSource();
+        Object CheckGuess = evt.getSource();
         //I think I am getting close just need to decide what to make CheckGuess equal Ideas?
-       if (CheckGuess == ){
+        
+       guess=this.jmyGuess.getText();
+        if (guess.equals(myPlayGame.getOrigWord())){
            jLab.setText("Good job!");
+         
        }
       
        else{ 
         jLab.setText("Incorrect, try again!");
-        }*/
+        //jLab.setText((String) CheckGuess);
+        }
     }//GEN-LAST:event_jCheckGuessActionPerformed
     
     /**

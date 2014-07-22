@@ -15,6 +15,16 @@ import citbyui.cit260.wordscramble.enums.Status;
 public class MainFrame extends javax.swing.JFrame {
   PlayerName myPlayerName = new PlayerName();
   GameMenuFrame myGameMenuFrame = new GameMenuFrame();
+  public String playerName = "Hello"; //myPlayerName.getPlayerName();
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+    
     /**
      * Creates new form MainFrame
      */
@@ -41,7 +51,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtWelcome = new javax.swing.JTextArea();
         playerButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jplayerWelcome = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Word Scramble");
@@ -137,7 +147,12 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText(PlayerName.playerName + " is playing");
+        jplayerWelcome.setText(PlayerName.playerName + " is playing");
+        jplayerWelcome.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jplayerWelcomePropertyChange(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
@@ -157,14 +172,14 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBodyLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jplayerWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87))
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel1)
+                .addComponent(jplayerWelcome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -192,6 +207,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
 //System.exit(0);        // TODO add your handling code here:
+        //this.dispose();
                 java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -202,16 +218,21 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_exitButtonActionPerformed
 
     private void gameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gameButtonActionPerformed
-       java.awt.EventQueue.invokeLater(new Runnable() {
+       this.dispose();
+        java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
                 new GameMenuFrame().setVisible(true);
+               
     }//GEN-LAST:event_gameButtonActionPerformed
    });
+       //this.setVisible(false);
+       //this.dispose();
         }                                    
      
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
         // TODO add your handling code here:
+        this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -222,13 +243,19 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void playerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playerButtonActionPerformed
         // TODO add your handling code here:
-        this.dispose();
+        //this.dispose();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new PlayerName().setVisible(true);
             }
         });
     }//GEN-LAST:event_playerButtonActionPerformed
+
+    private void jplayerWelcomePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jplayerWelcomePropertyChange
+        // TODO add your handling code here:
+        this.jplayerWelcome.setText(myPlayerName.getPlayerName()+" is playing");
+        
+    }//GEN-LAST:event_jplayerWelcomePropertyChange
 
     /**
      * @param args the command line arguments
@@ -239,12 +266,12 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton exitButton;
     private javax.swing.JButton gameButton;
     private javax.swing.JButton helpButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlTitle;
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
+    private javax.swing.JLabel jplayerWelcome;
     private javax.swing.JTextArea jtWelcome;
     private javax.swing.JButton playerButton;
     // End of variables declaration//GEN-END:variables
