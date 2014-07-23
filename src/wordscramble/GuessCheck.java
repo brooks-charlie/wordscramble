@@ -20,7 +20,7 @@ public class GuessCheck implements Serializable {
     private String guess;
     private int userGuess=1;
     private int maxAttempts = 3;
-    private String result = "0";
+    private int result = 0;
 
     public GuessCheck() {
         //this.guess = guess;
@@ -51,32 +51,34 @@ public class GuessCheck implements Serializable {
         this.maxAttempts = maxAttempts;
     }
 
-    public String getResult() {
+    public int getResult() {
         return result;
     }
 
-    public void setResult(String result) {
+    public void setResult(int result) {
         this.result = result;
     }
 
-    public String checker(String origWord, String scrambledWord, int wordLength, String guess) {
+    public int checker(String origWord, String scrambledWord, int wordLength, String guess) {
 
         //for (userGuess = 0; userGuess < maxAttempts; userGuess++) {
-            if (userGuess == maxAttempts) {
-                result = "Game Over.";
+            if (userGuess == maxAttempts && !guess.equals(origWord)) {
+                result = userGuess; // 3=Game Over
                // new ExitFrame().setVisible(true);
-                new PlayAgainFrame().setVisible(true);
+                //new PlayAgainFrame().setVisible(true);
                // break;
             } else if (guess.equals(origWord)) {
-                result = "Good Job!";
+                result = 0; // 1=Good Job!
                 //new ExitFrame().setVisible(true);
-                new PlayAgainFrame().setVisible(true);
+                //new PlayAgainFrame().setVisible(true);
                // break;
             } else {
-                userGuess++;
-                result = "Incorrect try again. " + userGuess;
+                result = userGuess; // 1 or 2=Incorrect, try again
+                
+                 
                 
             }
+            userGuess++;
             return result;
         //}
        // return null;

@@ -59,8 +59,8 @@ public class Timer {
             elapsed = ((System.currentTimeMillis() - startTime) / 1000);
         }
         else {
-            elapsed = ((stopTime - startTime));// / 1000);
-            elapsed = (elapsed /1000);
+            elapsed = ((stopTime - startTime)/1000);// / 1000);
+            //elapsed = (elapsed /1000);
         }
       //  System.out.println("start time is: " + startTime);
        // System.out.println("stop time is " + stopTime);

@@ -13,14 +13,18 @@ package citbyui.cit260.wordscramble.enums;
 public enum ScoreRhetoric {
     WON ("You WON! Congratulation!\n"),
     ULTIMATE ("You are the Ultimate De-Scrambler!\n"),
-    SORRY ("Sorry, you didn't guess the right word. Play again, you'll get it next time!\n");
+    SORRY ("Sorry, you didn't guess the right word. Play again, you'll get it next time!\n"),
+    INVALID ("Invalid number of attempts"),
+    INVALIDLETTERS ("Invalid number of letters"),
+    ;
     
     String scoreRhetoric;
     ScoreRhetoric(String scoreRhetoric){
         this.scoreRhetoric = scoreRhetoric;
     }
-    public void display(){
-        System.out.println(this.scoreRhetoric);
+    public String display(){
+        //System.out.println(this.scoreRhetoric);
+        return scoreRhetoric;
     }
     
 }

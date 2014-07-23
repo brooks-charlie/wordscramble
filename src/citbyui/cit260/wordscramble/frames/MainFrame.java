@@ -55,6 +55,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Word Scramble");
+        setLocation(new java.awt.Point(222, 222));
 
         jpBody.setBackground(new java.awt.Color(255, 255, 204));
         jpBody.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 3));

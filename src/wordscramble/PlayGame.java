@@ -18,7 +18,7 @@ public class PlayGame implements Serializable{
     public static String origWord, scrambledWord;
     private char[] bubbleChar;
     public static GuessCheck myGuess = new GuessCheck();
-    private long startTime;
+    public long startTime;
     private float totalTime;
 
     public PlayGame() {
@@ -70,8 +70,8 @@ public class PlayGame implements Serializable{
        // System.out.println("Scrambled Word: " + scrambledWord);
        // System.out.println("You have up to 3 tries to guess the correct word.");
         
-        Timer myTimer = new Timer();
-        startTime = myTimer.start();
+        //Timer myTimer = new Timer();
+        //startTime = myTimer.start();
         
      //   this.endGame(myGuess.checker(origWord, scrambledWord, wordLength), wordLength);
         
@@ -79,14 +79,18 @@ public class PlayGame implements Serializable{
         
     }
     
-    private void endGame(int result, int wordLength) {
+    public String endGame(int result, int wordLength) {
+        String endGameText = null;
         Timer myTimer = new Timer();
         if (result == 1){
             
             myTimer.stop();
-            totalTime=myTimer.getElapsedTimeSecs(startTime);
-            System.out.println("Good job, you are correct!\nThe answer was:\t" + origWord+"\n");
-            System.out.println("It took you "+ totalTime + " seconds to guess correctly.\n");
+            //totalTime=myTimer.getElapsedTimeSecs(this.startTime);
+            //System.out.println("Good job, you are correct!\nThe answer was:\t" + origWord+"\n");
+            //endGameText="Good job, you are correct!\nThe answer was:\t" + origWord;
+           // System.out.println("It took you "+ totalTime + " seconds to guess correctly.\n");
+            //endGameText="It took you "+ totalTime + " seconds to guess correctly.";
+            //endGameText="Start time is: "+ this.startTime;
             //System.out.println("You tried "+ userGuess + " times to get the word right.\nThe word was:\t"+origWord);
             
             ScoreCalc myScore = new ScoreCalc();
@@ -95,11 +99,11 @@ public class PlayGame implements Serializable{
             TrackGames myTrackGames = new TrackGames();
             myTrackGames.winsOrLosses(1);
             
-            PlayAgain playAgain = new PlayAgain();
-            playAgain.replayGame(wordLength);
+            //PlayAgain playAgain = new PlayAgain();
+            //playAgain.replayGame(wordLength);
             
-            MainMenuView myMainMenu = new MainMenuView();
-            myMainMenu.getInput();
+            //MainMenuView myMainMenu = new MainMenuView();
+            //myMainMenu.getInput();
             
         }
         else {
@@ -112,9 +116,10 @@ public class PlayGame implements Serializable{
             TrackGames myTrackGames = new TrackGames();
             myTrackGames.winsOrLosses(0);
             
-            PlayAgain playAgain = new PlayAgain();
-            playAgain.replayGame(wordLength);
+            //PlayAgain playAgain = new PlayAgain();
+            //playAgain.replayGame(wordLength);
            // System.out.println("You didn't guess the right word. Play again, you'll get it next time!");    
         }
+        return endGameText;
     }
 }

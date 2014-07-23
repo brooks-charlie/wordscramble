@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package citbyui.cit260.wordscramble.frames;
+
 import citbyui.cit260.wordscramble.controls.WordMenuControl;
+import static citbyui.cit260.wordscramble.controls.WordMenuControl.wordLength;
 import javax.swing.JLabel;
 import wordscramble.GuessCheck;
 import wordscramble.PlayGame;
+import wordscramble.Timer;
 import wordscramble.WordScramble;
 
 /**
@@ -16,26 +18,36 @@ import wordscramble.WordScramble;
  * @author Aubrey
  */
 public class PlayGameFrame extends javax.swing.JFrame {
+
     public static String guess;
     public static String checkGuess;
     public static String gameOverMessage;
+    public static long startTime;
+    public static float totalTime;
+    private int guessResult;
     GuessCheck myGuessCheck = new GuessCheck();
     PlayGame myPlayGame = new PlayGame();
-    WordMenuControl wordLength= new WordMenuControl();
-    WordMenuControl userGuess= new WordMenuControl();
-    WordMenuControl maxAttempts= new WordMenuControl();
+    Timer myTimer = new Timer();
+
+
+
+    WordMenuControl userGuess = new WordMenuControl();
+    WordMenuControl maxAttempts = new WordMenuControl();
 
     public JLabel getjResultMessage() {
         return jResultMessage;
     }
-    
-    
-    
+
     /**
      * Creates new form PlayGameFrame
      */
     public PlayGameFrame() {
         initComponents();
+        startTime = myTimer.start();
+    }
+    private static void PlayGameDispose(){
+        // .dispose();
+        
     }
 
     /**
@@ -56,8 +68,11 @@ public class PlayGameFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jResultMessage = new javax.swing.JLabel();
         jCheckGuess = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(222, 222));
+        setLocationByPlatform(true);
 
         jpBody.setBackground(new java.awt.Color(255, 255, 208));
         jpBody.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 3));
@@ -75,17 +90,17 @@ public class PlayGameFrame extends javax.swing.JFrame {
         jpTitle.setLayout(jpTitleLayout);
         jpTitleLayout.setHorizontalGroup(
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTitleLayout.createSequentialGroup()
-                .addGap(330, 330, 330)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTitleLayout.createSequentialGroup()
+                .addContainerGap(143, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
         jpTitleLayout.setVerticalGroup(
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTitleLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel2)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jmyGuess.addActionListener(new java.awt.event.ActionListener() {
@@ -110,28 +125,36 @@ public class PlayGameFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("You have 3 tries to guess the right word. Good luck!");
+
         javax.swing.GroupLayout jpBodyLayout = new javax.swing.GroupLayout(jpBody);
         jpBody.setLayout(jpBodyLayout);
         jpBodyLayout.setHorizontalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBodyLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(419, 419, 419))
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpBodyLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(486, 486, 486)
                         .addComponent(jLabel1))
                     .addGroup(jpBodyLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 852, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jpBodyLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jResultMessage, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
-                            .addComponent(jmyGuess))
-                        .addGap(63, 63, 63)
-                        .addComponent(jCheckGuess)))
+                        .addGap(72, 72, 72)
+                        .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jResultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jpBodyLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jmyGuess, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckGuess)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpBodyLayout.setVerticalGroup(
@@ -142,62 +165,114 @@ public class PlayGameFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jResultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jmyGuess, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
-                        .addComponent(jCheckGuess))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(68, 68, 68))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jResultMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jmyGuess, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckGuess))
+                .addGap(66, 66, 66))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpBody, javax.swing.GroupLayout.PREFERRED_SIZE, 553, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jpBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmyGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmyGuessActionPerformed
-        // TODO add your handling code here:
-        guess=this.jmyGuess.getText();
-         java.awt.EventQueue.invokeLater(new Runnable(){
-                public void run() {
-                   WordScramble.PlayGame = new PlayGame();
-                   
-                   //WordScramble.mainFrame.setVisible(true);
-                    
-                }
-            });
-       // this.dispose();
+        Object CheckGuess = evt.getSource();
+
+        guess = this.jmyGuess.getText();
+      //  java.awt.EventQueue.invokeLater(new Runnable() {
+        //    public void run() {
+        guessResult = myGuessCheck.checker(myPlayGame.getOrigWord(), myPlayGame.getScrambledWord(), wordLength, guess);
+       //jResultMessage.setText(Integer.toString(myGuessCheck.checker(myPlayGame.getOrigWord(), myPlayGame.getScrambledWord(), 3, guess)));
+        //myTimer.stop();
+        if (guessResult == 0) {
+            totalTime = myTimer.getElapsedTimeSecs(PlayGameFrame.startTime);
+            jResultMessage.setText("Good Job!");
+            gameOverMessage = jResultMessage.getText();
+            myPlayGame.endGame(1, wordLength);
+            new PlayAgainFrame().setVisible(true);
+           // PlayGameFrame.PlayGameDispose();
+            //PlayGameFrame.PlayGameDispose();
+            
+        this.dispose();
+        }else if(guessResult==3){
+            totalTime = myTimer.getElapsedTimeSecs(PlayGameFrame.startTime);
+            jResultMessage.setText("Sorry, game over.");
+            gameOverMessage = jResultMessage.getText();
+            myPlayGame.endGame(0, wordLength);
+            new PlayAgainFrame().setVisible(true);
+        this.dispose();
+        }else{
+            jResultMessage.setText("Incorrect, please try again.");
+            gameOverMessage = jResultMessage.getText();
+            this.jmyGuess.setText("");
+            
+        }
+       //     } 
+        //});
+//this.dispose();
+        
     }//GEN-LAST:event_jmyGuessActionPerformed
 
     private void jCheckGuessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckGuessActionPerformed
         Object CheckGuess = evt.getSource();
 
-       guess=this.jmyGuess.getText();
-       
-       jResultMessage.setText(myGuessCheck.checker(myPlayGame.getOrigWord(), myPlayGame.getScrambledWord(), 3, guess));
-       gameOverMessage = jResultMessage.getText();
-       this.dispose();
-       
+        guess = this.jmyGuess.getText();
+       // java.awt.EventQueue.invokeLater(new Runnable() {
+           // public void run() {
+        guessResult = myGuessCheck.checker(myPlayGame.getOrigWord(), myPlayGame.getScrambledWord(), wordLength, guess);
+       //jResultMessage.setText(Integer.toString(myGuessCheck.checker(myPlayGame.getOrigWord(), myPlayGame.getScrambledWord(), 3, guess)));
+        //myTimer.stop();
+        if (guessResult == 0) {
+            totalTime = myTimer.getElapsedTimeSecs(PlayGameFrame.startTime);
+            jResultMessage.setText("Good Job!");
+            gameOverMessage = jResultMessage.getText();
+            myPlayGame.endGame(1, wordLength);
+            new PlayAgainFrame().setVisible(true);
+            //PlayGameFrame.PlayGameDispose();
+            
+        this.dispose();
+        }else if(guessResult==3){
+            totalTime = myTimer.getElapsedTimeSecs(PlayGameFrame.startTime);
+            jResultMessage.setText("Sorry, game over.");
+            gameOverMessage = jResultMessage.getText();
+            myPlayGame.endGame(0, wordLength);
+            new PlayAgainFrame().setVisible(true);
+        this.dispose();
+        }else{
+            jResultMessage.setText("Incorrect, please try again.");
+            gameOverMessage = jResultMessage.getText();
+            this.jmyGuess.setText("");
+            
+        }
+          //  } 
+       // });
+//this.dispose();
+        
     }//GEN-LAST:event_jCheckGuessActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jCheckGuess;
@@ -205,6 +280,7 @@ public class PlayGameFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jResultMessage;
     private javax.swing.JTextField jmyGuess;
     private javax.swing.JPanel jpBody;

@@ -57,6 +57,7 @@ public class PlayerName extends javax.swing.JFrame {
         jlTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(222, 222));
 
         jpBody.setBackground(new java.awt.Color(255, 255, 204));
         jpBody.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 255, 153), 3));

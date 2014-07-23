@@ -13,13 +13,13 @@ import wordscramble.PlayGame;
  * @author charliebrooks
  */
 public class WordMenuControl {
-    private int wordLength;
+    public static int wordLength;
         //MainMenuControl mainMenuControl = new MainMenuControl();
         
         PlayGame myGame = new PlayGame();
         
-    public void wordlength(int wordLength) {
-
+    public void wordlength(int userWordLength) {
+wordLength=userWordLength;
         //wordLength = 3;
         //System.out.println("\n You have choosen "+ wordLength + "\n");
         this.myGame.playGame(wordLength);

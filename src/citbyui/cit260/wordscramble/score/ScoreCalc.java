@@ -26,10 +26,12 @@ public class ScoreCalc extends Score implements Serializable  {
         int numLetters = wordLength;
         int numFailed = failedAttempts;
         if (numFailed > 3) {
-            System.out.println("Invalid number of attempts");
+            //System.out.println("Invalid number of attempts");
+            ScoreRhetoric.INVALID.display();
         }
         if (numLetters < 3 || numLetters > 6) {
-            System.out.println("Invalid number of letters");
+            //System.out.println("Invalid number of letters");
+            ScoreRhetoric.INVALIDLETTERS.display();
         }
 
         int totalScore = (numLetters - numFailed) * 100;
@@ -46,7 +48,7 @@ public class ScoreCalc extends Score implements Serializable  {
             ScoreRhetoric.SORRY.display();
         }
             
-        System.out.println("Your score is " + totalScore+"\n");
+        //System.out.println("Your score is " + totalScore+"\n");
         if (WordScramble.numGames == 0) {
             ScoreKeeper myKeepScore = new ScoreKeeper();
             myKeepScore.scoreFirstGame(totalScore);
